@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 const stats = [
   { value: '18+', label: 'Specialized Agents' },
-  { value: '6', label: 'Active Projects' },
+  { value: '50+', label: 'Integrations & Skills' },
   { value: '24/7', label: 'Autonomous Operation' },
   { value: '4 yrs', label: 'Building AI Systems' },
 ]
@@ -73,6 +73,44 @@ const tools = [
   { name: 'PM2', desc: 'Process management' },
   { name: 'GitHub', desc: 'Version control' },
   { name: 'Claude API', desc: 'AI backbone' },
+]
+
+const integrations = [
+  {
+    category: 'AI & Models',
+    color: '#8B5CF6',
+    items: ['Claude API', 'Gemini', 'GPT / OpenAI', 'Ollama (local)', 'LMStudio', 'MLX Whisper', 'OpenAI Whisper', 'Google AI Studio'],
+  },
+  {
+    category: 'Productivity',
+    color: '#3B82F6',
+    items: ['Apple Notes', 'Apple Reminders', 'Bear Notes', 'Obsidian', 'Things 3', 'Notion', 'Trello', '1Password'],
+  },
+  {
+    category: 'Communication',
+    color: '#10B981',
+    items: ['Telegram', 'Signal', 'Discord', 'Slack', 'iMessage', 'WhatsApp CLI', 'Himalaya (Email)'],
+  },
+  {
+    category: 'Dev & Infra',
+    color: '#E85D04',
+    items: ['GitHub CLI', 'Railway', 'Supabase', 'Convex', 'PM2', 'tmux', 'Playwright MCP', 'MCP Protocol'],
+  },
+  {
+    category: 'Creative & Media',
+    color: '#F59E0B',
+    items: ['Figma Sync', 'Spotify', 'Sonos', 'ElevenLabs TTS', 'Peekaboo (macOS UI)', 'Video Frames', 'nano-pdf', 'OpenAI Image Gen'],
+  },
+  {
+    category: 'Data & APIs',
+    color: '#06B6D4',
+    items: ['RapidAPI', 'ComicVine API', 'GoCollect', 'PriceCharting', 'Metron', 'GCD', 'Google Workspace', 'Weather API'],
+  },
+  {
+    category: 'Hardware & Mesh',
+    color: '#EC4899',
+    items: ['Meshtastic LoRa', 'Raspberry Pi', 'Mac mini (host)', 'Philips Hue', 'Camera nodes', 'Screen recording', 'Location services'],
+  },
 ]
 
 export default function AgentSystem() {
@@ -175,6 +213,46 @@ export default function AgentSystem() {
                   <div className="text-sm font-semibold text-white mb-1">{tool.name}</div>
                   <div className="text-xs text-neutral-500">{tool.desc}</div>
                 </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Integrations & Skills */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: 'easeOut', delay: 0.15 }}
+            className="mt-8 mb-14"
+          >
+            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-neutral-500 mb-6">
+              Integrations & Skills
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+              {integrations.map((group, i) => (
+                <motion.div
+                  key={group.category}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, ease: 'easeOut', delay: i * 0.07 }}
+                  className="rounded-xl border border-neutral-800 bg-neutral-800/30 p-5"
+                >
+                  <div
+                    className="text-xs font-bold tracking-wider uppercase mb-4 pb-3 border-b border-neutral-800"
+                    style={{ color: group.color }}
+                  >
+                    {group.category}
+                  </div>
+                  <ul className="space-y-2">
+                    {group.items.map((item) => (
+                      <li key={item} className="flex items-center gap-2 text-sm text-neutral-400">
+                        <span className="w-1 h-1 rounded-full flex-shrink-0" style={{ backgroundColor: group.color }}></span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
               ))}
             </div>
           </motion.div>
