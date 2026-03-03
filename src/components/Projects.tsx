@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 type Project = {
   name: string
@@ -7,6 +8,7 @@ type Project = {
   detail: string
   tags: string[]
   fullWidth?: boolean
+  demoUrl?: string
 }
 
 const projects: Project[] = [
@@ -30,6 +32,7 @@ const projects: Project[] = [
     description: 'Off-grid decentralized communications via LoRa mesh.',
     detail: 'Meshtastic + Raspberry Pi bridge wired into the agent system. Built for disaster comms, off-grid coordination, and mesh intelligence.',
     tags: ['Meshtastic', 'Python', 'Raspberry Pi', 'LoRa'],
+    demoUrl: 'https://trade-post-mesh-production.up.railway.app/app',
   },
   {
     name: 'DigiJerry',
@@ -64,6 +67,8 @@ function StatusBadge({ status }: { status: Project['status'] }) {
 }
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
+  const [demoOpen, setDemoOpen] = useState(false)
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -114,14 +119,45 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             <h3 className="text-xl font-bold text-neutral-900 mb-1">{project.name}</h3>
             <p className="text-neutral-600 text-sm font-medium mb-3">{project.description}</p>
             <p className="text-neutral-400 text-sm leading-relaxed mb-4">{project.detail}</p>
-            <div className="flex flex-wrap gap-1.5">
+            <div className="flex flex-wrap gap-1.5 mb-4">
               {project.tags.map((tag) => (
                 <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-500 font-medium">
                   {tag}
                 </span>
               ))}
             </div>
+            {project.demoUrl && (
+              <button
+                onClick={() => setDemoOpen(!demoOpen)}
+                className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full transition-colors"
+                style={demoOpen
+                  ? { backgroundColor: '#E85D04', color: 'white' }
+                  : { backgroundColor: '#fff7f3', color: '#E85D04', border: '1px solid #E85D04' }
+                }
+              >
+                {demoOpen ? '✕ Close Demo' : '▶ Live Demo'}
+              </button>
+            )}
           </div>
+
+          {/* Inline iframe demo */}
+          {project.demoUrl && demoOpen && (
+            <div className="border-t border-neutral-100">
+              <div className="bg-neutral-50 px-4 py-2 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                <span className="text-xs text-neutral-500 font-medium">Live — seeded with demo data</span>
+              </div>
+              <div className="relative w-full" style={{ height: '600px' }}>
+                <iframe
+                  src={project.demoUrl}
+                  className="w-full h-full border-0"
+                  title={`${project.name} Live Demo`}
+                  loading="lazy"
+                  allow="geolocation"
+                />
+              </div>
+            </div>
+          )}
         </>
       )}
     </motion.div>
