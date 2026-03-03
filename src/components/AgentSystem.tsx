@@ -228,7 +228,7 @@ export default function AgentSystem() {
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-neutral-500 mb-6">
               Integrations & Skills
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
               {integrations.map((group, i) => (
                 <motion.div
                   key={group.category}
