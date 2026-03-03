@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { useState } from 'react'
 
 type Project = {
   name: string
@@ -9,6 +8,7 @@ type Project = {
   tags: string[]
   fullWidth?: boolean
   demoUrl?: string
+  heroImage?: string
 }
 
 const projects: Project[] = [
@@ -33,6 +33,7 @@ const projects: Project[] = [
     detail: 'Meshtastic + Raspberry Pi bridge wired into the agent system. Built for disaster comms, off-grid coordination, and mesh intelligence.',
     tags: ['Meshtastic', 'Python', 'Raspberry Pi', 'LoRa'],
     demoUrl: 'https://trade-post-mesh-production.up.railway.app/app',
+    heroImage: '/tradepost-feed.jpg',
   },
   {
     name: 'DigiJerry',
@@ -67,8 +68,6 @@ function StatusBadge({ status }: { status: Project['status'] }) {
 }
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
-  const [demoOpen, setDemoOpen] = useState(false)
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -104,11 +103,19 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       ) : (
         /* Standard card */
         <>
-          {/* Image placeholder */}
-          <div className="relative aspect-video bg-neutral-100 flex items-center justify-center">
-            <span className="text-neutral-300 text-2xl font-bold tracking-tight select-none">
-              {project.name}
-            </span>
+          {/* Hero image or placeholder */}
+          <div className="relative aspect-video overflow-hidden bg-neutral-100 flex items-center justify-center">
+            {project.heroImage ? (
+              <img
+                src={project.heroImage}
+                alt={`${project.name} screenshot`}
+                className="w-full h-full object-cover object-top"
+              />
+            ) : (
+              <span className="text-neutral-300 text-2xl font-bold tracking-tight select-none">
+                {project.name}
+              </span>
+            )}
             <div className="absolute top-3 right-3">
               <StatusBadge status={project.status} />
             </div>
@@ -127,37 +134,17 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               ))}
             </div>
             {project.demoUrl && (
-              <button
-                onClick={() => setDemoOpen(!demoOpen)}
+              <a
+                href={project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full transition-colors"
-                style={demoOpen
-                  ? { backgroundColor: '#E85D04', color: 'white' }
-                  : { backgroundColor: '#fff7f3', color: '#E85D04', border: '1px solid #E85D04' }
-                }
+                style={{ backgroundColor: '#fff7f3', color: '#E85D04', border: '1px solid #E85D04' }}
               >
-                {demoOpen ? '✕ Close Demo' : '▶ Live Demo'}
-              </button>
+                ▶ Live Demo ↗
+              </a>
             )}
           </div>
-
-          {/* Inline iframe demo */}
-          {project.demoUrl && demoOpen && (
-            <div className="border-t border-neutral-100">
-              <div className="bg-neutral-50 px-4 py-2 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-                <span className="text-xs text-neutral-500 font-medium">Live — seeded with demo data</span>
-              </div>
-              <div className="relative w-full" style={{ height: '600px' }}>
-                <iframe
-                  src={project.demoUrl}
-                  className="w-full h-full border-0"
-                  title={`${project.name} Live Demo`}
-                  loading="lazy"
-                  allow="geolocation"
-                />
-              </div>
-            </div>
-          )}
         </>
       )}
     </motion.div>
