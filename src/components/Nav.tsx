@@ -7,7 +7,7 @@ export default function Nav() {
     { label: 'Work', href: '#projects' },
     { label: 'AI System', href: '#ai-system' },
     { label: 'About', href: '#about' },
-    { label: 'Contact', href: 'https://www.instagram.com/sig.seeker', external: true },
+    { label: 'Contact', href: 'https://www.instagram.com/sig.seeker/reels/', external: true },
   ]
 
   return (

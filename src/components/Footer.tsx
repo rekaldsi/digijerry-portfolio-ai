@@ -4,7 +4,7 @@ export default function Footer() {
       <p className="text-white font-bold text-lg">JERRY CIESLIK</p>
       <p className="text-neutral-400 text-sm mt-1">Creative Generalist · AI Architect · Product Builder</p>
       <a
-        href="https://www.instagram.com/sig.seeker"
+        href="https://www.instagram.com/sig.seeker/reels/"
         target="_blank"
         rel="noopener noreferrer"
         className="block mt-4 text-sm font-medium transition-colors hover:opacity-80"

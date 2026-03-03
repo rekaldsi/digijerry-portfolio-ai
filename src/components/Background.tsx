@@ -31,7 +31,7 @@ export default function Background() {
 
           <div className="mt-10">
             <a
-              href="https://www.instagram.com/sig.seeker"
+              href="https://www.instagram.com/sig.seeker/reels/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-semibold transition-colors hover:opacity-80"
