@@ -52,6 +52,12 @@ export default function Hero() {
             >
               Instagram: @sig.seeker
             </a>
+            <a
+              href="mailto:sketchandslogan@gmail.com"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm border-2 border-neutral-300 text-neutral-700 hover:border-neutral-500 transition-colors"
+            >
+              Contact Me
+            </a>
           </div>
         </motion.div>
       </div>
