@@ -77,19 +77,14 @@ const tools = [
 
 const integrations = [
   {
-    category: 'AI & Models',
+    category: 'AI & LLMs',
     color: '#8B5CF6',
-    items: ['Claude API', 'Gemini', 'GPT / OpenAI', 'Ollama (local)', 'LMStudio', 'MLX Whisper', 'OpenAI Whisper', 'Google AI Studio'],
+    items: ['Claude (Anthropic)', 'GPT / OpenAI', 'Gemini', 'Ollama (local)', 'LMStudio', 'Google AI Studio', 'MLX Whisper', 'ElevenLabs TTS'],
   },
   {
-    category: 'Productivity',
-    color: '#3B82F6',
-    items: ['Apple Notes', 'Apple Reminders', 'Bear Notes', 'Obsidian', 'Things 3', 'Notion', 'Trello', '1Password'],
-  },
-  {
-    category: 'Communication',
-    color: '#10B981',
-    items: ['Telegram', 'Signal', 'Discord', 'Slack', 'iMessage', 'WhatsApp CLI', 'Himalaya (Email)'],
+    category: 'GenAI Creative',
+    color: '#EC4899',
+    items: ['Midjourney', 'RunwayML', 'Luma Dream Machine', 'Hailuo MiniMax', 'Pika', 'Kling', 'VEO', 'Krea', 'Hedra', 'Higgsfield'],
   },
   {
     category: 'Dev & Infra',
@@ -97,19 +92,24 @@ const integrations = [
     items: ['GitHub CLI', 'Railway', 'Supabase', 'Convex', 'PM2', 'tmux', 'Playwright MCP', 'MCP Protocol'],
   },
   {
-    category: 'Creative & Media',
-    color: '#F59E0B',
-    items: ['Figma Sync', 'Spotify', 'Sonos', 'ElevenLabs TTS', 'Peekaboo (macOS UI)', 'Video Frames', 'nano-pdf', 'OpenAI Image Gen'],
+    category: 'Productivity',
+    color: '#3B82F6',
+    items: ['Apple Notes', 'Apple Reminders', 'Obsidian', 'Things 3', 'Notion', 'Trello', '1Password', 'Bear Notes'],
+  },
+  {
+    category: 'Communication',
+    color: '#10B981',
+    items: ['Telegram', 'Signal', 'Discord', 'Slack', 'iMessage', 'WhatsApp', 'Email (IMAP/SMTP)'],
   },
   {
     category: 'Data & APIs',
     color: '#06B6D4',
-    items: ['RapidAPI', 'ComicVine API', 'GoCollect', 'PriceCharting', 'Metron', 'GCD', 'Google Workspace', 'Weather API'],
+    items: ['RapidAPI', 'Google Workspace', 'Figma', 'OpenAI Image Gen', 'Weather API', 'Spotify', 'Sonos'],
   },
   {
     category: 'Hardware & Mesh',
-    color: '#EC4899',
-    items: ['Meshtastic LoRa', 'Raspberry Pi', 'Mac mini (host)', 'Philips Hue', 'Camera nodes', 'Screen recording', 'Location services'],
+    color: '#F59E0B',
+    items: ['Meshtastic LoRa', 'Raspberry Pi', 'Mac mini (host)', 'Philips Hue', 'Camera nodes', 'Screen recording'],
   },
 ]
 
