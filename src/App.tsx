@@ -9,6 +9,10 @@ import Background from './components/Background'
 import Footer from './components/Footer'
 import Book from './pages/Book'
 import TDA from './pages/TDA'
+import CaseKodex from './pages/CaseKodex'
+import CaseOverwatch from './pages/CaseOverwatch'
+import CaseTradePost from './pages/CaseTradePost'
+import CaseBotique from './pages/CaseBotique'
 
 function Home() {
   return (
@@ -34,6 +38,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/book" element={<Book />} />
         <Route path="/tda" element={<TDA />} />
+        <Route path="/case/kodex" element={<CaseKodex />} />
+        <Route path="/case/overwatch" element={<CaseOverwatch />} />
+        <Route path="/case/tradepost" element={<CaseTradePost />} />
+        <Route path="/case/botique" element={<CaseBotique />} />
       </Routes>
     </BrowserRouter>
   )
