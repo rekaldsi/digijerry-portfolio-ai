@@ -14,31 +14,31 @@ const fadeUp = {
 const pillars = [
   {
     num: '01',
-    title: 'The Knowledge Spine',
-    body: 'Codified recurring creative truths into a structured memory framework: vehicle positioning, regional persona bias, offer categories, platform constraints, and team approval chains. Without this, AI output is random. With it, every generated asset knows what it is, where it is going, and who it is talking to.',
+    title: 'Knowledge Layer',
+    body: 'Critical marketing intelligence distributed across presentations, decks, and individual expertise was structured into a centralized, searchable knowledge base. Vehicle positioning, regional market nuances, audience insights, creative frameworks, and production workflows organized so teams stop rebuilding context on every new project.',
   },
   {
     num: '02',
-    title: 'DEAR as a Programmable Engine',
-    body: 'DEAR had been a durable campaign format for six years. TDAiOS systematized it into a rules engine. Every AI output had to pass a Tier lens, vehicle voice structure, Feature to Emotion to Action logic, offer inclusion, and modular VO readiness for DCO. This encoded creative discipline. It stopped AI from drifting into Tier 1 brand manifestos or feature dumps without emotional logic.',
+    title: 'Creative Intelligence Layer',
+    body: 'Translates structured knowledge into creative guidance. Helps teams generate messaging aligned with campaign frameworks and brand principles. The goal is not to replace creative thinking. It is to reduce repetitive work, accelerate ideation, and keep output grounded in what the organization already knows.',
   },
   {
     num: '03',
-    title: 'Governance Over Hype',
-    body: 'The system was framed around auditability, version control, and guardrails before automation. Clear container logic (Tier 1 vs Tier 2 vs Tier 3) reduced QA friction and kept output compliant under Publicis AI governance requirements. This wasn\'t "let\'s use AI." It was "let\'s make the system safer at scale."',
+    title: 'Governance Layer',
+    body: 'Retail marketing requires strict accuracy across hundreds of creative variations each month. The Governance Layer ensures automated and AI-assisted workflows stay aligned with brand guidelines and operational rules. Automation scales safely. Compliance risk stays low. The system does not drift.',
   },
   {
     num: '04',
-    title: 'Connected Flow Architecture',
-    body: 'TDAiOS connected what had been adjacent efforts into one pipeline: live offer data flowing into DEAR scripting, into DCO execution, into media, social, chat, retargeting, and measurement. A script generated for a specific model and offer in a specific region carried the right persona bias, the right voice, the right dynamic super, and tied back to Tier 2 sales KPIs.',
+    title: 'The Connective System',
+    body: 'The organization did not need more tools. It needed a connective system that organizes the knowledge and logic behind the work. TDA iOS was designed to bridge creative, technology, production, and strategy into one shared operational framework rather than a collection of adjacent efforts.',
   },
 ]
 
 const outcomes = [
-  { title: 'Formal AI-Readiness Narrative', body: 'Leadership had a structured story for where the organization stood on AI. Not hype, not fear. A documented readiness model with a clear path forward.' },
-  { title: 'Vendor Evaluation Criteria', body: 'Built structured criteria for evaluating automation vendors: the difference between real automation depth and template wrapping dressed up as AI.' },
-  { title: 'Reduced Operational Drag', body: 'At 100 to 300+ assets per month, reducing friction at the scripting, versioning, and QA stages compounds fast. The framework made that reduction systematic.' },
-  { title: 'Publicis Alignment', body: 'TDAiOS anticipated the shift from AI novelty to measurable business outcomes, positioning the division as designing a governed creative operating system, not just experimenting with tools.' },
+  { title: 'Intelligence Framework Presented to Leadership', body: 'A centralized intelligence framework designed from the ground up and presented directly to client leadership and the technology team. Not a slide deck of ideas. A structured platform concept with defined components and a clear operational model.' },
+  { title: 'Workflow Friction Mapped and Documented', body: 'Analyzed the existing operational ecosystem, identified where knowledge was breaking down, and documented the friction points slowing creative and production teams. The diagnosis came before the prescription.' },
+  { title: 'Cross-Discipline Platform Concept', body: 'Designed a platform concept that bridges creative, technology, production, and strategy. Four disciplines that had been running in parallel now had a shared framework to operate within.' },
+  { title: 'Governance Model for Safe Automation', body: 'Built a governance model that allows automation to scale without introducing compliance risk. At the volume retail marketing demands, accuracy is not optional. The model makes it systematic.' },
 ]
 
 export default function TDA() {
@@ -64,7 +64,7 @@ export default function TDA() {
 
           <motion.p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#E85D04' }}
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            Case Study · TDAiOS
+            Case Study · TDA iOS
           </motion.p>
 
           <motion.h1 className="text-5xl md:text-7xl font-black text-white leading-none tracking-tight mb-6"
@@ -74,15 +74,15 @@ export default function TDA() {
 
           <motion.p className="text-neutral-400 text-lg max-w-2xl leading-relaxed mb-14"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
-            A governance-first operating model designed and prototyped for Toyota TDA, showing their tech leads and creative leadership how to unify DEAR scripting, dynamic offer logic, personalization rules, and AI-assisted production into one connected system. Built to make the case that real AI infrastructure isn't a prompt or a button, it's a connected system with memory, rules, and measurable outcomes.
+            A 4-month engagement at Saatchi and Saatchi New York, embedded with the Toyota Dealer Association retail division. TDA iOS was designed as an intelligent operating layer: centralizing creative knowledge, enabling governed automation, and connecting the disciplines that produce retail marketing at scale.
           </motion.p>
 
           <motion.div className="flex flex-wrap gap-4"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
             {[
-              { value: '100–300+', label: 'Assets shipped per month' },
-              { value: '6 Years', label: 'Of DEAR logic formalized' },
-              { value: 'Tier 2', label: 'Automotive retail scale' },
+              { value: 'Hundreds', label: 'Creative variations per month' },
+              { value: '4 Months', label: 'Engagement duration' },
+              { value: 'Saatchi & Saatchi NY', label: 'Agency context' },
             ].map((s) => (
               <div key={s.label} className="rounded-xl px-5 py-3 border border-neutral-800">
                 <div className="text-white font-bold text-sm">{s.value}</div>
@@ -101,22 +101,22 @@ export default function TDA() {
               The Problem
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
-              Creative was modular. The system was not.
+              Critical knowledge was fragmented. Teams were operating in parallel.
             </h2>
             <div className="space-y-5 text-neutral-600 leading-relaxed text-lg">
               <p>
-                The retail advertising division had real assets: a strong six-year creative framework, a dynamic offer system, DCO execution partners, regional persona mappings, and teams across creative, tech, production, analytics, and social. The infrastructure existed. What didn't exist was anything connecting it.
+                The Toyota Dealer Association retail division produces localized marketing across regional dealer groups every month. Vehicle positioning, audience insights, regional market conditions, campaign frameworks, production workflows: these lived inside scattered presentations, campaign decks, and individual expertise. Every time a new project started, teams had to rebuild context from scratch.
               </p>
               <p>
-                Dynamic video scaling, social automation experiments, AI chat pilots, model-specific retargeting logic, and competitive creative systems were all running as adjacent efforts. No shared memory. No governance model. No way to connect script logic to offer data to audience logic to production logic at the speed and volume Tier 2 retail demands.
+                Automation tools were entering the workflow without governance. Creative, production, and technology teams were running in parallel rather than through a shared platform. The risk was not that the tools were bad. The risk was that there was no system to organize the logic behind the work.
               </p>
               <p>
-                Meanwhile, pressure from leadership was shifting from AI hype to connected systems with measurable outcomes. The timing created the opening. TDAiOS was the attempt to build the unifying logic layer before the window closed.
+                The insight: the organization did not need more tools. It needed a connective system that organizes the knowledge and logic behind the work, so automation could scale without introducing compliance risk.
               </p>
             </div>
             <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-8 italic text-base leading-relaxed">
               <p className="text-neutral-700 font-medium">
-                "The goal wasn't to introduce AI. It was to show what it actually takes to make AI usable, auditable, and scalable inside an enterprise creative machine, and build the prototype that proved it."
+                "The goal was not to introduce automation. It was to design the structure that makes automation safe to use at the volume retail marketing demands."
               </p>
             </blockquote>
           </motion.div>
@@ -128,21 +128,21 @@ export default function TDA() {
         <div className="max-w-3xl mx-auto">
           <motion.div {...fadeUp}>
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#E85D04' }}>
-              What TDAiOS Actually Was
+              What TDA iOS Actually Was
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Not software. Not an app. An operating model.
+              Not software. Not an app. An intelligent operating layer.
             </h2>
             <p className="text-neutral-400 leading-relaxed text-lg mb-6">
-              TDAiOS was a connected intelligence layer that unified: creative logic, offer data, persona strategy, regional nuance, DCO mechanics, AI-assisted production, and compliance guardrails. It modeled how Tier 2 retail content could be generated, versioned, and deployed at scale, with governance built in from the start.
+              TDA iOS was designed as a framework, not a product. Three components working together: a Knowledge Layer that centralizes and structures critical marketing information, a Creative Intelligence Layer that translates that knowledge into guided creative output, and a Governance Layer that keeps automated workflows aligned with brand rules and compliance requirements.
             </p>
             <p className="text-neutral-400 leading-relaxed text-lg">
-              Think of it as the operating system that should sit beneath the tools, giving every asset, at every stage, a shared set of rules to follow. I designed it, prototyped it, and used it to show decision-makers what was actually possible.
+              The goal was to give every team, at every stage, a shared foundation to work from. Not more tools sitting next to each other. A system connecting the logic that already existed inside the organization.
             </p>
 
             <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-8 italic text-base leading-relaxed">
               <p className="text-neutral-300 font-medium">
-                "Not a prompt. Not a button. A connected pipeline with memory, governance, and rules that encode creative discipline."
+                "Real AI infrastructure is not a prompt or a button. It is a connected system with memory, rules, and governance built in from the start."
               </p>
             </blockquote>
           </motion.div>
@@ -157,7 +157,7 @@ export default function TDA() {
               The Architecture
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">
-              Four pillars. One connected system.
+              Three layers. One connected system.
             </h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -183,20 +183,20 @@ export default function TDA() {
               The Connected Pipeline
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-              What one connected pipeline looks like.
+              What one connected system actually looks like.
             </h2>
             <p className="text-neutral-400 leading-relaxed text-lg mb-10">
-              Before TDAiOS, adjacent systems ran independently. After, a single logic chain connected every step:
+              Before TDA iOS, the steps below were separate conversations across separate teams. After, a single logic chain connects every stage:
             </p>
             <div className="space-y-4">
               {[
-                'Live offer data surfaces the right incentive for a specific model in a specific region',
-                'Knowledge layer confirms the regional persona bias and vehicle positioning',
-                'DEAR script generated with the correct voice, emotional arc, and offer integration',
-                'Modular supers built for DCO, dynamic pricing swapped by execution partner',
-                'Retargeting logic resolves to the last-touched model for the individual user',
-                'Chat layer defers offers appropriately for legal compliance',
-                'Measurement ties the full chain back to Tier 2 sales outcomes',
+                'Marketing knowledge captured from existing presentations, decks, playbooks, and team expertise',
+                'Information structured into a centralized knowledge base: vehicle positioning, regional nuances, audience insights, production workflows',
+                'Knowledge translated into creative guidance aligned with campaign frameworks and brand principles',
+                'AI-assisted ideation generates messaging within guardrails, grounded in what the organization already knows',
+                'Governance checks validate output against brand guidelines, compliance rules, and operational standards',
+                'Content adapted for specific regional markets, dealer promotions, and vehicle availability',
+                'Hundreds of creative variations deployed across media channels each month with accuracy at scale',
               ].map((step, i) => (
                 <motion.div key={i}
                   initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
@@ -210,7 +210,7 @@ export default function TDA() {
               ))}
             </div>
             <p className="text-neutral-500 text-sm mt-10 italic">
-              That's a system. Before TDAiOS, those were seven separate conversations.
+              That is a system. Before TDA iOS, those were seven separate conversations.
             </p>
           </motion.div>
         </div>
@@ -221,10 +221,10 @@ export default function TDA() {
         <div className="max-w-5xl mx-auto">
           <motion.div {...fadeUp} className="mb-14">
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#E85D04' }}>
-              What It Enabled
+              What It Produced
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">
-              Not fully productized. Still consequential.
+              A framework designed. A case made.
             </h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -246,17 +246,17 @@ export default function TDA() {
         <div className="max-w-3xl mx-auto text-center">
           <motion.div {...fadeUp}>
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#E85D04' }}>
-              The Strategic Hook
+              The Takeaway
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Not "using AI." Designing the system that makes AI safe to use at scale.
+              Not more tools. A system that connects the ones that already exist.
             </h2>
             <p className="text-neutral-400 leading-relaxed text-lg mb-8">
-              TDAiOS wasn't software handed off to engineering. It was a prototype and operating model I designed to show tech leads and creative leadership how a real AI system needs to be built. Not a prompt. Not a button. A connected pipeline with memory, governance, and rules that encode creative discipline. The kind of thing that scales production without scaling chaos.
+              The strategic insight behind TDA iOS was straightforward: organizations at this scale do not struggle because they lack tools. They struggle because nothing organizes the logic those tools need to work from. Knowledge is fragmented. Teams are parallel. Automation enters without rules. TDA iOS was designed to solve all three simultaneously.
             </p>
             <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-8 italic text-base leading-relaxed text-left">
               <p className="text-neutral-300 font-medium">
-                "I built the prototype to make the invisible visible. That's the hard part. And I did it."
+                "The hard part is not adopting AI. The hard part is building the connective system that makes AI safe, accurate, and scalable inside an organization that cannot afford to get it wrong."
               </p>
             </blockquote>
             <a href="/#contact" onClick={(e) => { e.preventDefault(); sessionStorage.setItem("hashNav", "#contact"); window.location.href = "/#contact"; }}
