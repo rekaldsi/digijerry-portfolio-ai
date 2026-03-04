@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import chaptersRaw from '../data/agi-book-chapters.json'
 
@@ -186,6 +186,10 @@ function ChapterAccordion({
 
 export default function Book() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const handleToggle = (i: number) => {
     setOpenIndex(openIndex === i ? null : i)

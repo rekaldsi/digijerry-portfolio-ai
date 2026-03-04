@@ -47,11 +47,11 @@ const projects: Project[] = [
 ]
 
 const agiBbook: Project = {
-  name: 'AGI Book',
+  name: 'After Intelligence',
   status: 'WRITTEN',
-  description: 'A multi-chapter exploration of AGI — written, recorded, not yet published.',
-  detail: 'Started as a framework for understanding where artificial general intelligence is heading. Became something bigger. Podcast coming.',
-  tags: ['Writing', 'Podcast', 'AGI'],
+  description: 'AGI and Its Implications on Humanity — 21 chapters on what comes after AI.',
+  detail: 'Written before AGI became a mainstream conversation. Covers consciousness, rights, identity, governance, the singularity, and what it means to be human in a world where machines can think. Originally conceived as a podcast. Became a book.',
+  tags: ['AGI', 'Writing', '21 Chapters', 'Podcast'],
   fullWidth: true,
   link: '/book',
 }
@@ -104,6 +104,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             {project.link && (
               <Link
                 to={project.link}
+                onClick={() => window.scrollTo(0, 0)}
                 className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2 rounded-full transition-colors"
                 style={{ backgroundColor: '#fff7f3', color: '#E85D04', border: '1px solid #E85D04' }}
               >
