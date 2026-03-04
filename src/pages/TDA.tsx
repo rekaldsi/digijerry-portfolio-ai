@@ -74,7 +74,7 @@ export default function TDA() {
 
           <motion.p className="text-neutral-400 text-lg max-w-2xl leading-relaxed mb-14"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
-            A governance-first operating model designed and prototyped to show a major automotive brand how to unify DEAR scripting, dynamic offer logic, personalization rules, and AI-assisted production into one connected system. Built to help leadership understand what real AI infrastructure looks like, not a prompt, not a button, but a connected system with memory, rules, and measurable outcomes.
+            A governance-first operating model designed and prototyped for Toyota TDA, showing their tech leads and creative leadership how to unify DEAR scripting, dynamic offer logic, personalization rules, and AI-assisted production into one connected system. Built to make the case that real AI infrastructure isn't a prompt or a button, it's a connected system with memory, rules, and measurable outcomes.
           </motion.p>
 
           <motion.div className="flex flex-wrap gap-4"

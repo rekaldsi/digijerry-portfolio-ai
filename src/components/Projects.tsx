@@ -56,7 +56,7 @@ const projects: Project[] = [
     name: 'TDAiOS',
     status: 'LIVE',
     description: 'An AI intelligence OS built to govern, centralize, and activate creative workflows at scale.',
-    detail: 'Designed and deployed an intelligence operating system for a major automotive retail advertising group. Built the governance framework, centralized knowledge base, and structured prompt architecture that gave creative and production teams a single source of truth for AI-assisted work. Moved the organization from ad-hoc AI use to a governed, scalable system.',
+    detail: 'Designed and prototyped a governed AI operating model for Toyota TDA, the Tier 2 retail advertising division. Built the knowledge base architecture, DEAR scripting rules engine, and connected pipeline to show tech leads and creative leadership what real AI infrastructure looks like. A proof of concept that made the invisible visible.',
     tags: ['AI Governance', 'Knowledge Systems', 'Prompt Architecture', 'DCO', 'Workflow Design'],
     heroImage: '/tdaios-card.jpg',
     link: '/tda',
