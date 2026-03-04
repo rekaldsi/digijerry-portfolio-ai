@@ -37,7 +37,7 @@ export default function HowIWork() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
           {steps.map((step, i) => (
             <motion.div
               key={step.num}
@@ -45,12 +45,13 @@ export default function HowIWork() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, ease: 'easeOut', delay: i * 0.1 }}
+              className="transition-all duration-200 ease-out"
             >
-              <div className="text-5xl font-black mb-4 leading-none" style={{ color: '#E85D04' }}>
+              <div className="text-5xl font-black mb-5 leading-none" style={{ color: '#E85D04' }}>
                 {step.num}
               </div>
-              <h3 className="text-xl font-bold text-neutral-900 mb-3">{step.title}</h3>
-              <p className="text-neutral-500 leading-relaxed text-sm">{step.body}</p>
+              <h3 className="text-xl font-bold text-neutral-900 mb-4 tracking-tight">{step.title}</h3>
+              <p className="text-neutral-600 text-sm leading-relaxed">{step.body}</p>
             </motion.div>
           ))}
         </div>
@@ -70,7 +71,7 @@ export default function HowIWork() {
               style={{ backgroundColor: '#E85D04' }}
             />
           </p>
-          <p className="text-neutral-500 mt-6 text-base max-w-2xl leading-relaxed">
+          <p className="text-neutral-600 mt-6 text-base max-w-2xl leading-relaxed">
             What that means for you: faster shipping, lower overhead, and a creative partner who can lead strategy in the morning and deploy a feature by afternoon. No handoff friction. No translation layer. Just results.
           </p>
         </motion.div>

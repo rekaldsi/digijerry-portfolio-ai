@@ -86,7 +86,7 @@ export default function TDA() {
             ].map((s) => (
               <div key={s.label} className="rounded-xl px-5 py-3 border border-neutral-800">
                 <div className="text-white font-bold text-sm">{s.value}</div>
-                <div className="text-neutral-500 text-xs mt-0.5">{s.label}</div>
+                <div className="text-neutral-400 text-xs mt-0.5">{s.label}</div>
               </div>
             ))}
           </motion.div>
@@ -114,9 +114,9 @@ export default function TDA() {
                 Meanwhile, pressure from leadership was shifting from AI hype to connected systems with measurable outcomes. The timing created the opening. TDAiOS was the attempt to build the unifying logic layer before the window closed.
               </p>
             </div>
-            <blockquote className="border-l-4 pl-6 py-2 mt-10" style={{ borderColor: '#E85D04' }}>
-              <p className="text-xl font-semibold text-neutral-800 italic leading-relaxed">
-                "The goal wasn't to introduce AI. It was to show what it actually takes to make AI usable, auditable, and scalable inside an enterprise creative machine — and build the prototype that proved it."
+            <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-8 italic text-base leading-relaxed">
+              <p className="text-neutral-700 font-medium">
+                "The goal wasn't to introduce AI. It was to show what it actually takes to make AI usable, auditable, and scalable inside an enterprise creative machine, and build the prototype that proved it."
               </p>
             </blockquote>
           </motion.div>
@@ -134,11 +134,17 @@ export default function TDA() {
               Not software. Not an app. An operating model.
             </h2>
             <p className="text-neutral-400 leading-relaxed text-lg mb-6">
-              TDAiOS was a connected intelligence layer that unified: creative logic, offer data, persona strategy, regional nuance, DCO mechanics, AI-assisted production, and compliance guardrails. It modeled how Tier 2 retail content could be generated, versioned, and deployed at scale — with governance built in from the start.
+              TDAiOS was a connected intelligence layer that unified: creative logic, offer data, persona strategy, regional nuance, DCO mechanics, AI-assisted production, and compliance guardrails. It modeled how Tier 2 retail content could be generated, versioned, and deployed at scale, with governance built in from the start.
             </p>
             <p className="text-neutral-400 leading-relaxed text-lg">
               Think of it as the operating system that should sit beneath the tools, giving every asset, at every stage, a shared set of rules to follow. I designed it, prototyped it, and used it to show decision-makers what was actually possible.
             </p>
+
+            <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-8 italic text-base leading-relaxed">
+              <p className="text-neutral-300 font-medium">
+                "Not a prompt. Not a button. A connected pipeline with memory, governance, and rules that encode creative discipline."
+              </p>
+            </blockquote>
           </motion.div>
         </div>
       </section>
@@ -159,10 +165,10 @@ export default function TDA() {
               <motion.div key={item.num}
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="border-t-2 pt-8" style={{ borderColor: '#E85D04' }}>
+                className="border-t-2 pt-8 transition-all duration-200 ease-out" style={{ borderColor: '#E85D04' }}>
                 <div className="text-3xl font-black mb-4 leading-none" style={{ color: '#E85D04' }}>{item.num}</div>
-                <h3 className="text-neutral-900 font-bold text-lg mb-3">{item.title}</h3>
-                <p className="text-neutral-500 text-sm leading-relaxed">{item.body}</p>
+                <h3 className="text-neutral-900 font-semibold text-lg mb-3">{item.title}</h3>
+                <p className="text-neutral-600 text-sm leading-relaxed">{item.body}</p>
               </motion.div>
             ))}
           </div>
@@ -182,7 +188,7 @@ export default function TDA() {
             <p className="text-neutral-400 leading-relaxed text-lg mb-10">
               Before TDAiOS, adjacent systems ran independently. After, a single logic chain connected every step:
             </p>
-            <div className="space-y-3">
+            <div className="space-y-4">
               {[
                 'Live offer data surfaces the right incentive for a specific model in a specific region',
                 'Knowledge layer confirms the regional persona bias and vehicle positioning',
@@ -195,7 +201,7 @@ export default function TDA() {
                 <motion.div key={i}
                   initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.07 }}
-                  className="flex items-start gap-4">
+                  className="flex items-start gap-4 transition-all duration-200 ease-out">
                   <span className="text-sm font-black mt-0.5 shrink-0" style={{ color: '#E85D04' }}>
                     {String(i + 1).padStart(2, '0')}
                   </span>
@@ -226,9 +232,9 @@ export default function TDA() {
               <motion.div key={item.title}
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="rounded-2xl p-8 bg-neutral-50 border border-neutral-100">
-                <h3 className="font-bold text-neutral-900 text-base mb-3">{item.title}</h3>
-                <p className="text-neutral-500 text-sm leading-relaxed">{item.body}</p>
+                className="rounded-2xl p-8 bg-neutral-50 border border-neutral-100 transition-all duration-200 ease-out">
+                <h3 className="font-semibold text-neutral-900 text-base mb-3">{item.title}</h3>
+                <p className="text-neutral-600 text-sm leading-relaxed">{item.body}</p>
               </motion.div>
             ))}
           </div>
@@ -248,12 +254,14 @@ export default function TDA() {
             <p className="text-neutral-400 leading-relaxed text-lg mb-8">
               TDAiOS wasn't software handed off to engineering. It was a prototype and operating model I designed to show tech leads and creative leadership how a real AI system needs to be built. Not a prompt. Not a button. A connected pipeline with memory, governance, and rules that encode creative discipline. The kind of thing that scales production without scaling chaos.
             </p>
-            <p className="text-white font-bold text-lg mb-10">
-              I built the prototype to make the invisible visible. That's the hard part. And I did it.
-            </p>
+            <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-8 italic text-base leading-relaxed text-left">
+              <p className="text-neutral-300 font-medium">
+                "I built the prototype to make the invisible visible. That's the hard part. And I did it."
+              </p>
+            </blockquote>
             <a href="/#contact" onClick={(e) => { e.preventDefault(); sessionStorage.setItem("hashNav", "#contact"); window.location.href = "/#contact"; }}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white text-sm transition-opacity hover:opacity-90"
-              style={{ backgroundColor: '#E85D04' }}>
+              className="inline-flex items-center gap-2 text-base font-semibold transition-opacity hover:opacity-80"
+              style={{ color: '#E85D04' }}>
               Get in touch →
             </a>
           </motion.div>

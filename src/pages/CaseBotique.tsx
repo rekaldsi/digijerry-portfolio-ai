@@ -55,7 +55,7 @@ export default function CaseBotique() {
             {[{ value: 'Concept', label: 'Designed and built' }, { value: 'USDC', label: 'Base L2 payments' }, { value: 'Beta', label: 'Live at thebotique.ai' }].map((s) => (
               <div key={s.label} className="rounded-xl px-5 py-3 border border-neutral-800">
                 <div className="text-white font-bold text-sm">{s.value}</div>
-                <div className="text-neutral-500 text-xs mt-0.5">{s.label}</div>
+                <div className="text-neutral-400 text-xs mt-0.5">{s.label}</div>
               </div>
             ))}
           </motion.div>
@@ -94,8 +94,8 @@ export default function CaseBotique() {
             <p className="text-neutral-600 leading-relaxed text-lg mb-6">
               TheBotique was conceived as the infrastructure layer for an economy where AI agents do real work. Not a chatbot directory. A marketplace with verified agents, task categories, instant settlement, and, the part that makes it genuinely different, agents that can hire other agents to complete sub-tasks autonomously.
             </p>
-            <blockquote className="border-l-4 pl-6 py-2" style={{ borderColor: '#E85D04' }}>
-              <p className="text-xl font-semibold text-neutral-800 italic leading-relaxed">
+            <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-8 italic text-base leading-relaxed">
+              <p className="text-neutral-700 font-medium">
                 "The same way Upwork changed how humans hire freelancers, this changes how agents access each other."
               </p>
             </blockquote>
@@ -115,13 +115,22 @@ export default function CaseBotique() {
               <motion.div key={item.num}
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="rounded-2xl p-8 border border-neutral-800">
-                <div className="text-4xl font-black mb-4 leading-none" style={{ color: '#E85D04' }}>{item.num}</div>
-                <h3 className="text-white font-bold text-lg mb-3">{item.title}</h3>
+                className="rounded-2xl p-8 border border-neutral-800 transition-all duration-200 ease-out">
+                <div className="text-4xl font-black mb-5 leading-none" style={{ color: '#E85D04' }}>{item.num}</div>
+                <h3 className="text-white font-semibold text-lg mb-3">{item.title}</h3>
                 <p className="text-neutral-400 text-sm leading-relaxed">{item.body}</p>
               </motion.div>
             ))}
           </div>
+
+          {/* Pull quote */}
+          <motion.div {...fadeUp} className="mt-14">
+            <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-6 italic text-base leading-relaxed">
+              <p className="text-neutral-300 font-medium">
+                "Not a chatbot directory. A marketplace with verified agents, task categories, instant settlement, and agents that can hire other agents."
+              </p>
+            </blockquote>
+          </motion.div>
         </div>
       </section>
 
@@ -135,8 +144,8 @@ export default function CaseBotique() {
               TheBotique is live at thebotique.ai. It was designed and built to explore what the AI agent economy actually needs at the infrastructure level. The fact that it exists as a working site, with browse, categories, listing, and payment flows, is the point. This is what it looks like when someone thinks about a problem, then builds the answer.
             </p>
             <a href="/#contact" onClick={(e) => { e.preventDefault(); sessionStorage.setItem("hashNav", "#contact"); window.location.href = "/#contact"; }}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white text-sm transition-opacity hover:opacity-90"
-              style={{ backgroundColor: '#E85D04' }}>
+              className="inline-flex items-center gap-2 text-base font-semibold transition-opacity hover:opacity-80"
+              style={{ color: '#E85D04' }}>
               Let's talk →
             </a>
           </motion.div>

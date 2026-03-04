@@ -25,6 +25,7 @@ const capabilities = [
     body: 'A 0–100 composite score computed from four weighted metrics: BLE device density, mesh node coverage, WiFi relay potential, and signal quality. The first formalized metric for whether a neighborhood can support decentralized coordination without cloud dependency.',
     image: '/overwatch-status.jpg',
     imageAlt: 'OVERWATCH system status panel, 5.2M scans, Supabase connected, ADS-B live',
+    caption: 'System status panel: 5.2M cumulative scans, Supabase connected, ADS-B live feed active.',
   },
   {
     num: '02',
@@ -32,6 +33,7 @@ const capabilities = [
     body: 'Nine toggleable intelligence layers on one map: live aircraft (ADS-B), BLE devices (50,000+), WiFi scatter, mesh nodes, street traffic, speed cams, earthquakes, weather radar, and GDACS global alerts. Each layer sourced, ingested, and rendered in real time.',
     image: '/overwatch-layers.jpg',
     imageAlt: 'OVERWATCH data layers panel, 9 layers including BLE, mesh, aircraft, traffic',
+    caption: 'Data layers panel: 9 real-time intelligence layers, toggled independently on a single map.',
   },
   {
     num: '03',
@@ -39,12 +41,14 @@ const capabilities = [
     body: 'Grid-based coverage analysis at ~100m cell resolution. Each cell scored for mesh viability, relay potential, and redundancy. Gap detection surfaces exactly where the network is thin. Relay placement recommendations tell you where to put hardware to fix it.',
     image: '/overwatch-map-full.jpg',
     imageAlt: 'OVERWATCH Chicago intelligence grid, full wardrive coverage visualization',
+    caption: 'Chicago intelligence grid: full wardrive coverage, 368 mesh nodes, 5.2M cumulative scans.',
   },
   {
     num: '04',
     title: 'Bridge Node and Topology Modeling',
     body: 'Critical connectivity modeling identifies which nodes, if lost, would fragment the mesh. BitChat-style hop simulation estimates redundancy across the network. These aren\'t visualizations, they\'re planning tools for infrastructure deployment.',
     image: null,
+    caption: null,
   },
 ]
 
@@ -111,7 +115,7 @@ export default function CaseOverwatch() {
             {stats.map((s) => (
               <div key={s.label} className="rounded-xl px-5 py-3 border border-neutral-800">
                 <div className="text-white font-bold text-sm">{s.value}</div>
-                <div className="text-neutral-500 text-xs mt-0.5">{s.label}</div>
+                <div className="text-neutral-400 text-xs mt-0.5">{s.label}</div>
               </div>
             ))}
           </motion.div>
@@ -123,7 +127,7 @@ export default function CaseOverwatch() {
         <div className="max-w-5xl mx-auto">
           <motion.div {...fadeUp}>
             <img src="/overwatch-map-full.jpg" alt="OVERWATCH intelligence grid" className="w-full rounded-2xl border border-neutral-800" />
-            <p className="text-neutral-500 text-xs mt-3 text-center">
+            <p className="text-sm text-neutral-400 mt-3 text-center italic">
               Chicago, OVERWATCH grid live. 154 aircraft tracked via ADS-B. 50,000 BLE devices. 368 mesh nodes. 5.2M cumulative scans.
             </p>
           </motion.div>
@@ -149,8 +153,8 @@ export default function CaseOverwatch() {
                 At that point, this wasn't a mapping tool anymore. It was a strategic planning engine for neighborhood-scale infrastructure resilience. ScanMap described what it did. OVERWATCH describes what it is.
               </p>
             </div>
-            <blockquote className="border-l-4 pl-6 py-2 mt-10" style={{ borderColor: '#00BFFF' }}>
-              <p className="text-xl font-semibold text-neutral-800 italic leading-relaxed">
+            <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-8 italic text-base leading-relaxed">
+              <p className="text-neutral-700 font-medium">
                 "Most neighborhood platforms assume connectivity. OVERWATCH measures it."
               </p>
             </blockquote>
@@ -165,12 +169,12 @@ export default function CaseOverwatch() {
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00BFFF' }}>Evolution</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Four phases. One through-line.</h2>
           </motion.div>
-          <div className="space-y-8">
+          <div className="space-y-10">
             {phases.map((p, i) => (
               <motion.div key={p.phase}
                 initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="flex gap-6 items-start">
+                className="flex gap-6 items-start transition-all duration-200 ease-out">
                 <div className="shrink-0 w-1 self-stretch rounded-full" style={{ backgroundColor: i < 3 ? '#00BFFF' : '#334155' }} />
                 <div>
                   <span className="text-xs font-bold tracking-widest uppercase" style={{ color: i < 3 ? '#00BFFF' : '#475569' }}>{p.phase}</span>
@@ -190,33 +194,44 @@ export default function CaseOverwatch() {
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00BFFF' }}>Capabilities</p>
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">What the intelligence engine actually does.</h2>
           </motion.div>
-          <div className="space-y-20">
+          <div className="space-y-24">
             {capabilities.map((item, i) => (
               <motion.div key={item.num}
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                transition={{ duration: 0.5 }}>
+                transition={{ duration: 0.5 }}
+                className="transition-all duration-200 ease-out">
                 {item.image ? (
-                  <div className={`flex flex-col ${i % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-10 items-center`}>
+                  <div className={`flex flex-col ${i % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 items-center`}>
                     <div className="flex-1">
-                      <div className="text-4xl font-black mb-4" style={{ color: '#00BFFF' }}>{item.num}</div>
-                      <h3 className="text-neutral-900 font-bold text-2xl mb-4">{item.title}</h3>
-                      <p className="text-neutral-500 leading-relaxed">{item.body}</p>
+                      <div className="text-4xl font-black mb-5" style={{ color: '#00BFFF' }}>{item.num}</div>
+                      <h3 className="text-neutral-900 font-bold text-2xl mb-4 tracking-tight">{item.title}</h3>
+                      <p className="text-neutral-600 leading-relaxed">{item.body}</p>
                     </div>
                     <div className="flex-1">
                       <img src={item.image} alt={item.imageAlt}
                         className="w-full rounded-xl border border-neutral-100 shadow-sm" />
+                      {item.caption && <p className="text-sm text-neutral-500 mt-3 italic">{item.caption}</p>}
                     </div>
                   </div>
                 ) : (
-                  <div className="border-t pt-8 border-neutral-100">
-                    <div className="text-4xl font-black mb-4" style={{ color: '#00BFFF' }}>{item.num}</div>
-                    <h3 className="text-neutral-900 font-bold text-2xl mb-4">{item.title}</h3>
-                    <p className="text-neutral-500 leading-relaxed max-w-2xl">{item.body}</p>
+                  <div className="border-t pt-10 border-neutral-100">
+                    <div className="text-4xl font-black mb-5" style={{ color: '#00BFFF' }}>{item.num}</div>
+                    <h3 className="text-neutral-900 font-bold text-2xl mb-4 tracking-tight">{item.title}</h3>
+                    <p className="text-neutral-600 leading-relaxed max-w-2xl">{item.body}</p>
                   </div>
                 )}
               </motion.div>
             ))}
           </div>
+
+          {/* Pull quote */}
+          <motion.div {...fadeUp} className="mt-16">
+            <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-6 italic text-base leading-relaxed">
+              <p className="text-neutral-700 font-medium">
+                "Nine live data layers. A formal mesh viability scoring engine. AI-grounded infrastructure insights. This is what applied spatial intelligence looks like when it's built to answer a real question."
+              </p>
+            </blockquote>
+          </motion.div>
         </div>
       </section>
 
@@ -232,8 +247,8 @@ export default function CaseOverwatch() {
               <motion.div key={item.title}
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="rounded-2xl p-8 border border-neutral-800">
-                <h3 className="text-white font-bold text-base mb-3">{item.title}</h3>
+                className="rounded-2xl p-8 border border-neutral-800 transition-all duration-200 ease-out">
+                <h3 className="text-white font-semibold text-base mb-3">{item.title}</h3>
                 <p className="text-neutral-400 text-sm leading-relaxed">{item.body}</p>
               </motion.div>
             ))}
@@ -258,7 +273,7 @@ export default function CaseOverwatch() {
             <div className="mt-10 p-6 rounded-2xl border border-neutral-100 bg-neutral-50 text-center">
               <p className="text-neutral-500 text-sm font-bold tracking-widest uppercase mb-2">The Pipeline</p>
               <p className="text-neutral-900 font-bold text-lg">SIVOPS → OVERWATCH → Trade Post</p>
-              <p className="text-neutral-400 text-sm mt-1">Field Sensor → Infrastructure Intelligence → Economic Coordination</p>
+              <p className="text-neutral-500 text-sm mt-1">Field Sensor → Infrastructure Intelligence → Economic Coordination</p>
             </div>
           </motion.div>
         </div>
@@ -275,12 +290,14 @@ export default function CaseOverwatch() {
             <p className="text-neutral-400 leading-relaxed text-lg mb-8">
               OVERWATCH is built on React, TypeScript, Supabase, MapLibre GL, and Gemini, processing over 5 million field scans from a custom Android scanner running offline in real neighborhoods. Nine live data layers. A formal mesh viability scoring engine. AI-grounded infrastructure insights. This is what applied spatial intelligence looks like when it's built to answer a real question.
             </p>
-            <p className="text-white font-bold text-lg mb-10">
-              Not a wardriving tool. An infrastructure resilience engine.
-            </p>
+            <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-8 italic text-base leading-relaxed text-left">
+              <p className="text-neutral-300 font-medium">
+                "Not a wardriving tool. An infrastructure resilience engine."
+              </p>
+            </blockquote>
             <a href="/#contact" onClick={(e) => { e.preventDefault(); sessionStorage.setItem("hashNav", "#contact"); window.location.href = "/#contact"; }}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white text-sm transition-opacity hover:opacity-90"
-              style={{ backgroundColor: '#00BFFF' }}>
+              className="inline-flex items-center gap-2 text-base font-semibold transition-opacity hover:opacity-80"
+              style={{ color: '#00BFFF' }}>
               Let's talk →
             </a>
           </motion.div>

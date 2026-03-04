@@ -4,7 +4,7 @@ export default function Footer() {
       <p className="text-white font-bold text-lg">JERRY CIESLIK</p>
       <p className="text-neutral-400 text-sm mt-1">Creative Generalist · AI Architect · Product Builder</p>
       <a
-        href="https://www.instagram.com/sig.seeker/reels/" target="_blank" rel="noopener noreferrer"
+        href="https://www.instagram.com/sig.seeker/reels/"
         target="_blank"
         rel="noopener noreferrer"
         className="block mt-4 text-sm font-medium transition-colors hover:opacity-80"
@@ -12,8 +12,8 @@ export default function Footer() {
       >
         @sig.seeker
       </a>
-      <p className="text-neutral-600 text-xs mt-6">© 2026 Jerry Cieslik</p>
-      <p className="text-neutral-700 text-xs mt-2 italic">42 agents running. Zero of them know what time it is.</p>
+      <p className="text-neutral-400 text-xs mt-6">© 2026 Jerry Cieslik</p>
+      <p className="text-neutral-500 text-xs mt-2 italic">42 agents running. Zero of them know what time it is.</p>
     </footer>
   )
 }

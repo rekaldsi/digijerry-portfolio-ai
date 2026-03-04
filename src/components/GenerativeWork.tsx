@@ -50,12 +50,12 @@ export default function GenerativeWork() {
   return (
     <section id="generative" className="bg-white py-24 px-6">
       <div className="max-w-5xl mx-auto">
-        <motion.div {...fadeUp} className="mb-14">
-          <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4 text-neutral-400">Generative Experiments</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-3">
+        <motion.div {...fadeUp} className="mb-16">
+          <p className="text-xs font-bold tracking-[0.35em] uppercase mb-4 text-[#E85D04]">Generative Experiments</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
             Exploring what AI can create, distort,<br className="hidden md:block" /> and make you question.
           </h2>
-          <p className="text-neutral-500 text-base max-w-2xl">
+          <p className="text-neutral-600 text-base max-w-2xl leading-relaxed">
             Not every project is a platform. Some are experiments in what these tools can actually do when you push them creatively.
           </p>
         </motion.div>
@@ -91,9 +91,10 @@ export default function GenerativeWork() {
 
               {/* Card copy */}
               <div className="mt-5">
-                <p className="text-xs font-bold tracking-widest uppercase text-neutral-400 mb-1">{v.tools}</p>
-                <h3 className="text-neutral-900 font-bold text-xl mb-2">{v.title}</h3>
-                <p className="text-neutral-500 text-sm leading-relaxed">{v.desc}</p>
+                <p className="text-xs font-bold tracking-widest uppercase text-neutral-500 mb-1">{v.tools}</p>
+                <h3 className="text-neutral-900 font-bold text-xl mb-1">{v.title}</h3>
+                <p className="text-xs italic text-neutral-400 mb-2">[Add: brief creative intent for this piece]</p>
+                <p className="text-neutral-600 text-sm leading-relaxed">{v.desc}</p>
               </div>
             </motion.div>
           ))}
@@ -103,7 +104,7 @@ export default function GenerativeWork() {
         <motion.div {...fadeUp} className="mt-14 text-center">
           <p className="text-neutral-400 text-sm mb-3">Want to see more generative experiments?</p>
           <a
-            href="https://www.instagram.com/sig.seeker/reels/" target="_blank" rel="noopener noreferrer"
+            href="https://www.instagram.com/sig.seeker/reels/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-neutral-200 text-neutral-700 text-sm font-semibold hover:border-neutral-400 hover:text-neutral-900 transition-all duration-200"
