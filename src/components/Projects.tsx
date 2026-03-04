@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 type Project = {
   name: string
-  status: 'LIVE' | 'ACTIVE / FIELD TESTING' | 'COMING SOON' | 'WRITTEN' | 'IN PROGRESS'
+  status: 'LIVE' | 'ACTIVE / FIELD TESTING' | 'COMING SOON' | 'WRITTEN' | 'IN PROGRESS' | 'CONCEPT'
   description: string
   detail: string
   tags: string[]
@@ -54,7 +54,7 @@ const projects: Project[] = [
   },
   {
     name: 'TDA iOS',
-    status: 'LIVE',
+    status: 'CONCEPT',
     description: 'Intelligent operating system designed for retail marketing at scale.',
     detail: 'During a 4-month engagement at Saatchi and Saatchi New York, embedded with the Toyota Dealer Association retail division, I designed TDA iOS: a centralized intelligence platform with a Knowledge Layer, Creative Intelligence Layer, and Governance Layer to connect fragmented teams, structured knowledge, and automation into one operating framework. Presented directly to client leadership and the technology team.',
     tags: ['AI Governance', 'Knowledge Systems', 'Creative Operations', 'Workflow Design'],
@@ -80,6 +80,7 @@ function StatusBadge({ status }: { status: Project['status'] }) {
     'COMING SOON': 'bg-neutral-100 text-neutral-500',
     'WRITTEN': 'bg-neutral-100 text-neutral-500',
     'IN PROGRESS': 'bg-blue-50 text-blue-600',
+    'CONCEPT': 'bg-purple-50 text-purple-600',
   }
   return (
     <span className={`text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full ${styles[status]}`}>
