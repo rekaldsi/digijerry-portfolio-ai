@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import AgentSystem from './components/AgentSystem'
@@ -16,6 +17,21 @@ import CaseTradePost from './pages/CaseTradePost'
 import CaseBotique from './pages/CaseBotique'
 
 function Home() {
+  const location = useLocation()
+
+  useEffect(() => {
+    // If navigated here with a hash, scroll to it after render
+    if (location.hash) {
+      const id = location.hash.replace('#', '')
+      const el = document.getElementById(id)
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100)
+      }
+    } else if (!(location.state as { from?: string })?.from) {
+      window.scrollTo(0, 0)
+    }
+  }, [location])
+
   return (
     <>
       <Nav />

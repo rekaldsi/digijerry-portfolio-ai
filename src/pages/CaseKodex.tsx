@@ -241,7 +241,7 @@ export default function CaseKodex() {
             <p className="text-neutral-900 font-bold text-lg mb-10">
               The collector experience was designed first. The infrastructure was built to deserve it.
             </p>
-            <a href="/#contact"
+            <a href="/#contact" onClick={(e) => { e.preventDefault(); window.location.href = "/#contact"; }}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white text-sm transition-opacity hover:opacity-90"
               style={{ backgroundColor: '#E85D04' }}>
               Let's talk →
