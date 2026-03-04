@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 type Project = {
   name: string
@@ -9,6 +10,7 @@ type Project = {
   fullWidth?: boolean
   demoUrl?: string
   heroImage?: string
+  link?: string
 }
 
 const projects: Project[] = [
@@ -51,6 +53,7 @@ const agiBbook: Project = {
   detail: 'Started as a framework for understanding where artificial general intelligence is heading. Became something bigger. Podcast coming.',
   tags: ['Writing', 'Podcast', 'AGI'],
   fullWidth: true,
+  link: '/book',
 }
 
 function StatusBadge({ status }: { status: Project['status'] }) {
@@ -91,13 +94,22 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             </div>
             <p className="text-neutral-600 font-medium mb-2">{project.description}</p>
             <p className="text-neutral-400 text-sm leading-relaxed mb-4">{project.detail}</p>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 mb-5">
               {project.tags.map((tag) => (
                 <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-500 font-medium">
                   {tag}
                 </span>
               ))}
             </div>
+            {project.link && (
+              <Link
+                to={project.link}
+                className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2 rounded-full transition-colors"
+                style={{ backgroundColor: '#fff7f3', color: '#E85D04', border: '1px solid #E85D04' }}
+              >
+                Read the Book →
+              </Link>
+            )}
           </div>
         </div>
       ) : (
