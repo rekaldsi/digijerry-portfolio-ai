@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 type Project = {
   name: string
-  status: 'LIVE' | 'ACTIVE / FIELD TESTING' | 'COMING SOON' | 'WRITTEN'
+  status: 'LIVE' | 'ACTIVE / FIELD TESTING' | 'COMING SOON' | 'WRITTEN' | 'IN PROGRESS'
   description: string
   detail: string
   tags: string[]
@@ -48,10 +48,10 @@ const projects: Project[] = [
 
 const agiBbook: Project = {
   name: 'After Intelligence',
-  status: 'WRITTEN',
-  description: 'AGI and Its Implications on Humanity — 21 chapters on what comes after AI.',
-  detail: 'Written before AGI became a mainstream conversation. Covers consciousness, rights, identity, governance, the singularity, and what it means to be human in a world where machines can think. Originally conceived as a podcast. Became a book.',
-  tags: ['AGI', 'Writing', '21 Chapters', 'Podcast'],
+  status: 'IN PROGRESS',
+  description: '21 podcast chapters on AGI and what it means for humanity.',
+  detail: 'Started as a podcast series before AGI was a mainstream conversation. 21 chapters covering consciousness, rights, identity, governance, and the singularity. The podcast is still in the works — but the chapters are here, and the content is worth reading.',
+  tags: ['AGI', 'Podcast', '21 Chapters', 'Writing'],
   fullWidth: true,
   link: '/book',
 }
@@ -62,6 +62,7 @@ function StatusBadge({ status }: { status: Project['status'] }) {
     'ACTIVE / FIELD TESTING': 'bg-orange-50 text-[#E85D04]',
     'COMING SOON': 'bg-neutral-100 text-neutral-500',
     'WRITTEN': 'bg-neutral-100 text-neutral-500',
+    'IN PROGRESS': 'bg-blue-50 text-blue-600',
   }
   return (
     <span className={`text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full ${styles[status]}`}>
@@ -109,7 +110,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                 className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2 rounded-full transition-colors"
                 style={{ backgroundColor: '#fff7f3', color: '#E85D04', border: '1px solid #E85D04' }}
               >
-                Read the Book →
+                Read the Chapters →
               </Link>
             )}
           </div>

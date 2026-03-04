@@ -228,7 +228,7 @@ export default function Book() {
               strokeLinejoin="round"
             />
           </svg>
-          {fromProjects ? '← Back to Work' : '← Back'}
+          {fromProjects ? '← Back to Work' : '← Back to Site'}
         </button>
       </div>
 
@@ -244,7 +244,7 @@ export default function Book() {
             className="text-xs font-bold tracking-[0.3em] uppercase mb-6"
             style={{ color: '#E85D04' }}
           >
-            The AGI Book
+            The AGI Podcast Series
           </p>
 
           {/* Title */}
@@ -259,7 +259,7 @@ export default function Book() {
 
           {/* Author line */}
           <p className="text-sm text-neutral-600 tracking-wide">
-            Jerry Cieslik &nbsp;·&nbsp; 21 Chapters &nbsp;·&nbsp; Written 2024
+            Jerry Cieslik &nbsp;·&nbsp; 21 Chapters &nbsp;·&nbsp; Podcast in Progress
           </p>
         </motion.div>
 
@@ -305,10 +305,10 @@ export default function Book() {
               21 Chapters
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">
-              Read the book.
+              Read the chapters.
             </h2>
             <p className="text-neutral-400 mt-2 text-base">
-              Tap any chapter to expand the full text.
+              Each chapter was written as a standalone podcast episode. Tap any to read the full text.
             </p>
           </motion.div>
 
@@ -339,10 +339,10 @@ export default function Book() {
             className="max-w-xl mx-auto"
           >
             <p className="text-lg md:text-xl text-neutral-300 mb-3 leading-relaxed">
-              This book started as a podcast. It became something bigger.
+              These chapters were built for a podcast series on AGI — before everyone else started talking about it.
             </p>
             <p className="text-neutral-500 mb-10">
-              A full audio version is coming.
+              The podcast is still in the works. The content is here now.
             </p>
             <a
               href="https://www.instagram.com/sig.seeker/reels/"
