@@ -53,16 +53,9 @@ const projects: Project[] = [
     detail: 'Built as a reusable agency workspace — campaign intelligence, brand workflows, AI-assisted briefs, and performance tracking in one system. Architected from day one to be white-labeled and deployed across multiple clients and brand verticals.',
     tags: ['React', 'AI Workflows', 'White-Label', 'Agency'],
   },
-  {
-    name: 'DigiJerry',
-    status: 'COMING SOON',
-    description: 'An AI version of me you can actually talk to.',
-    detail: 'Claude API + knowledge base trained on 4 years of conversations and portfolio work. Ask it anything about my career, process, or opinions.',
-    tags: ['Claude API', 'React', 'Railway'],
-  },
 ]
 
-const agiBbook: Project = {
+const agiBook: Project = {
   name: 'After Intelligence',
   status: 'IN PROGRESS',
   description: '21 podcast chapters on AGI and what it means for humanity.',
@@ -205,7 +198,7 @@ export default function Projects() {
           {projects.map((project, i) => (
             <ProjectCard key={project.name} project={project} index={i} />
           ))}
-          <ProjectCard project={agiBbook} index={projects.length} />
+          <ProjectCard project={agiBook} index={projects.length} />
         </div>
       </div>
     </section>
