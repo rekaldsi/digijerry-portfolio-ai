@@ -39,26 +39,15 @@ export default function Hero() {
       />
 
       <div className="max-w-6xl mx-auto px-6 pt-24 pb-16 relative z-10 w-full">
-        {/* Name label — small, above headline */}
-        <motion.p
-          className="text-neutral-500 text-xs font-bold tracking-[0.25em] uppercase mb-6"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          Jerry Cieslik
-        </motion.p>
-
-        {/* H1 — big, dark-mode energy */}
+        {/* H1 — the statement, not the name */}
         <motion.h1
           className="font-black leading-none tracking-tight mb-8"
-          style={{ fontSize: 'clamp(3.5rem, 18vw, 9rem)' }}
+          style={{ fontSize: 'clamp(3rem, 14vw, 8rem)' }}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
           <span className="text-white block">Creative</span>
-          {/* Generalist with wiggle */}
           <motion.span
             className="block"
             style={{ color: '#C8F135' }}

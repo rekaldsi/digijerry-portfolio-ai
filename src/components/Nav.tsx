@@ -20,15 +20,10 @@ export default function Nav() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur border-b transition-colors duration-300 ${scrolled ? 'bg-white/90 border-neutral-100' : 'bg-transparent border-transparent'}`}>
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Name only appears after scrolling past hero */}
         <a
           href="#"
-          className="font-bold text-sm tracking-wide transition-all duration-300"
-          style={{
-            color: scrolled ? '#171717' : 'transparent',
-            pointerEvents: scrolled ? 'auto' : 'none',
-            userSelect: 'none',
-          }}
+          className="font-bold text-sm tracking-wide transition-colors duration-300"
+          style={{ color: scrolled ? '#171717' : '#ffffff' }}
         >
           Jerry Cieslik
         </a>
