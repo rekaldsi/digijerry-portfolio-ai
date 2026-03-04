@@ -51,7 +51,7 @@ export default function BrandLogos() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-8 items-center justify-items-center"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-6 gap-y-8 items-center justify-items-center"
         >
           {logos.map((logo, i) => (
             <motion.div
@@ -67,7 +67,7 @@ export default function BrandLogos() {
                 src={logo.file}
                 alt={logo.name}
                 className="opacity-90 hover:opacity-100 transition-opacity duration-300"
-                style={{ maxHeight: '70px', maxWidth: '180px', width: 'auto', height: 'auto' }}
+                style={{ height: '100px', width: '100%', objectFit: 'contain', objectPosition: 'center' }}
               />
             </motion.div>
           ))}
@@ -81,7 +81,7 @@ export default function BrandLogos() {
             className="flex items-center justify-center w-full"
             title="Toyota TDA — coming soon"
           >
-            <div style={{ height: '80px', width: '200px' }} className="rounded border border-dashed border-neutral-700 opacity-30" />
+            <div style={{ height: '100px', width: '100%' }} className="rounded border border-dashed border-neutral-700 opacity-30" />
           </motion.div>
         </motion.div>
       </div>
