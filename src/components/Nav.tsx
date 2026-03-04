@@ -10,11 +10,11 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const links = [
+  const links: { label: string; href: string; external?: boolean }[] = [
     { label: 'Work', href: '#projects' },
     { label: 'AI System', href: '#ai-system' },
     { label: 'About', href: '#about' },
-    { label: 'Contact', href: 'https://www.instagram.com/sig.seeker/reels/', external: true },
+    { label: 'Contact', href: '#contact' },
   ]
 
   return (

@@ -6,6 +6,7 @@ import Projects from './components/Projects'
 import BrandLogos from './components/BrandLogos'
 import HowIWork from './components/HowIWork'
 import Background from './components/Background'
+import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
 import Book from './pages/Book'
 import TDA from './pages/TDA'
@@ -25,6 +26,7 @@ function Home() {
         <BrandLogos />
         <HowIWork />
         <Background />
+        <ContactSection />
       </main>
       <Footer />
     </>
