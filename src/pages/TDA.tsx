@@ -270,7 +270,7 @@ export default function TDA() {
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white text-sm transition-opacity hover:opacity-90"
               style={{ backgroundColor: '#E85D04' }}
             >
-              Get in touch → sketchandslogan@gmail.com
+              Get in touch →
             </a>
           </motion.div>
         </div>
