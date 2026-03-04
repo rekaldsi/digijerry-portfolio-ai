@@ -1,12 +1,14 @@
 import { motion } from 'framer-motion'
+import type { Easing } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 
+const ease: Easing = 'easeOut'
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.5, ease: 'easeOut' },
+  viewport: { once: true as const },
+  transition: { duration: 0.5, ease },
 }
 
 const systems = [
