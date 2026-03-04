@@ -228,7 +228,7 @@ export default function Book() {
               strokeLinejoin="round"
             />
           </svg>
-          {fromProjects ? '← Back to Work' : '← Back to Site'}
+          {fromProjects ? 'Back to Work' : 'Back to Site'}
         </button>
       </div>
 
