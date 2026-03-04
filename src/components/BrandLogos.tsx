@@ -65,13 +65,13 @@ export default function BrandLogos() {
               transition={{ duration: 0.4, delay: i * 0.04 }}
               title={logo.name}
               className="flex items-center justify-center"
-              style={{ height: '70px' }}
+              style={{ height: '90px' }}
             >
               <img
                 src={logo.file}
                 alt={logo.name}
                 className="opacity-90 hover:opacity-100 transition-opacity duration-300"
-                style={{ maxHeight: '50px', maxWidth: '100%', width: 'auto', height: 'auto', display: 'block' }}
+                style={{ maxHeight: '65px', maxWidth: '100%', width: 'auto', height: 'auto', display: 'block' }}
               />
             </motion.div>
           ))}
