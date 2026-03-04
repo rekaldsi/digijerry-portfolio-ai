@@ -77,39 +77,34 @@ const tools = [
 
 const integrations = [
   {
-    category: 'AI & LLMs',
+    category: 'Local Models',
+    color: '#C8F135',
+    items: ['GPT-OSS 20B (LMStudio)', 'DeepSeek Coder 6.7B', 'Qwen3 8B (Ollama)', 'Gemma 3 27B', 'Phi-4 Mini', 'Kimi VL (vision)', 'MLX Whisper (local STT)', 'LMStudio runtime'],
+  },
+  {
+    category: 'AI & Cloud LLMs',
     color: '#8B5CF6',
-    items: ['Claude (Anthropic)', 'GPT / OpenAI', 'Gemini', 'Ollama (local)', 'LMStudio', 'Google AI Studio', 'MLX Whisper', 'ElevenLabs TTS'],
+    items: ['Claude 4 (Anthropic)', 'Gemini 2.5 Pro/Flash', 'GPT / OpenAI', 'Google AI Studio', 'ElevenLabs TTS', 'OpenAI Whisper API'],
+  },
+  {
+    category: 'MCP Servers',
+    color: '#E85D04',
+    items: ['Playwright MCP', 'Supabase MCP', 'Filesystem MCP', 'Memory MCP', 'Augment Codebase', 'mcporter (custom)', 'Meshtastic MCP'],
+  },
+  {
+    category: 'Dev & Orchestration',
+    color: '#F59E0B',
+    items: ['Convex (logging)', 'n8n (workflows)', 'Docker', 'PM2 (21 processes)', 'Railway', 'GitHub CLI', 'tmux'],
   },
   {
     category: 'GenAI Creative',
     color: '#EC4899',
-    items: ['Midjourney', 'RunwayML', 'Luma Dream Machine', 'Hailuo MiniMax', 'Pika', 'Kling', 'VEO', 'Krea', 'Hedra', 'Higgsfield'],
+    items: ['Midjourney', 'RunwayML', 'Luma Dream Machine', 'Pika', 'Kling', 'Hailuo MiniMax', 'Hedra', 'Higgsfield'],
   },
   {
-    category: 'Dev & Infra',
-    color: '#E85D04',
-    items: ['GitHub CLI', 'Railway', 'Supabase', 'Convex', 'PM2', 'tmux', 'Playwright MCP', 'MCP Protocol'],
-  },
-  {
-    category: 'Productivity',
-    color: '#3B82F6',
-    items: ['Apple Notes', 'Apple Reminders', 'Obsidian', 'Things 3', 'Notion', 'Trello', '1Password', 'Bear Notes'],
-  },
-  {
-    category: 'Communication',
+    category: 'Channels & Comms',
     color: '#10B981',
     items: ['Telegram', 'Signal', 'Discord', 'Slack', 'iMessage', 'WhatsApp', 'Email (IMAP/SMTP)'],
-  },
-  {
-    category: 'Data & APIs',
-    color: '#06B6D4',
-    items: ['RapidAPI', 'Google Workspace', 'Figma', 'OpenAI Image Gen', 'Weather API', 'Spotify', 'Sonos'],
-  },
-  {
-    category: 'Hardware & Mesh',
-    color: '#F59E0B',
-    items: ['Meshtastic LoRa', 'Raspberry Pi', 'Mac mini (host)', 'Philips Hue', 'Camera nodes', 'Screen recording'],
   },
 ]
 
@@ -226,9 +221,9 @@ export default function AgentSystem() {
             className="mt-8 mb-14"
           >
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-neutral-500 mb-6">
-              Integrations & Skills
+              Tech Stack & Integrations
             </p>
-            <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
               {integrations.map((group, i) => (
                 <motion.div
                   key={group.category}
