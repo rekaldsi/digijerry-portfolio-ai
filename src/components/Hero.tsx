@@ -7,13 +7,6 @@ const stats = [
   { value: '5', label: 'Products live' },
 ]
 
-const prompts = [
-  'Show me your ad work',
-  'What AI have you built?',
-  'Who have you worked for?',
-  "What's your background?",
-]
-
 export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col justify-center relative overflow-hidden" style={{ backgroundColor: '#0f0f0f' }}>
@@ -70,30 +63,12 @@ export default function Hero() {
           25 years of creative strategy. 4 years of AI. Built to ship.
         </motion.p>
 
-        {/* Prompt chips */}
-        <motion.div
-          className="flex flex-wrap gap-2 mb-10"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-        >
-          {prompts.map((p) => (
-            <a
-              key={p}
-              href="#projects"
-              className="text-xs font-semibold px-4 py-2 rounded-full border border-neutral-700 text-neutral-400 hover:border-neutral-500 hover:text-neutral-200 transition-colors uppercase tracking-wider"
-            >
-              {p}
-            </a>
-          ))}
-        </motion.div>
-
         {/* CTAs */}
         <motion.div
           className="flex flex-wrap gap-4 mb-12"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
         >
           <a
             href="#projects"
@@ -101,6 +76,14 @@ export default function Hero() {
             style={{ backgroundColor: '#C8F135' }}
           >
             See My Work ↓
+          </a>
+          <a
+            href="https://www.instagram.com/sig.seeker/reels/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm border border-neutral-700 text-neutral-300 hover:border-neutral-500 transition-colors"
+          >
+            @sig.seeker
           </a>
           <a
             href="mailto:sketchandslogan@gmail.com"

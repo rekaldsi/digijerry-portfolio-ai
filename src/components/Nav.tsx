@@ -18,12 +18,15 @@ export default function Nav() {
   ]
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur border-b transition-colors duration-300 ${scrolled ? 'bg-white/90 border-neutral-100' : 'bg-transparent border-transparent'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur border-b transition-all duration-500 ${scrolled ? 'bg-white/90 border-neutral-100' : 'bg-transparent border-transparent'}`}>
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a
           href="#"
-          className="font-bold text-sm tracking-wide transition-colors duration-300"
-          style={{ color: scrolled ? '#171717' : '#ffffff' }}
+          className="font-bold text-sm tracking-wide transition-all duration-500"
+          style={{
+            color: scrolled ? '#171717' : '#ffffff',
+            opacity: scrolled ? 1 : 0.75,
+          }}
         >
           Jerry Cieslik
         </a>
