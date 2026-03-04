@@ -19,13 +19,13 @@ export default function Background() {
 
           <div className="space-y-6 text-neutral-600 leading-relaxed">
             <p>
-              25 years in advertising. Associate Creative Director at Leo Burnett for 17 years. Then Saatchi & Saatchi. Brands like Camel, Pull-Ups, Kellogg's. The kind of career that teaches you how to move fast, make things people actually care about, and sell ideas in rooms that don't want to buy them.
+              Nearly two decades as an Associate Creative Director at Leo Burnett — one of the most demanding creative environments in the world. Before that, FCB, experiential work for R.J. Reynolds, and national TV and radio at Bridges Media Group. The through-line: moving fast, making things people actually respond to, and selling ideas in rooms that don't want to buy them.
             </p>
             <p>
-              4 years ago I started building with AI before most people knew how to spell "prompt engineering." I built agents, systems, and products — not experiments. Things that run in production, ship features, and get real users.
+              Four years ago I started building with AI before most people knew what to call it. Not prompting — building. Custom agents, generative workflows, autonomous systems running in production. I've shipped platforms, trained teams, and deployed tools that actually got used. The portfolio above isn't a demo reel. It's what's live.
             </p>
             <p>
-              Now I'm looking for the right company to bring this into. If you're building something that matters and need someone who can think strategically AND ship autonomously — let's talk.
+              BFA in Multimedia/Design from Illinois Institute of Art. Based in Chicago. If you're building something that needs both strategic vision and the technical chops to ship it — I'm the person you're looking for.
             </p>
           </div>
 
