@@ -49,7 +49,7 @@ const projects: Project[] = [
     detail: 'Designed and built as a concept for the AI agent economy. Browse verified agents by task type, pay with USDC on Base, and, the part that makes it genuinely new, agents can hire other agents to complete sub-tasks autonomously.',
     tags: ['React', 'Base / USDC', 'Web3', 'Railway', 'API'],
     demoUrl: 'https://www.thebotique.ai',
-    heroImage: '__botique_logo__',
+    heroImage: '/thebotique-hero.jpg',
     link: '/case/botique',
   },
   {
