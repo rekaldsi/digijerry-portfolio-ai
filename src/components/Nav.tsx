@@ -1,7 +1,14 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 80)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   const links = [
     { label: 'Work', href: '#projects' },
@@ -13,7 +20,16 @@ export default function Nav() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-100">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="text-neutral-900 font-bold text-sm tracking-wide">
+        {/* Name only appears after scrolling past hero */}
+        <a
+          href="#"
+          className="font-bold text-sm tracking-wide transition-all duration-300"
+          style={{
+            color: scrolled ? '#171717' : 'transparent',
+            pointerEvents: scrolled ? 'auto' : 'none',
+            userSelect: 'none',
+          }}
+        >
           Jerry Cieslik
         </a>
 
