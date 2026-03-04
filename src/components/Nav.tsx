@@ -18,7 +18,7 @@ export default function Nav() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-100">
+    <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur border-b transition-colors duration-300 ${scrolled ? 'bg-white/90 border-neutral-100' : 'bg-transparent border-transparent'}`}>
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Name only appears after scrolling past hero */}
         <a
@@ -42,7 +42,7 @@ export default function Nav() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-neutral-500 hover:text-neutral-900 transition-colors"
+                className={`text-sm transition-colors ${scrolled ? 'text-neutral-500 hover:text-neutral-900' : 'text-neutral-400 hover:text-white'}`}
               >
                 {link.label}
               </a>
@@ -50,7 +50,7 @@ export default function Nav() {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm text-neutral-500 hover:text-neutral-900 transition-colors"
+                className={`text-sm transition-colors ${scrolled ? 'text-neutral-500 hover:text-neutral-900' : 'text-neutral-400 hover:text-white'}`}
               >
                 {link.label}
               </a>
@@ -60,13 +60,13 @@ export default function Nav() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-1"
+          className={`md:hidden flex flex-col gap-1.5 p-1`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Menu"
         >
-          <span className={`block w-5 h-0.5 bg-neutral-900 transition-all ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-          <span className={`block w-5 h-0.5 bg-neutral-900 transition-all ${menuOpen ? 'opacity-0' : ''}`} />
-          <span className={`block w-5 h-0.5 bg-neutral-900 transition-all ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          <span className={`block w-5 h-0.5 transition-all ${scrolled ? 'bg-neutral-900' : 'bg-neutral-300'} ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+          <span className={`block w-5 h-0.5 transition-all ${scrolled ? 'bg-neutral-900' : 'bg-neutral-300'} ${menuOpen ? 'opacity-0' : ''}`} />
+          <span className={`block w-5 h-0.5 transition-all ${scrolled ? 'bg-neutral-900' : 'bg-neutral-300'} ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
         </button>
       </div>
 
