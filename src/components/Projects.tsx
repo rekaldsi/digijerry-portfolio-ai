@@ -47,11 +47,11 @@ const projects: Project[] = [
     heroImage: '/thebotique-hero.jpg',
   },
   {
-    name: 'The Orchard',
+    name: 'Toyota TDA / The Orchard',
     status: 'LIVE',
-    description: 'White-label AI brand intelligence dashboard for agencies and dealers.',
-    detail: 'Built as a reusable agency workspace — campaign intelligence, brand workflows, AI-assisted briefs, and performance tracking in one system. Architected from day one to be white-labeled and deployed across multiple clients and brand verticals.',
-    tags: ['React', 'AI Workflows', 'White-Label', 'Agency'],
+    description: 'Operationalized AI inside Toyota\'s enterprise retail system at Saatchi & Saatchi.',
+    detail: 'Four months embedded at the intersection of creative, tech, and production for Toyota Dealer Association. Built the DEAR prompt framework — turning a 6-year campaign architecture into a programmable retail engine. Designed the TDA KnowledgeBot knowledge infrastructure. Contributed DCO logic for Road Rivals (33 advantages × 99 sizes). Introduced an AI search / contextual product mention pilot tied directly to Tier 2 retail KPIs. Educated creative and production teams on structured AI use inside Marcel. Shipped real creative — including a produced LED ribbon concept for RBNY. This wasn\'t experimentation. It was systems architecture inside an enterprise machine.',
+    tags: ['DCO', 'AI Strategy', 'Saatchi & Saatchi', 'Toyota TDA', 'Prompt Engineering', 'Retail AI'],
   },
 ]
 
