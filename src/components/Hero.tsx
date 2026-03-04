@@ -86,7 +86,7 @@ export default function Hero() {
             See My Work ↓
           </a>
           <a
-            href="https://www.instagram.com/sig.seeker/reels/"
+            href="https://www.instagram.com/sig.seeker/reels/" target="_blank" rel="noopener noreferrer"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm border border-neutral-700 text-neutral-300 hover:border-neutral-500 transition-colors"

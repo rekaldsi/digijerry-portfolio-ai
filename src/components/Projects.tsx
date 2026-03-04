@@ -136,24 +136,15 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         /* Standard card */
         <>
           {/* Hero image or placeholder */}
-          <div className="relative aspect-video overflow-hidden flex items-center justify-center"
-            style={{ backgroundColor: project.heroImage === '__botique_logo__' ? '#041725' : undefined }}
-          >
-            {project.heroImage === '__botique_logo__' ? (
-              <img
-                src="/botique-logo.jpg"
-                alt="TheBotique logo"
-                className="h-full w-auto object-contain"
-                style={{ maxHeight: '80%' }}
-              />
-            ) : project.heroImage ? (
+          <div className="relative aspect-video overflow-hidden bg-neutral-100 flex items-center justify-center">
+            {project.heroImage ? (
               <img
                 src={project.heroImage}
                 alt={`${project.name} screenshot`}
                 className="w-full h-full object-cover object-top"
               />
             ) : (
-              <span className="text-neutral-300 text-2xl font-bold tracking-tight select-none bg-neutral-100 w-full h-full flex items-center justify-center">
+              <span className="text-neutral-300 text-2xl font-bold tracking-tight select-none">
                 {project.name}
               </span>
             )}

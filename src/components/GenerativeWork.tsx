@@ -103,7 +103,7 @@ export default function GenerativeWork() {
         <motion.div {...fadeUp} className="mt-14 text-center">
           <p className="text-neutral-400 text-sm mb-3">Want to see more generative experiments?</p>
           <a
-            href="https://www.instagram.com/sig.seeker/reels/"
+            href="https://www.instagram.com/sig.seeker/reels/" target="_blank" rel="noopener noreferrer"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-neutral-200 text-neutral-700 text-sm font-semibold hover:border-neutral-400 hover:text-neutral-900 transition-all duration-200"
