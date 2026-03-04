@@ -19,14 +19,14 @@ export default function Hero() {
         >
           {/* Eyebrow */}
           <p
-            className="text-xs font-semibold tracking-[0.25em] uppercase mb-6"
+            className="text-xs font-semibold tracking-[0.15em] sm:tracking-[0.25em] uppercase mb-6"
             style={{ color: '#E85D04' }}
           >
             Creative Generalist · AI Architect · Product Builder
           </p>
 
           {/* H1 */}
-          <h1 className="text-7xl md:text-9xl font-black text-neutral-900 leading-none tracking-tight mb-6">
+          <h1 className="text-5xl sm:text-7xl md:text-9xl font-black text-neutral-900 leading-none tracking-tight mb-6">
             JERRY<br />CIESLIK
           </h1>
 
