@@ -30,7 +30,7 @@ const pillars = [
   {
     num: '04',
     title: 'Connected Flow Architecture',
-    body: 'TDAiOS connected what had been adjacent efforts into one pipeline: OAT offer feeds flowing into DEAR scripting, into DCO execution, into media, social, chat, retargeting, and measurement. For the first time, a script generated for a RAV4 APR offer in Denver carried the right persona bias, the right voice, the right dynamic super, and tied back to Tier 2 sales KPIs.',
+    body: 'TDAiOS connected what had been adjacent efforts into one pipeline: live offer data flowing into DEAR scripting, into DCO execution, into media, social, chat, retargeting, and measurement. A script generated for a specific model and offer in a specific region carried the right persona bias, the right voice, the right dynamic super, and tied back to Tier 2 sales KPIs.',
   },
 ]
 
@@ -74,7 +74,7 @@ export default function TDA() {
 
           <motion.p className="text-neutral-400 text-lg max-w-2xl leading-relaxed mb-14"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
-            A governance-first operating model built to unify DEAR scripting, dynamic offer logic, personalization rules, and AI-assisted production into a scalable Tier-2 retail system. Designed to reduce risk, increase versioning efficiency, and align creative automation with measurable sales outcomes.
+            A governance-first operating model designed and prototyped to show a major automotive brand how to unify DEAR scripting, dynamic offer logic, personalization rules, and AI-assisted production into one connected system. Built to help leadership understand what real AI infrastructure looks like, not a prompt, not a button, but a connected system with memory, rules, and measurable outcomes.
           </motion.p>
 
           <motion.div className="flex flex-wrap gap-4"
@@ -108,7 +108,7 @@ export default function TDA() {
                 The retail advertising division had real assets: a strong six-year creative framework, a dynamic offer system, DCO execution partners, regional persona mappings, and teams across creative, tech, production, analytics, and social. The infrastructure existed. What didn't exist was anything connecting it.
               </p>
               <p>
-                Dynamic video scaling, social automation experiments, AI chat pilots, model-specific retargeting logic, and competitive creative systems were all running as adjacent efforts. No shared memory. No governance model. No way to connect script logic to offer logic to audience logic to production logic at the speed and volume Tier 2 retail demands.
+                Dynamic video scaling, social automation experiments, AI chat pilots, model-specific retargeting logic, and competitive creative systems were all running as adjacent efforts. No shared memory. No governance model. No way to connect script logic to offer data to audience logic to production logic at the speed and volume Tier 2 retail demands.
               </p>
               <p>
                 Meanwhile, pressure from leadership was shifting from AI hype to connected systems with measurable outcomes. The timing created the opening. TDAiOS was the attempt to build the unifying logic layer before the window closed.
@@ -116,7 +116,7 @@ export default function TDA() {
             </div>
             <blockquote className="border-l-4 pl-6 py-2 mt-10" style={{ borderColor: '#E85D04' }}>
               <p className="text-xl font-semibold text-neutral-800 italic leading-relaxed">
-                "The goal wasn't to introduce AI. It was to build the operating model that made AI usable, auditable, and scalable inside an enterprise retail machine."
+                "The goal wasn't to introduce AI. It was to show what it actually takes to make AI usable, auditable, and scalable inside an enterprise creative machine — and build the prototype that proved it."
               </p>
             </blockquote>
           </motion.div>
@@ -134,10 +134,10 @@ export default function TDA() {
               Not software. Not an app. An operating model.
             </h2>
             <p className="text-neutral-400 leading-relaxed text-lg mb-6">
-              TDAiOS was a connected intelligence layer that unified: creative logic, offer truth, persona strategy, regional nuance, DCO mechanics, AI-assisted production, and compliance guardrails. It formalized how Tier 2 retail content gets generated, versioned, and deployed.
+              TDAiOS was a connected intelligence layer that unified: creative logic, offer data, persona strategy, regional nuance, DCO mechanics, AI-assisted production, and compliance guardrails. It modeled how Tier 2 retail content could be generated, versioned, and deployed at scale — with governance built in from the start.
             </p>
             <p className="text-neutral-400 leading-relaxed text-lg">
-              Think of it as the operating system that sat beneath the tools, giving every asset, at every stage, a shared set of rules to follow.
+              Think of it as the operating system that should sit beneath the tools, giving every asset, at every stage, a shared set of rules to follow. I designed it, prototyped it, and used it to show decision-makers what was actually possible.
             </p>
           </motion.div>
         </div>
@@ -184,7 +184,7 @@ export default function TDA() {
             </p>
             <div className="space-y-3">
               {[
-                'OAT feed surfaces an APR offer for a specific model in a specific region',
+                'Live offer data surfaces the right incentive for a specific model in a specific region',
                 'Knowledge layer confirms the regional persona bias and vehicle positioning',
                 'DEAR script generated with the correct voice, emotional arc, and offer integration',
                 'Modular supers built for DCO, dynamic pricing swapped by execution partner',
@@ -246,10 +246,10 @@ export default function TDA() {
               Not "using AI." Designing the system that makes AI safe to use at scale.
             </h2>
             <p className="text-neutral-400 leading-relaxed text-lg mb-8">
-              TDAiOS repositioned what AI means inside an enterprise creative organization. Not a tool people experiment with. A governed, connected operating model that encodes creative discipline, aligns to compliance requirements, and scales production without scaling chaos. This is the work that matters when leadership stops asking "are you using AI?" and starts asking "can this system actually ship?"
+              TDAiOS wasn't software handed off to engineering. It was a prototype and operating model I designed to show tech leads and creative leadership how a real AI system needs to be built. Not a prompt. Not a button. A connected pipeline with memory, governance, and rules that encode creative discipline. The kind of thing that scales production without scaling chaos.
             </p>
             <p className="text-white font-bold text-lg mb-10">
-              That question has an answer now. And I built it.
+              I built the prototype to make the invisible visible. That's the hard part. And I did it.
             </p>
             <a href="/#contact" onClick={(e) => { e.preventDefault(); window.location.href = "/#contact"; }}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white text-sm transition-opacity hover:opacity-90"
