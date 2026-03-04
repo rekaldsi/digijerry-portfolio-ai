@@ -278,7 +278,7 @@ export default function CaseOverwatch() {
             <p className="text-white font-bold text-lg mb-10">
               Not a wardriving tool. An infrastructure resilience engine.
             </p>
-            <a href="mailto:sketchandslogan@gmail.com"
+            <a href="/#contact"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white text-sm transition-opacity hover:opacity-90"
               style={{ backgroundColor: '#00BFFF' }}>
               Let's talk →

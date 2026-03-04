@@ -94,7 +94,7 @@ export default function Hero() {
             @sig.seeker
           </a>
           <a
-            href="mailto:sketchandslogan@gmail.com"
+            href="#contact"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm border border-neutral-700 text-neutral-300 hover:border-neutral-500 transition-colors"
           >
             Get in Touch

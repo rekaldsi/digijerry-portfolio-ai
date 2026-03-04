@@ -306,7 +306,7 @@ export default function CaseTradePost() {
             <p className="text-white font-bold text-lg mb-10">
               Not anti-cloud. Just cloud-optional. That's the only design target that matters when the grid fails.
             </p>
-            <a href="mailto:sketchandslogan@gmail.com"
+            <a href="/#contact"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white text-sm transition-opacity hover:opacity-90"
               style={{ backgroundColor: '#00C896' }}>
               Let's talk →

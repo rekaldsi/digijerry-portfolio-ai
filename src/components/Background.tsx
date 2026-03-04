@@ -37,7 +37,7 @@ export default function Background() {
 
           <div className="mt-10">
             <a
-              href="mailto:sketchandslogan@gmail.com"
+              href="#contact"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-white transition-opacity hover:opacity-90"
               style={{ backgroundColor: '#E85D04' }}
             >
