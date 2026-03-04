@@ -3,6 +3,7 @@ import Nav from './components/Nav'
 import Hero from './components/Hero'
 import AgentSystem from './components/AgentSystem'
 import Projects from './components/Projects'
+import BrandLogos from './components/BrandLogos'
 import HowIWork from './components/HowIWork'
 import Background from './components/Background'
 import Footer from './components/Footer'
@@ -16,6 +17,7 @@ function Home() {
         <Hero />
         <AgentSystem />
         <Projects />
+        <BrandLogos />
         <HowIWork />
         <Background />
       </main>
