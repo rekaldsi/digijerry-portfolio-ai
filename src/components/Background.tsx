@@ -14,24 +14,21 @@ export default function Background() {
             Background
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-10">
-            Creative Generalist. AI Alchemist. Human-Centered Futurist.
+            Creative director. Systems builder. AI native.
           </h2>
 
           <div className="space-y-6 text-neutral-600 leading-relaxed">
             <p>
-              In a rapidly evolving advertising landscape, I've built a career rooted in creativity, strategy, and innovation. My passion lies in leveraging emerging technologies like AI and automation to reimagine how we connect with audiences in meaningful ways.
+              Nearly two decades in advertising — most of it as Associate Creative Director at Leo Burnett, one of the most demanding creative environments in the world. Before that, FCB, experiential work for R.J. Reynolds, national TV and radio. The through-line: making things people actually respond to, and selling ideas in rooms that don't want to buy them.
             </p>
             <p>
-              Over the past three years, I've led advancements in how creative teams collaborate — integrating cutting-edge tools and crafting campaigns that leave a lasting impact. Beyond campaigns, I've driven programs to upskill talent, enabling teams to adopt new technologies and reimagine workflows.
+              Four years ago I started building with AI before most people knew what to call it. Not prompting — architecting. I've built custom agents, generative workflows, prompt frameworks, and autonomous systems that run in production. Most recently embedded at Saatchi & Saatchi as Creative Director, Digital & Technology for Toyota TDA — operationalizing AI inside one of the most complex retail advertising systems in the world.
             </p>
             <p>
-              My approach blends bold creativity with a focus on solving problems in smarter, more impactful ways — whether that's rethinking email, digital, or social strategies, or empowering teams with tools to stay ahead of the curve.
+              I don't just use AI tools. I design the systems that make them usable at scale — with governance, modularity, and real creative output baked in. The work above isn't a demo reel. It's what's live.
             </p>
             <p>
-              My work extends beyond advertising. From decentralized art collections and mural projects to exploring the intersection of AI, creativity, and ethics — I believe personal curiosity fuels professional growth. Bold ideas paired with actionable insights can shape not just campaigns, but the way we work, collaborate, and create.
-            </p>
-            <p className="font-medium text-neutral-800">
-              If you're looking for a creative partner who doesn't just adapt to change but drives it — let's connect.
+              BFA in Multimedia/Design, Illinois Institute of Art. Based in Chicago. If you need someone who can think at the strategy level and ship at the execution level — that's the job I've been doing.
             </p>
           </div>
 
