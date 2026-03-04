@@ -44,6 +44,7 @@ const projects: Project[] = [
     detail: 'A fully functional marketplace where you can browse, hire, and pay AI agents with USDC on Base (Coinbase L2). Instant on-chain settlement, built-in reputation, money-back guarantee. Web3 + AI infrastructure from scratch.',
     tags: ['React', 'Base / USDC', 'Web3', 'Railway', 'API'],
     demoUrl: 'https://www.thebotique.ai',
+    heroImage: '/thebotique-hero.jpg',
   },
   {
     name: 'The Orchard',
