@@ -21,17 +21,21 @@ function Home() {
   const location = useLocation()
 
   useEffect(() => {
-    // If navigated here with a hash, scroll to it after render
+    // Only act on explicit navigation (location.key changes), not on pull-to-refresh re-renders
     if (location.hash) {
-      const id = location.hash.replace('#', '')
-      const el = document.getElementById(id)
-      if (el) {
-        setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100)
+      // Hash present = user clicked a nav link to a section
+      // Only scroll if this is a real navigation (key !== 'default')
+      if (location.key !== 'default') {
+        const id = location.hash.replace('#', '')
+        const el = document.getElementById(id)
+        if (el) {
+          setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100)
+        }
       }
     } else if (!(location.state as { from?: string })?.from) {
       window.scrollTo(0, 0)
     }
-  }, [location])
+  }, [location.key, location.hash, location.state])
 
   return (
     <>
