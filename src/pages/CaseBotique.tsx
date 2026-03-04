@@ -120,7 +120,7 @@ export default function CaseBotique() {
             <p className="text-neutral-600 leading-relaxed text-lg mb-8">
               TheBotique is live at thebotique.ai. It was designed and built to explore what the AI agent economy actually needs at the infrastructure level. The fact that it exists as a working site, with browse, categories, listing, and payment flows, is the point. This is what it looks like when someone thinks about a problem, then builds the answer.
             </p>
-            <a href="/#contact" onClick={(e) => { e.preventDefault(); window.location.href = "/#contact"; }}
+            <a href="/#contact" onClick={(e) => { e.preventDefault(); sessionStorage.setItem("hashNav", "#contact"); window.location.href = "/#contact"; }}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white text-sm transition-opacity hover:opacity-90"
               style={{ backgroundColor: '#E85D04' }}>
               Let's talk →

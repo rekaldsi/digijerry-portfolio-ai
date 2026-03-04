@@ -21,16 +21,20 @@ function Home() {
   const location = useLocation()
 
   useEffect(() => {
-    // Only act on explicit navigation (location.key changes), not on pull-to-refresh re-renders
     if (location.hash) {
-      // Hash present = user clicked a nav link to a section
-      // Only scroll if this is a real navigation (key !== 'default')
-      if (location.key !== 'default') {
-        const id = location.hash.replace('#', '')
-        const el = document.getElementById(id)
-        if (el) {
-          setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100)
+      const id = location.hash.replace('#', '')
+      // For pull-to-refresh (key === 'default') with no intentional hash nav, skip
+      // But if navigated here from a case study CTA, key will not be 'default'
+      // Use a flag in sessionStorage to distinguish intentional hash nav
+      const intentional = sessionStorage.getItem('hashNav') === location.hash
+      sessionStorage.removeItem('hashNav')
+      if (intentional || location.key !== 'default') {
+        const scroll = () => {
+          const el = document.getElementById(id)
+          if (el) el.scrollIntoView({ behavior: 'smooth' })
         }
+        // Give the page time to render before scrolling
+        setTimeout(scroll, 200)
       }
     } else if (!(location.state as { from?: string })?.from) {
       window.scrollTo(0, 0)
