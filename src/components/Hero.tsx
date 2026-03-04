@@ -42,17 +42,18 @@ export default function Hero() {
         {/* H1 — the statement, not the name */}
         <motion.h1
           className="font-black leading-none tracking-tight mb-8"
-          style={{ fontSize: 'clamp(3rem, 14vw, 8rem)' }}
+          style={{ fontSize: 'clamp(2.8rem, 9vw, 6rem)' }}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
           <span className="text-white block">Creative</span>
           <motion.span
-            className="block"
+            className="inline-block"
             style={{ color: '#C8F135' }}
-            animate={{ skewX: [0, -1.5, 1, -0.5, 0] }}
-            transition={{ duration: 0.8, delay: 0.9, ease: 'easeInOut' }}
+            initial={{ skewX: 0 }}
+            animate={{ skewX: [0, -2, 1.5, -1, 0] }}
+            transition={{ duration: 0.7, delay: 1.0, ease: 'easeInOut' }}
           >
             Generalist.
           </motion.span>
