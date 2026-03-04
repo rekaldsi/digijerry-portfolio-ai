@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useNavigate, useLocation } from 'react-router-dom'
 import chaptersRaw from '../data/agi-book-chapters.json'
 
 type Source = {
@@ -186,10 +187,25 @@ function ChapterAccordion({
 
 export default function Book() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const navigate = useNavigate()
+  const location = useLocation()
+  const fromProjects = (location.state as { from?: string })?.from === '/#projects'
 
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  function handleBack() {
+    if (fromProjects) {
+      navigate('/')
+      // After navigation, scroll to #projects
+      setTimeout(() => {
+        document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
+      }, 100)
+    } else {
+      navigate(-1)
+    }
+  }
 
   const handleToggle = (i: number) => {
     setOpenIndex(openIndex === i ? null : i)
@@ -199,8 +215,8 @@ export default function Book() {
     <div className="min-h-screen" style={{ backgroundColor: '#0a0a0a' }}>
       {/* Nav back link */}
       <div className="max-w-6xl mx-auto px-6 pt-8">
-        <a
-          href="/"
+        <button
+          onClick={handleBack}
           className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-neutral-500 hover:text-neutral-300 transition-colors"
         >
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -212,8 +228,8 @@ export default function Book() {
               strokeLinejoin="round"
             />
           </svg>
-          Back
-        </a>
+          {fromProjects ? '← Back to Work' : '← Back'}
+        </button>
       </div>
 
       {/* Hero */}
