@@ -8,7 +8,7 @@ const stats = [
   { value: '25', label: 'Years in advertising' },
   { value: '4+', label: 'Years in AI' },
   { value: '42', label: 'Active agents' },
-  { value: '5', label: 'Products live' },
+  { value: '4', label: 'Products live' },
 ]
 
 export default function Hero() {
