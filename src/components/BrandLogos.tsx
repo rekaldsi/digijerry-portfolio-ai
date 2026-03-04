@@ -51,7 +51,7 @@ export default function BrandLogos() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-6 gap-y-8 items-center justify-items-center"
+          className="grid grid-cols-4 gap-8"
         >
           {logos.map((logo, i) => (
             <motion.div
@@ -60,28 +60,28 @@ export default function BrandLogos() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.04 }}
-              className="flex items-center justify-center"
               title={logo.name}
+              style={{ height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
             >
               <img
                 src={logo.file}
                 alt={logo.name}
                 className="opacity-90 hover:opacity-100 transition-opacity duration-300"
-                style={{ height: '60px', width: '100%', objectFit: 'contain', objectPosition: 'center' }}
+                style={{ maxHeight: '60px', maxWidth: '160px', width: 'auto', height: 'auto', display: 'block' }}
               />
             </motion.div>
           ))}
 
-          {/* Toyota TDA placeholder — slot reserved */}
+          {/* Toyota TDA placeholder */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: logos.length * 0.04 }}
-            className="flex items-center justify-center w-full"
             title="Toyota TDA — coming soon"
+            style={{ height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           >
-            <div style={{ height: '100px', width: '100%' }} className="rounded border border-dashed border-neutral-700 opacity-30" />
+            <div style={{ height: '50px', width: '120px' }} className="rounded border border-dashed border-neutral-700 opacity-30" />
           </motion.div>
         </motion.div>
       </div>
