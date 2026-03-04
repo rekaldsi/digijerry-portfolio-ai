@@ -66,8 +66,8 @@ export default function BrandLogos() {
               <img
                 src={logo.file}
                 alt={logo.name}
-                className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
-                style={{ height: '80px', width: '200px', objectFit: 'contain' }}
+                className="opacity-80 hover:opacity-100 transition-opacity duration-300"
+                style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
               />
             </motion.div>
           ))}
