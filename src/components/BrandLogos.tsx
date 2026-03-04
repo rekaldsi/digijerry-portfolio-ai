@@ -9,16 +9,19 @@ const logos = [
   { name: "Kellogg's", file: '/logos/Kelloggs.png' },
   { name: 'Huggies', file: '/logos/Huggies.png' },
   { name: 'Pull-Ups', file: '/logos/Pull-Ups.png' },
-  { name: 'Dunkin\'', file: '/logos/Dunkin.png' },
+  { name: "Dunkin'", file: '/logos/Dunkin.png' },
   { name: 'Heineken Silver', file: '/logos/Heineken_Silver.png' },
   { name: 'Basil Hayden', file: '/logos/Basil_Hayden.png' },
-  { name: 'Beef', file: '/logos/Beef.png' },
+  { name: 'Beef. It\'s What\'s for Dinner', file: '/logos/Beef.png' },
   { name: 'Samsung', file: '/logos/Samsung.png' },
   { name: 'Sony', file: '/logos/Sony.png' },
   { name: 'Nokia', file: '/logos/Nokia.png' },
   { name: 'United Airlines', file: '/logos/United.png' },
-  // Toyota TDA — placeholder, add logo file when ready
-  // { name: 'Toyota TDA', file: '/logos/ToyotaTDA.png' },
+  { name: 'Bank of America', file: '/logos/BOA.png' },
+  { name: 'Miller Lite', file: '/logos/Miller_Lite.png' },
+  { name: 'Sandals Resorts', file: '/logos/Sandals.png' },
+  { name: 'Toyota', file: '/logos/Toyota.png' },
+  { name: 'Wingstop', file: '/logos/WingStop.png' },
 ]
 
 export default function BrandLogos() {
@@ -51,7 +54,7 @@ export default function BrandLogos() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-8"
+          className="grid grid-cols-3 md:grid-cols-7 gap-6 md:gap-8"
         >
           {logos.map((logo, i) => (
             <motion.div
