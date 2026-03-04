@@ -18,7 +18,7 @@ const projects: Project[] = [
     name: 'KØDEX',
     status: 'LIVE',
     description: 'Comic collection intelligence platform for serious collectors.',
-    detail: 'Tracks your collection like a stock portfolio — real-time pricing, cover art matching, signing planner, key issue flags, and an insights dashboard built for collectors who take it seriously.',
+    detail: 'Tracks your collection like a stock portfolio, real-time pricing, cover art matching, signing planner, key issue flags, and an insights dashboard built for collectors who take it seriously.',
     tags: ['React', 'Vite', 'Supabase', 'Railway', 'ComicVine API'],
     link: '/case/kodex',
   },
@@ -34,7 +34,7 @@ const projects: Project[] = [
     name: 'Trade Post Mesh',
     status: 'ACTIVE / FIELD TESTING',
     description: 'An off-grid neighborhood operating system.',
-    detail: 'A decentralized platform for local communities to trade, barter, request help, and push alerts — without internet or cell service. Built on LoRa mesh radio. No tracking. No central server. Just neighbors talking to neighbors.',
+    detail: 'A decentralized platform for local communities to trade, barter, request help, and push alerts, without internet or cell service. Built on LoRa mesh radio. No tracking. No central server. Just neighbors talking to neighbors.',
     tags: ['Meshtastic', 'Python', 'Raspberry Pi', 'LoRa'],
     demoUrl: 'https://trade-post-mesh-production.up.railway.app/app',
     heroImage: '/tradepost-feed.jpg',
@@ -44,7 +44,7 @@ const projects: Project[] = [
     name: 'TheBotique',
     status: 'LIVE',
     description: 'A marketplace where agents hire agents.',
-    detail: 'Designed and built as a concept for the AI agent economy. Browse verified agents by task type, pay with USDC on Base, and — the part that makes it genuinely new — agents can hire other agents to complete sub-tasks autonomously.',
+    detail: 'Designed and built as a concept for the AI agent economy. Browse verified agents by task type, pay with USDC on Base, and, the part that makes it genuinely new, agents can hire other agents to complete sub-tasks autonomously.',
     tags: ['React', 'Base / USDC', 'Web3', 'Railway', 'API'],
     demoUrl: 'https://www.thebotique.ai',
     heroImage: '/thebotique-hero.jpg',
@@ -64,7 +64,7 @@ const agiBook: Project = {
   name: 'After Intelligence',
   status: 'IN PROGRESS',
   description: '21 podcast chapters on AGI and what it means for humanity.',
-  detail: 'Started as a podcast series before AGI was a mainstream conversation. 21 chapters covering consciousness, rights, identity, governance, and the singularity. The podcast is still in the works — but the chapters are here, and the content is worth reading.',
+  detail: 'Started as a podcast series before AGI was a mainstream conversation. 21 chapters covering consciousness, rights, identity, governance, and the singularity. The podcast is still in the works, but the chapters are here, and the content is worth reading.',
   tags: ['AGI', 'Podcast', '21 Chapters', 'Writing'],
   fullWidth: true,
   link: '/book',
@@ -95,7 +95,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       className={`bg-white rounded-2xl border border-neutral-100 overflow-hidden hover:shadow-md transition-shadow ${project.fullWidth ? 'col-span-1 md:col-span-2' : ''}`}
     >
       {project.fullWidth ? (
-        /* Book card — editorial style */
+        /* Book card, editorial style */
         <div className="p-8 md:p-10 flex flex-col md:flex-row gap-8 items-start">
           <div className="flex-shrink-0">
             <span className="text-8xl md:text-9xl font-black text-neutral-100 leading-none select-none">

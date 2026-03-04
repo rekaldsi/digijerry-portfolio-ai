@@ -14,11 +14,11 @@ const fadeUp = {
 const evolution = [
   {
     phase: 'Trade Post',
-    desc: 'A neighborhood barter and coordination app. Post offers, post needs, browse listings, send messages. Cloud-hosted on Supabase. Standard client-server architecture. Solid foundation — but dependent on the internet to function.',
+    desc: 'A neighborhood barter and coordination app. Post offers, post needs, browse listings, send messages. Cloud-hosted on Supabase. Standard client-server architecture. Solid foundation, but dependent on the internet to function.',
   },
   {
     phase: 'Trade Post + OVERWATCH',
-    desc: 'Added the infrastructure intelligence layer. OVERWATCH measured real neighborhood signal density — WiFi, BLE, LoRa mesh nodes — and produced a 0–100 Neighborhood Readiness Index. Now the platform knew whether the local network could actually support peer-to-peer traffic.',
+    desc: 'Added the infrastructure intelligence layer. OVERWATCH measured real neighborhood signal density, WiFi, BLE, LoRa mesh nodes, and produced a 0–100 Neighborhood Readiness Index. Now the platform knew whether the local network could actually support peer-to-peer traffic.',
   },
   {
     phase: 'Trade Post Mesh',
@@ -30,22 +30,22 @@ const contrast = [
   { label: 'Transport', before: 'Client → Supabase → Client', after: 'Client → LoRa / BLE / WiFi → Client' },
   { label: 'Connectivity', before: 'Grid required', after: 'Offline-first, cloud as memory' },
   { label: 'Encryption', before: 'Server-visible payloads', after: 'E2EE, server blind' },
-  { label: 'Mesh activation', before: 'N/A', after: 'Conditional — triggered by OVERWATCH readiness score' },
+  { label: 'Mesh activation', before: 'N/A', after: 'Conditional, triggered by OVERWATCH readiness score' },
 ]
 
 const features = [
   {
     num: '01',
     title: 'Offer / Need / Alert Feed',
-    body: 'The core coordination surface. Post what you have, what you need, or what the neighborhood needs to know right now. Posts are typed — OFFER, NEED, ALERT, PIN — tagged with a node ID and set to expire. Browse without filtering noise from outside your area. When the grid is up, it syncs to cloud. When it isn\'t, the mesh carries it.',
+    body: 'The core coordination surface. Post what you have, what you need, or what the neighborhood needs to know right now. Posts are typed, OFFER, NEED, ALERT, PIN, tagged with a node ID and set to expire. Browse without filtering noise from outside your area. When the grid is up, it syncs to cloud. When it isn\'t, the mesh carries it.',
     image: '/tradepost-feed-alert.jpg',
-    imageAlt: 'Trade Post live feed — tornado watch and Pilsen power outage alerts',
+    imageAlt: 'Trade Post live feed, tornado watch and Pilsen power outage alerts',
     caption: 'Live feed during a real Cook County tornado watch and Pilsen transformer outage. Both alerts propagating through the mesh while the grid was stressed.',
   },
   {
     num: '02',
     title: 'Mesh Transport via Meshtastic LoRa',
-    body: 'Lightweight post intents broadcast over LoRa radio — the same long-range, low-power protocol used in disaster relief networks. No internet required for local propagation. Each post hops between mesh nodes, tagged with the originating node ID. The mesh doesn\'t replace the cloud — it activates when the cloud isn\'t there.',
+    body: 'Lightweight post intents broadcast over LoRa radio: the same long-range, low-power protocol used in disaster relief networks. No internet required for local propagation. Each post hops between mesh nodes, tagged with the originating node ID. The mesh doesn\'t replace the cloud. It activates when the cloud isn\'t there.',
     image: null,
   },
   {
@@ -57,15 +57,15 @@ const features = [
   {
     num: '04',
     title: 'OVERWATCH-Driven Mesh Activation',
-    body: 'Mesh transport isn\'t always-on. It\'s conditional — activated when OVERWATCH reports sufficient BLE density, mesh node coverage, and redundancy for the local area. If the neighborhood can support it, offers route peer-to-peer. If not, the system uses cloud relay and flags the gap. Infrastructure viability drives transport selection automatically.',
+    body: 'Mesh transport isn\'t always-on. It\'s conditional, activated when OVERWATCH reports sufficient BLE density, mesh node coverage, and redundancy for the local area. If the neighborhood can support it, offers route peer-to-peer. If not, the system uses cloud relay and flags the gap. Infrastructure viability drives transport selection automatically.',
     image: '/overwatch-map-full.jpg',
-    imageAlt: 'OVERWATCH Chicago intelligence grid — the layer that determines when mesh activates',
-    caption: 'OVERWATCH — the intelligence layer underneath. 5.2M scans, 368 mesh nodes, real-time readiness scoring tells Trade Post Mesh when to go peer-to-peer.',
+    imageAlt: 'OVERWATCH Chicago intelligence grid, the layer that determines when mesh activates',
+    caption: 'OVERWATCH: the intelligence layer underneath. 5.2M scans, 368 mesh nodes, real-time readiness scoring tells Trade Post Mesh when to go peer-to-peer.',
   },
   {
     num: '05',
     title: 'Offline Listing Cache',
-    body: 'Listings cache locally so the experience doesn\'t degrade when connectivity does. Browse, post, and respond with no active connection. When the network returns — cloud or mesh — state syncs forward. No lost posts, no blank screens, no error states during the exact moments the platform is needed most.',
+    body: 'Listings cache locally so the experience doesn\'t degrade when connectivity does. Browse, post, and respond with no active connection. When the network returns (cloud or mesh) state syncs forward. No lost posts, no blank screens, no error states during the exact moments the platform is needed most.',
     image: null,
   },
 ]
@@ -73,7 +73,7 @@ const features = [
 const decisions = [
   {
     title: 'Start With the App, Then Earn the Mesh',
-    body: 'Trade Post launched as a standard cloud app first — proving people would actually use a neighborhood coordination platform before building the harder mesh infrastructure on top. The evolution to Mesh wasn\'t scope creep. It was the original destination, reached in the right order.',
+    body: 'Trade Post launched as a standard cloud app first. Proving people would actually use a neighborhood coordination platform before building the harder mesh infrastructure on top. The evolution to Mesh wasn\'t scope creep. It was the original destination, reached in the right order.',
   },
   {
     title: 'Cloud-Optional, Not Anti-Cloud',
@@ -85,7 +85,7 @@ const decisions = [
   },
   {
     title: 'Designed for the Scenarios That Matter Most',
-    body: 'Disaster events, grid failures, low-connectivity environments, community-run infrastructure. These aren\'t edge cases — they\'re the primary design targets. Every architecture decision was made by asking: does this work when the grid goes down at the worst possible time?',
+    body: 'Disaster events, grid failures, low-connectivity environments, community-run infrastructure. These aren\'t edge cases, they\'re the primary design targets. Every architecture decision was made by asking: does this work when the grid goes down at the worst possible time?',
   },
 ]
 
@@ -119,7 +119,7 @@ export default function CaseTradePost() {
           </motion.h1>
           <motion.p className="text-neutral-400 text-lg max-w-2xl leading-relaxed mb-14"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
-            Trade Post started as a neighborhood barter app. It became something bigger: a decentralized operating system for local economic coordination — one that functions when WiFi is down, cellular is congested, and the cloud is unreachable. Built on Meshtastic LoRa mesh, E2EE, and OVERWATCH infrastructure intelligence.
+            Trade Post started as a neighborhood barter app. It became something bigger: a decentralized operating system for local economic coordination, one that functions when WiFi is down, cellular is congested, and the cloud is unreachable. Built on Meshtastic LoRa mesh, E2EE, and OVERWATCH infrastructure intelligence.
           </motion.p>
           <motion.div className="flex flex-wrap gap-4"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
@@ -144,7 +144,7 @@ export default function CaseTradePost() {
           <motion.div {...fadeUp}>
             <img src="/tradepost-feed-alert.jpg" alt="Trade Post live feed" className="w-full rounded-2xl border border-neutral-800" />
             <p className="text-neutral-500 text-xs mt-3 text-center">
-              Live — Cook County tornado watch + Pilsen transformer outage. Both alerts propagating through the mesh while the grid was stressed.
+              Live, Cook County tornado watch + Pilsen transformer outage. Both alerts propagating through the mesh while the grid was stressed.
             </p>
           </motion.div>
         </div>
@@ -160,10 +160,10 @@ export default function CaseTradePost() {
             </h2>
             <div className="space-y-5 text-neutral-600 leading-relaxed text-lg">
               <p>
-                Facebook Marketplace. Craigslist. Nextdoor. Every tool built for neighborhood coordination routes through centralized cloud infrastructure. When the grid goes down — tornado, power outage, infrastructure failure — they go down with it. During the exact moments when neighbors most need to coordinate, share supplies, post safety alerts, and find what's available nearby, the tools disappear.
+                Facebook Marketplace. Craigslist. Nextdoor. Every tool built for neighborhood coordination routes through centralized cloud infrastructure. When the grid goes down, tornado, power outage, infrastructure failure, they go down with it. During the exact moments when neighbors most need to coordinate, share supplies, post safety alerts, and find what's available nearby, the tools disappear.
               </p>
               <p>
-                The deeper problem: most mesh apps treat economic exchange as out of scope. They solve for messaging. Trade Post Mesh targeted the harder use case — can local barter actually operate without centralized infrastructure? Not theoretically. Practically. Post an offer. Match a need. Complete a trade. All of it, without a server in the middle.
+                The deeper problem: most mesh apps treat economic exchange as out of scope. They solve for messaging. Trade Post Mesh targeted the harder use case, can local barter actually operate without centralized infrastructure? Not theoretically. Practically. Post an offer. Match a need. Complete a trade. All of it, without a server in the middle.
               </p>
             </div>
             <blockquote className="border-l-4 pl-6 py-2 mt-10" style={{ borderColor: '#00C896' }}>
@@ -301,7 +301,7 @@ export default function CaseTradePost() {
               A proof of concept for economic coordination without the cloud.
             </h2>
             <p className="text-neutral-400 leading-relaxed text-lg mb-8">
-              Trade Post Mesh is built on React, Supabase, Meshtastic LoRa, and Signal Protocol scaffolding — with OVERWATCH as the infrastructure intelligence layer that determines when peer-to-peer transport is viable. The feed ran live during a real Cook County tornado watch. The architecture is designed to scale to any neighborhood with sufficient mesh density, as measured by the readiness scoring engine underneath it.
+              Trade Post Mesh is built on React, Supabase, Meshtastic LoRa, and Signal Protocol scaffolding, with OVERWATCH as the infrastructure intelligence layer that determines when peer-to-peer transport is viable. The feed ran live during a real Cook County tornado watch. The architecture is designed to scale to any neighborhood with sufficient mesh density, as measured by the readiness scoring engine underneath it.
             </p>
             <p className="text-white font-bold text-lg mb-10">
               Not anti-cloud. Just cloud-optional. That's the only design target that matters when the grid fails.

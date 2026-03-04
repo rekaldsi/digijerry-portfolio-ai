@@ -12,10 +12,10 @@ const fadeUp = {
 }
 
 const concepts = [
-  { num: '01', title: 'Browse and Hire Agents', body: 'A marketplace where you search by task type — research, creative, technical, documents — and hire a verified AI agent to do the work. Same mental model as Fiverr or Upwork, built for the AI economy.' },
+  { num: '01', title: 'Browse and Hire Agents', body: 'A marketplace where you search by task type, research, creative, technical, documents, and hire a verified AI agent to do the work. Same mental model as Fiverr or Upwork, built for the AI economy.' },
   { num: '02', title: 'Crypto-Native Payments', body: 'Payments settled in USDC on Base. No waiting, no invoices, no payment processors. Work gets done, payment moves. The settlement layer for a world where agents transact autonomously.' },
   { num: '03', title: 'Agents Hiring Agents', body: 'The concept that makes this genuinely new: an agent can hire another agent to complete sub-tasks. The orchestration layer for AI-to-AI work is what separates this from a simple directory.' },
-  { num: '04', title: 'Open API', body: 'Built from the start to be accessible programmatically. Agents, developers, and platforms can interact with TheBotique via API — listing, hiring, and paying without a browser.' },
+  { num: '04', title: 'Open API', body: 'Built from the start to be accessible programmatically. Agents, developers, and platforms can interact with TheBotique via API, listing, hiring, and paying without a browser.' },
 ]
 
 export default function CaseBotique() {
@@ -48,7 +48,7 @@ export default function CaseBotique() {
           </motion.h1>
           <motion.p className="text-neutral-400 text-lg max-w-2xl leading-relaxed mb-14"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
-            Designed and built as a concept for the AI agent economy — a platform where humans hire AI agents for work, and where agents can hire other agents to handle sub-tasks. Think Fiverr, rebuilt from scratch for a world where the workers are intelligent systems.
+            Designed and built as a concept for the AI agent economy, a platform where humans hire AI agents for work, and where agents can hire other agents to handle sub-tasks. Think Fiverr, rebuilt from scratch for a world where the workers are intelligent systems.
           </motion.p>
           <motion.div className="flex flex-wrap gap-4"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
@@ -78,7 +78,7 @@ export default function CaseBotique() {
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#E85D04' }}>The Vision</p>
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">The labor market is about to change. This was built for what comes next.</h2>
             <p className="text-neutral-600 leading-relaxed text-lg mb-6">
-              TheBotique was conceived as the infrastructure layer for an economy where AI agents do real work. Not a chatbot directory. A marketplace with verified agents, task categories, instant settlement, and — the part that makes it genuinely different — agents that can hire other agents to complete sub-tasks autonomously.
+              TheBotique was conceived as the infrastructure layer for an economy where AI agents do real work. Not a chatbot directory. A marketplace with verified agents, task categories, instant settlement, and, the part that makes it genuinely different, agents that can hire other agents to complete sub-tasks autonomously.
             </p>
             <blockquote className="border-l-4 pl-6 py-2" style={{ borderColor: '#E85D04' }}>
               <p className="text-xl font-semibold text-neutral-800 italic leading-relaxed">
@@ -118,7 +118,7 @@ export default function CaseBotique() {
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#E85D04' }}>The Takeaway</p>
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">Concept thinking with production execution.</h2>
             <p className="text-neutral-600 leading-relaxed text-lg mb-8">
-              TheBotique is live at thebotique.ai. It was designed and built to explore what the AI agent economy actually needs at the infrastructure level. The fact that it exists as a working site — with browse, categories, listing, and payment flows — is the point. This is what it looks like when someone thinks about a problem, then builds the answer.
+              TheBotique is live at thebotique.ai. It was designed and built to explore what the AI agent economy actually needs at the infrastructure level. The fact that it exists as a working site, with browse, categories, listing, and payment flows, is the point. This is what it looks like when someone thinks about a problem, then builds the answer.
             </p>
             <a href="mailto:sketchandslogan@gmail.com"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white text-sm transition-opacity hover:opacity-90"

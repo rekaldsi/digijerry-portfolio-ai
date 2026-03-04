@@ -15,28 +15,28 @@ const features = [
   {
     num: '01',
     title: 'Portfolio Valuation Engine',
-    body: 'Every comic tracked against real market pricing data. The dashboard shows total collection value, 30-day trend, and per-issue fair market estimates — the same mental model as a brokerage account, applied to a long box.',
+    body: 'Every comic tracked against real market pricing data. The dashboard shows total collection value, 30-day trend, and per-issue fair market estimates. Same mental model as a brokerage account, applied to a long box.',
     image: '/kodex-insights.jpg',
-    imageAlt: 'KØDEX Insights — $52,405 portfolio value with 30-day trend',
+    imageAlt: 'KØDEX Insights, $52,405 portfolio value with 30-day trend',
   },
   {
     num: '02',
     title: 'Collection Grid',
-    body: 'A visual grid of every issue in the collection — cover art matched from the ComicVine enrichment pipeline, graded/raw status, duplicate detection, barcode scan import, and filter by publisher, series, or creator. 4,099 issues and counting.',
+    body: 'A visual grid of every issue in the collection, cover art matched from the ComicVine enrichment pipeline, graded/raw status, duplicate detection, barcode scan import, and filter by publisher, series, or creator. 4,099 issues and counting.',
     image: '/kodex-collection.jpg',
     imageAlt: 'KØDEX Collection grid view',
   },
   {
     num: '03',
     title: 'Signing Planner',
-    body: 'Cross-references your collection against convention guest lists in real time. Shows you which books to bring to which events — by creator, by event, by city — so you never miss a signing opportunity for something you already own.',
+    body: 'Cross-references your collection against convention guest lists in real time. Shows you which books to bring to which events (by creator, by event, by city) so you never miss a signing opportunity for something you already own.',
     image: '/kodex-signings.jpg',
-    imageAlt: 'KØDEX Signing Planner — 64 events, 64 creators tracked',
+    imageAlt: 'KØDEX Signing Planner, 64 events, 64 creators tracked',
   },
   {
     num: '04',
     title: 'Smart Insights and Milestones',
-    body: 'AI-powered collection analytics surface patterns a collector wouldn\'t find manually — run completion status, key issue flags, publisher concentration, milestone alerts ("Your collection crossed $50,000 in value"), and growth trends over time.',
+    body: 'AI-powered collection analytics surface patterns a collector wouldn\'t find manually, run completion status, key issue flags, publisher concentration, milestone alerts ("Your collection crossed $50,000 in value"), and growth trends over time.',
     image: null,
   },
 ]
@@ -54,11 +54,11 @@ const pipeline = [
 const decisions = [
   {
     title: 'Stock Portfolio Mental Model',
-    body: 'Most collector apps think like libraries. KØDEX was designed to think like a brokerage. That framing drove every UI decision — value front and center, trend lines, key issue flags, run completion as a strategic target.',
+    body: 'Most collector apps think like libraries. KØDEX was designed to think like a brokerage. That framing drove every UI decision, value front and center, trend lines, key issue flags, run completion as a strategic target.',
   },
   {
     title: 'Enrichment Pipeline Over Manual Entry',
-    body: 'The collection grows because the pipeline does the work. Scan a barcode and the system builds the full record — art, metadata, pricing, creator credits. The collector should never type a series name.',
+    body: 'The collection grows because the pipeline does the work. Scan a barcode and the system builds the full record, art, metadata, pricing, creator credits. The collector should never type a series name.',
   },
   {
     title: 'Signing Planner as the Killer Feature',
@@ -66,7 +66,7 @@ const decisions = [
   },
   {
     title: 'Scale First, Polish After',
-    body: 'The enrichment pipeline was built to handle 185,000+ catalog records before the UI was finished. Getting the data layer right at scale meant the collector experience would always have something to display — even during development.',
+    body: 'The enrichment pipeline was built to handle 185,000+ catalog records before the UI was finished. Getting the data layer right at scale meant the collector experience would always have something to display, even during development.',
   },
 ]
 
@@ -100,7 +100,7 @@ export default function CaseKodex() {
           </motion.h1>
           <motion.p className="text-neutral-400 text-lg max-w-2xl leading-relaxed mb-14"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
-            A full-stack intelligence platform built for serious comic collectors. Not a spreadsheet. Not a checklist. A living system that tracks real market value, enriches every issue with cover art and metadata, surfaces signing opportunities at conventions, and tells you exactly what your collection is worth — right now.
+            A full-stack intelligence platform built for serious comic collectors. Not a spreadsheet. Not a checklist. A living system that tracks real market value, enriches every issue with cover art and metadata, surfaces signing opportunities at conventions, and tells you exactly what your collection is worth, right now.
           </motion.p>
           <motion.div className="flex flex-wrap gap-4"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
@@ -123,7 +123,7 @@ export default function CaseKodex() {
         <div className="max-w-5xl mx-auto">
           <motion.div {...fadeUp}>
             <img src="/kodex-dashboard.jpg" alt="KØDEX dashboard" className="w-full rounded-2xl border border-neutral-100 shadow-sm" />
-            <p className="text-neutral-400 text-xs mt-3 text-center">Dashboard — collection value, 30-day trend, key issue counts, and run completion intelligence</p>
+            <p className="text-neutral-400 text-xs mt-3 text-center">Dashboard, collection value, 30-day trend, key issue counts, and run completion intelligence</p>
           </motion.div>
         </div>
       </section>
@@ -136,13 +136,13 @@ export default function CaseKodex() {
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">Serious collectors had no serious tool.</h2>
             <div className="space-y-5 text-neutral-600 leading-relaxed text-lg">
               <p>
-                The comic collecting market is not small. Graded key issues sell for tens of thousands of dollars. Collections built over decades can be worth hundreds of thousands. And yet the tools collectors were using — spreadsheets, apps built in the 2000s, manual price lookups — had no concept of the collection as an asset with real financial weight.
+                The comic collecting market is not small. Graded key issues sell for tens of thousands of dollars. Collections built over decades can be worth hundreds of thousands. And yet the tools collectors were using, spreadsheets, apps built in the 2000s, manual price lookups, had no concept of the collection as an asset with real financial weight.
               </p>
               <p>
                 Collectors also had no systematic way to connect what they owned to signing opportunities at conventions. Every event, they'd manually scroll guest lists hoping to remember which books they had. It was a problem everyone had and nobody had solved.
               </p>
               <p>
-                KØDEX was built to solve both — and to do it at the level of sophistication the market actually deserved.
+                KØDEX was built to solve both, and to do it at the level of sophistication the market actually deserved.
               </p>
             </div>
             <blockquote className="border-l-4 pl-6 py-2 mt-10" style={{ borderColor: '#E85D04' }}>
@@ -154,7 +154,7 @@ export default function CaseKodex() {
         </div>
       </section>
 
-      {/* FEATURES — alternating with screenshots */}
+      {/* FEATURES, alternating with screenshots */}
       <section style={{ backgroundColor: '#0f0f0f' }} className="py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <motion.div {...fadeUp} className="mb-16">
@@ -236,7 +236,7 @@ export default function CaseKodex() {
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#E85D04' }}>The Takeaway</p>
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">Built from scratch. Running in production. Getting smarter every day.</h2>
             <p className="text-neutral-600 leading-relaxed text-lg mb-8">
-              KØDEX is a full-stack SaaS application built with React, Vite, Supabase, and Railway. The enrichment pipeline runs continuously — processing ComicVine, GCD, GoCollect, and PriceCharting data across 185,000+ catalog records. This is what it looks like when a creative person learns to think like a product engineer and build accordingly.
+              KØDEX is a full-stack SaaS application built with React, Vite, Supabase, and Railway. The enrichment pipeline runs continuously, processing ComicVine, GCD, GoCollect, and PriceCharting data across 185,000+ catalog records. This is what it looks like when a creative person learns to think like a product engineer and build accordingly.
             </p>
             <p className="text-neutral-900 font-bold text-lg mb-10">
               The collector experience was designed first. The infrastructure was built to deserve it.

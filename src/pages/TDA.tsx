@@ -15,17 +15,17 @@ const pillars = [
   {
     num: '01',
     title: 'The Knowledge Spine',
-    body: 'Codified recurring creative truths into a structured memory framework — vehicle positioning, regional persona bias, offer categories, platform constraints, and team approval chains. Without this, AI output is random. With it, every generated asset knows what it is, where it is going, and who it is talking to.',
+    body: 'Codified recurring creative truths into a structured memory framework: vehicle positioning, regional persona bias, offer categories, platform constraints, and team approval chains. Without this, AI output is random. With it, every generated asset knows what it is, where it is going, and who it is talking to.',
   },
   {
     num: '02',
     title: 'DEAR as a Programmable Engine',
-    body: 'DEAR had been a durable campaign format for six years. TDAiOS systematized it into a rules engine. Every AI output had to pass a Tier lens, vehicle voice structure, Feature to Emotion to Action logic, offer inclusion, and modular VO readiness for DCO. This encoded creative discipline — stopping AI from drifting into Tier 1 brand manifestos or feature dumps without emotional logic.',
+    body: 'DEAR had been a durable campaign format for six years. TDAiOS systematized it into a rules engine. Every AI output had to pass a Tier lens, vehicle voice structure, Feature to Emotion to Action logic, offer inclusion, and modular VO readiness for DCO. This encoded creative discipline. It stopped AI from drifting into Tier 1 brand manifestos or feature dumps without emotional logic.',
   },
   {
     num: '03',
     title: 'Governance Over Hype',
-    body: 'The system was framed around auditability, version control, and guardrails before automation. Clear container logic — Tier 1 vs Tier 2 vs Tier 3 — reduced QA friction and kept output compliant under Publicis AI governance requirements. This wasn\'t "let\'s use AI." It was "let\'s make the system safer at scale."',
+    body: 'The system was framed around auditability, version control, and guardrails before automation. Clear container logic (Tier 1 vs Tier 2 vs Tier 3) reduced QA friction and kept output compliant under Publicis AI governance requirements. This wasn\'t "let\'s use AI." It was "let\'s make the system safer at scale."',
   },
   {
     num: '04',
@@ -35,10 +35,10 @@ const pillars = [
 ]
 
 const outcomes = [
-  { title: 'Formal AI-Readiness Narrative', body: 'Leadership had a structured story for where the organization stood on AI — not hype, not fear, but a documented readiness model with a clear path forward.' },
-  { title: 'Vendor Evaluation Criteria', body: 'Built structured criteria for evaluating automation vendors — the difference between real automation depth and template wrapping dressed up as AI.' },
+  { title: 'Formal AI-Readiness Narrative', body: 'Leadership had a structured story for where the organization stood on AI. Not hype, not fear. A documented readiness model with a clear path forward.' },
+  { title: 'Vendor Evaluation Criteria', body: 'Built structured criteria for evaluating automation vendors: the difference between real automation depth and template wrapping dressed up as AI.' },
   { title: 'Reduced Operational Drag', body: 'At 100 to 300+ assets per month, reducing friction at the scripting, versioning, and QA stages compounds fast. The framework made that reduction systematic.' },
-  { title: 'Publicis Alignment', body: 'TDAiOS anticipated the shift from AI novelty to measurable business outcomes — positioning the division as designing a governed creative operating system, not just experimenting with tools.' },
+  { title: 'Publicis Alignment', body: 'TDAiOS anticipated the shift from AI novelty to measurable business outcomes, positioning the division as designing a governed creative operating system, not just experimenting with tools.' },
 ]
 
 export default function TDA() {
@@ -74,7 +74,7 @@ export default function TDA() {
 
           <motion.p className="text-neutral-400 text-lg max-w-2xl leading-relaxed mb-14"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
-            A governance-first operating model built to unify DEAR scripting, dynamic offer logic, personalization rules, and AI-assisted production into a scalable Tier-2 retail system — designed to reduce risk, increase versioning efficiency, and align creative automation with measurable sales outcomes.
+            A governance-first operating model built to unify DEAR scripting, dynamic offer logic, personalization rules, and AI-assisted production into a scalable Tier-2 retail system. Designed to reduce risk, increase versioning efficiency, and align creative automation with measurable sales outcomes.
           </motion.p>
 
           <motion.div className="flex flex-wrap gap-4"
@@ -137,7 +137,7 @@ export default function TDA() {
               TDAiOS was a connected intelligence layer that unified: creative logic, offer truth, persona strategy, regional nuance, DCO mechanics, AI-assisted production, and compliance guardrails. It formalized how Tier 2 retail content gets generated, versioned, and deployed.
             </p>
             <p className="text-neutral-400 leading-relaxed text-lg">
-              Think of it as the operating system that sat beneath the tools — giving every asset, at every stage, a shared set of rules to follow.
+              Think of it as the operating system that sat beneath the tools, giving every asset, at every stage, a shared set of rules to follow.
             </p>
           </motion.div>
         </div>
@@ -187,7 +187,7 @@ export default function TDA() {
                 'OAT feed surfaces an APR offer for a specific model in a specific region',
                 'Knowledge layer confirms the regional persona bias and vehicle positioning',
                 'DEAR script generated with the correct voice, emotional arc, and offer integration',
-                'Modular supers built for DCO — dynamic pricing swapped by execution partner',
+                'Modular supers built for DCO, dynamic pricing swapped by execution partner',
                 'Retargeting logic resolves to the last-touched model for the individual user',
                 'Chat layer defers offers appropriately for legal compliance',
                 'Measurement ties the full chain back to Tier 2 sales outcomes',

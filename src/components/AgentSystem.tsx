@@ -19,7 +19,7 @@ const agents = [
     emoji: '🔭',
     name: 'Research Scout',
     role: 'Intelligence Gatherer',
-    desc: 'Web research, API docs, competitive analysis, and tech landscape mapping — no file writes.',
+    desc: 'Web research, API docs, competitive analysis, and tech landscape mapping, no file writes.',
     color: '#3B82F6',
   },
   {
@@ -135,7 +135,7 @@ export default function AgentSystem() {
 
           {/* Subtext */}
           <p className="text-neutral-400 max-w-2xl text-lg leading-relaxed mb-14">
-            MrMagoochi is a persistent, multi-agent AI system running 24/7 on a Mac mini. It orchestrates 18+ specialized agents for creative strategy, research, autonomous coding, and ops — all with persistent memory, real-time logging, and autonomous deploys.
+            MrMagoochi is a persistent, multi-agent AI system running 24/7 on a Mac mini. It orchestrates 18+ specialized agents for creative strategy, research, autonomous coding, and ops, all with persistent memory, real-time logging, and autonomous deploys.
           </p>
 
           {/* Stats */}
@@ -159,7 +159,7 @@ export default function AgentSystem() {
           {/* Agent Grid */}
           <div className="mb-6">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-neutral-500 mb-6">
-              Agent Fleet — Selected
+              Agent Fleet, Selected
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {agents.map((agent, i) => (

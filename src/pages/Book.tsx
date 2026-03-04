@@ -32,7 +32,7 @@ const pullQuotes = [
     chapter: 'Ch. 14',
   },
   {
-    text: 'Conscious machines would potentially possess desires, preferences, and the ability to suffer — raising questions about their moral status.',
+    text: 'Conscious machines would potentially possess desires, preferences, and the ability to suffer, raising questions about their moral status.',
     chapter: 'Ch. 9',
   },
   {
@@ -142,7 +142,7 @@ function ChapterAccordion({
           {chapter.title}
         </span>
 
-        {/* Word count — hidden on small mobile */}
+        {/* Word count, hidden on small mobile */}
         <span className="hidden sm:block text-xs text-neutral-400 font-medium flex-shrink-0">
           {wordCount}
         </span>
@@ -280,14 +280,14 @@ export default function Book() {
                 &ldquo;{q.text}&rdquo;
               </p>
               <cite className="text-xs text-neutral-600 not-italic font-semibold tracking-widest uppercase">
-                — {q.chapter}
+               , {q.chapter}
               </cite>
             </blockquote>
           ))}
         </motion.div>
       </section>
 
-      {/* Chapter list section — white bg */}
+      {/* Chapter list section, white bg */}
       <section className="bg-white rounded-t-3xl">
         <div className="max-w-6xl mx-auto px-6 py-20">
           {/* Section header */}
@@ -339,7 +339,7 @@ export default function Book() {
             className="max-w-xl mx-auto"
           >
             <p className="text-lg md:text-xl text-neutral-300 mb-3 leading-relaxed">
-              These chapters were built for a podcast series on AGI — before everyone else started talking about it.
+              These chapters were built for a podcast series on AGI, before everyone else started talking about it.
             </p>
             <p className="text-neutral-500 mb-10">
               The podcast is still in the works. The content is here now.

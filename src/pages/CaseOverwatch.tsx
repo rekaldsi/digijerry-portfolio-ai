@@ -24,26 +24,26 @@ const capabilities = [
     title: 'Neighborhood Readiness Index',
     body: 'A 0–100 composite score computed from four weighted metrics: BLE device density, mesh node coverage, WiFi relay potential, and signal quality. The first formalized metric for whether a neighborhood can support decentralized coordination without cloud dependency.',
     image: '/overwatch-status.jpg',
-    imageAlt: 'OVERWATCH system status panel — 5.2M scans, Supabase connected, ADS-B live',
+    imageAlt: 'OVERWATCH system status panel, 5.2M scans, Supabase connected, ADS-B live',
   },
   {
     num: '02',
     title: 'Live Data Layer System',
     body: 'Nine toggleable intelligence layers on one map: live aircraft (ADS-B), BLE devices (50,000+), WiFi scatter, mesh nodes, street traffic, speed cams, earthquakes, weather radar, and GDACS global alerts. Each layer sourced, ingested, and rendered in real time.',
     image: '/overwatch-layers.jpg',
-    imageAlt: 'OVERWATCH data layers panel — 9 layers including BLE, mesh, aircraft, traffic',
+    imageAlt: 'OVERWATCH data layers panel, 9 layers including BLE, mesh, aircraft, traffic',
   },
   {
     num: '03',
     title: 'Spatial Intelligence Grid',
     body: 'Grid-based coverage analysis at ~100m cell resolution. Each cell scored for mesh viability, relay potential, and redundancy. Gap detection surfaces exactly where the network is thin. Relay placement recommendations tell you where to put hardware to fix it.',
     image: '/overwatch-map-full.jpg',
-    imageAlt: 'OVERWATCH Chicago intelligence grid — full wardrive coverage visualization',
+    imageAlt: 'OVERWATCH Chicago intelligence grid, full wardrive coverage visualization',
   },
   {
     num: '04',
     title: 'Bridge Node and Topology Modeling',
-    body: 'Critical connectivity modeling identifies which nodes, if lost, would fragment the mesh. BitChat-style hop simulation estimates redundancy across the network. These aren\'t visualizations — they\'re planning tools for infrastructure deployment.',
+    body: 'Critical connectivity modeling identifies which nodes, if lost, would fragment the mesh. BitChat-style hop simulation estimates redundancy across the network. These aren\'t visualizations, they\'re planning tools for infrastructure deployment.',
     image: null,
   },
 ]
@@ -51,11 +51,11 @@ const capabilities = [
 const decisions = [
   {
     title: 'ScanMap Describes the Tool. Overwatch Describes What It Is.',
-    body: 'The rename wasn\'t branding. ScanMap visualized signals. Overwatch models infrastructure resilience. When the pivot happened — formal viability scoring, gap analysis, bridge node detection, AI insights — the original name was no longer accurate. The new name is.',
+    body: 'The rename wasn\'t branding. ScanMap visualized signals. Overwatch models infrastructure resilience. When the pivot happened — once formal viability scoring, gap analysis, bridge node detection, and AI insights were in place — the original name was no longer accurate. The new name is.',
   },
   {
     title: 'Signals Are Infrastructure, Not Surveillance',
-    body: 'The system ingests WiFi, BLE, and mesh signals without identity tracking, payload interception, or personal data collection. Signals are treated the same way you\'d treat road data or power grid topology — as environmental infrastructure. That framing was designed in from the start.',
+    body: 'The system ingests WiFi, BLE, and mesh signals without identity tracking, payload interception, or personal data collection. Signals are treated the same way you\'d treat road data or power grid topology, as environmental infrastructure. That framing was designed in from the start.',
   },
   {
     title: 'AI Grounded in Local Scan Data',
@@ -104,7 +104,7 @@ export default function CaseOverwatch() {
           </motion.h1>
           <motion.p className="text-neutral-400 text-lg max-w-2xl leading-relaxed mb-14"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
-            What started as a wardrive visualizer became a neighborhood-scale infrastructure intelligence engine. OVERWATCH transforms raw RF signal data — WiFi, BLE, LoRa mesh — into a structured resilience model that answers one question: can this neighborhood function without the internet?
+            What started as a wardrive visualizer became a neighborhood-scale infrastructure intelligence engine. OVERWATCH transforms raw RF signal data, WiFi, BLE, LoRa mesh, into a structured resilience model that answers one question: can this neighborhood function without the internet?
           </motion.p>
           <motion.div className="flex flex-wrap gap-4"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
@@ -124,7 +124,7 @@ export default function CaseOverwatch() {
           <motion.div {...fadeUp}>
             <img src="/overwatch-map-full.jpg" alt="OVERWATCH intelligence grid" className="w-full rounded-2xl border border-neutral-800" />
             <p className="text-neutral-500 text-xs mt-3 text-center">
-              Chicago — OVERWATCH grid live. 154 aircraft tracked via ADS-B. 50,000 BLE devices. 368 mesh nodes. 5.2M cumulative scans.
+              Chicago, OVERWATCH grid live. 154 aircraft tracked via ADS-B. 50,000 BLE devices. 368 mesh nodes. 5.2M cumulative scans.
             </p>
           </motion.div>
         </div>
@@ -140,10 +140,10 @@ export default function CaseOverwatch() {
             </h2>
             <div className="space-y-5 text-neutral-600 leading-relaxed text-lg">
               <p>
-                ScanMap was built to visualize wardriving data — upload WiFi and BLE scans, see signal density on a map, analyze mesh readiness. A technical instrument panel. Useful, but narrow.
+                ScanMap was built to visualize wardriving data, upload WiFi and BLE scans, see signal density on a map, analyze mesh readiness. A technical instrument panel. Useful, but narrow.
               </p>
               <p>
-                The pivot happened when the analysis started generating real insight: mesh viability could be scored. Coverage gaps could be located precisely. Bridge nodes — the critical single points of failure — could be identified. Relay placement could be recommended algorithmically. AI could reason about local infrastructure from local data.
+                The pivot happened when the analysis started generating real insight: mesh viability could be scored. Coverage gaps could be located precisely. Bridge nodes (the critical single points of failure) could be identified. Relay placement could be recommended algorithmically. AI could reason about local infrastructure from local data.
               </p>
               <p>
                 At that point, this wasn't a mapping tool anymore. It was a strategic planning engine for neighborhood-scale infrastructure resilience. ScanMap described what it did. OVERWATCH describes what it is.
@@ -250,7 +250,7 @@ export default function CaseOverwatch() {
               The intelligence spine of a larger system.
             </h2>
             <p className="text-neutral-600 leading-relaxed text-lg mb-6">
-              OVERWATCH doesn't stand alone. It's the infrastructure awareness layer of Neighborhood OS — the full stack that includes SIVOPS (the offline field scanner) and Trade Post (the coordination and barter platform). The pipeline is: SIVOPS collects signals in the field, OVERWATCH models what those signals mean for infrastructure resilience, Trade Post uses that intelligence to route coordination through mesh when the grid fails.
+              OVERWATCH doesn't stand alone. It's the infrastructure awareness layer of Neighborhood OS, the full stack that includes SIVOPS (the offline field scanner) and Trade Post (the coordination and barter platform). The pipeline is: SIVOPS collects signals in the field, OVERWATCH models what those signals mean for infrastructure resilience, Trade Post uses that intelligence to route coordination through mesh when the grid fails.
             </p>
             <p className="text-neutral-600 leading-relaxed text-lg">
               OVERWATCH answers the question every other layer depends on: is this neighborhood ready to operate independently?
@@ -273,7 +273,7 @@ export default function CaseOverwatch() {
               Resilience modeling. Running in production.
             </h2>
             <p className="text-neutral-400 leading-relaxed text-lg mb-8">
-              OVERWATCH is built on React, TypeScript, Supabase, MapLibre GL, and Gemini — processing over 5 million field scans from a custom Android scanner running offline in real neighborhoods. Nine live data layers. A formal mesh viability scoring engine. AI-grounded infrastructure insights. This is what applied spatial intelligence looks like when it's built to answer a real question.
+              OVERWATCH is built on React, TypeScript, Supabase, MapLibre GL, and Gemini, processing over 5 million field scans from a custom Android scanner running offline in real neighborhoods. Nine live data layers. A formal mesh viability scoring engine. AI-grounded infrastructure insights. This is what applied spatial intelligence looks like when it's built to answer a real question.
             </p>
             <p className="text-white font-bold text-lg mb-10">
               Not a wardriving tool. An infrastructure resilience engine.

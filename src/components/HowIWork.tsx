@@ -4,17 +4,17 @@ const steps = [
   {
     num: '01',
     title: 'Strategy Before Code',
-    body: 'Every project starts with a plan — not a prompt. Scope is defined, architecture is validated, and the right tools are assigned before a single line runs. This is how you avoid rework.',
+    body: 'Every project starts with a plan, not a prompt. Scope is defined, architecture is validated, and the right tools are assigned before a single line runs. This is how you avoid rework.',
   },
   {
     num: '02',
     title: 'Autonomous Execution',
-    body: 'Specialized agents handle research, coding, QA, and deploys in parallel — while I oversee and steer. Features ship faster, with less overhead, and more consistency than traditional team structures.',
+    body: 'Specialized agents handle research, coding, QA, and deploys in parallel, while I oversee and steer. Features ship faster, with less overhead, and more consistency than traditional team structures.',
   },
   {
     num: '03',
     title: 'Systems That Compound',
-    body: 'Every project builds on the last. Shared memory, persistent context, and documented decisions mean the system gets smarter over time — not slower. Knowledge doesn\'t walk out the door.',
+    body: 'Every project builds on the last. Shared memory, persistent context, and documented decisions mean the system gets smarter over time, not slower. Knowledge doesn\'t walk out the door.',
   },
 ]
 
