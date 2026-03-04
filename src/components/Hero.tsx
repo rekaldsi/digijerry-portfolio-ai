@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import type { Easing } from 'framer-motion'
+import GridParticles from './GridParticles'
 
 const breathEase: Easing = 'easeInOut'
 
@@ -25,6 +26,9 @@ export default function Hero() {
           backgroundSize: '60px 60px',
         }}
       />
+
+      {/* Grid particles — tiny traffic on the grid lines */}
+      <GridParticles />
 
       {/* Orange glow top-left */}
       <div
