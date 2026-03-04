@@ -8,6 +8,7 @@ import HowIWork from './components/HowIWork'
 import Background from './components/Background'
 import Footer from './components/Footer'
 import Book from './pages/Book'
+import TDA from './pages/TDA'
 
 function Home() {
   return (
@@ -32,6 +33,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/book" element={<Book />} />
+        <Route path="/tda" element={<TDA />} />
       </Routes>
     </BrowserRouter>
   )

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 type Project = {
   name: string
@@ -52,6 +52,7 @@ const projects: Project[] = [
     description: 'Operationalized AI inside Toyota\'s enterprise retail system at Saatchi & Saatchi.',
     detail: 'Four months embedded at the intersection of creative, tech, and production for Toyota Dealer Association. Built the DEAR prompt framework — turning a 6-year campaign architecture into a programmable retail engine. Designed the TDA KnowledgeBot knowledge infrastructure. Contributed DCO logic for Road Rivals (33 advantages × 99 sizes). Introduced an AI search / contextual product mention pilot tied directly to Tier 2 retail KPIs. Educated creative and production teams on structured AI use inside Marcel. Shipped real creative — including a produced LED ribbon concept for RBNY. This wasn\'t experimentation. It was systems architecture inside an enterprise machine.',
     tags: ['DCO', 'AI Strategy', 'Saatchi & Saatchi', 'Toyota TDA', 'Prompt Engineering', 'Retail AI'],
+    link: '/tda',
   },
 ]
 
@@ -157,17 +158,30 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                 </span>
               ))}
             </div>
-            {project.demoUrl && (
-              <a
-                href={project.demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full transition-colors"
-                style={{ backgroundColor: '#fff7f3', color: '#E85D04', border: '1px solid #E85D04' }}
-              >
-                ▶ Live Demo ↗
-              </a>
-            )}
+            <div className="flex flex-wrap gap-3">
+              {project.demoUrl && (
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full transition-colors"
+                  style={{ backgroundColor: '#fff7f3', color: '#E85D04', border: '1px solid #E85D04' }}
+                >
+                  ▶ Live Demo ↗
+                </a>
+              )}
+              {project.link && (
+                <Link
+                  to={project.link}
+                  state={{ from: '/#projects' }}
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full transition-colors"
+                  style={{ backgroundColor: '#fff7f3', color: '#E85D04', border: '1px solid #E85D04' }}
+                >
+                  View Case Study →
+                </Link>
+              )}
+            </div>
           </div>
         </>
       )}
