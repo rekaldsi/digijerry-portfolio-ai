@@ -5,19 +5,20 @@ type Status = 'idle' | 'sending' | 'sent' | 'error'
 
 export default function ContactSection() {
   const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [status, setStatus] = useState<Status>('idle')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!name.trim() || !message.trim()) return
+    if (!name.trim() || !email.trim() || !message.trim()) return
     setStatus('sending')
 
     try {
       const res = await fetch('https://formspree.io/f/xwvngbpv', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ name, message }),
+        body: JSON.stringify({ name, email, message }),
       })
       if (res.ok) {
         setStatus('sent')
@@ -58,17 +59,31 @@ export default function ContactSection() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
-              <div>
-                <label className="block text-sm font-medium text-neutral-700 mb-2">Your name</label>
-                <input
-                  type="text"
-                  value={name}
-                  onChange={e => setName(e.target.value)}
-                  required
-                  placeholder="First and last"
-                  className="w-full px-4 py-3 rounded-xl border border-neutral-200 text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 text-sm"
-                  style={{ '--tw-ring-color': '#E85D04' } as React.CSSProperties}
-                />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label className="block text-sm font-medium text-neutral-700 mb-2">Your name</label>
+                  <input
+                    type="text"
+                    value={name}
+                    onChange={e => setName(e.target.value)}
+                    required
+                    placeholder="First and last"
+                    className="w-full px-4 py-3 rounded-xl border border-neutral-200 text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 text-sm"
+                    style={{ '--tw-ring-color': '#E85D04' } as React.CSSProperties}
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-neutral-700 mb-2">Your email</label>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
+                    required
+                    placeholder="you@company.com"
+                    className="w-full px-4 py-3 rounded-xl border border-neutral-200 text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 text-sm"
+                    style={{ '--tw-ring-color': '#E85D04' } as React.CSSProperties}
+                  />
+                </div>
               </div>
               <div>
                 <label className="block text-sm font-medium text-neutral-700 mb-2">Message</label>
