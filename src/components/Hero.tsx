@@ -44,9 +44,17 @@ export default function Hero() {
           <motion.span
             className="inline-block"
             style={{ color: '#C8F135' }}
-            initial={{ skewX: 0 }}
-            animate={{ skewX: [0, -2, 1.5, -1, 0] }}
-            transition={{ duration: 0.7, delay: 1.0, ease: 'easeInOut' }}
+            animate={{
+              skewX: [0, 0, 0, 0, 0, 0, 0, -2, 1.5, -1, 0.5, 0],
+              x:     [0, 0, 0, 0, 0, 0, 0,  -2,   2,  -1,   0, 0],
+            }}
+            transition={{
+              duration: 1.2,
+              delay: 1.2,
+              repeat: Infinity,
+              repeatDelay: 4,
+              ease: 'easeInOut',
+            }}
           >
             Generalist.
           </motion.span>
