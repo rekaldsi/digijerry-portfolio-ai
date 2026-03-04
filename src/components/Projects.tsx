@@ -49,9 +49,9 @@ const projects: Project[] = [
   {
     name: 'The Orchard',
     status: 'LIVE',
-    description: 'White-label AI brand intelligence dashboard — deployed for Toyota.',
-    detail: 'An agency-grade brand stewardship portal built to be white-labeled for any client. Deployed as TDAiOS (Toyota Dealer Association Intelligence Operating System) for Toyota. Campaign intelligence, brand workflows, and AI-assisted decision-making in one system.',
-    tags: ['React', 'Lovable', 'AI Workflows', 'White-Label'],
+    description: 'White-label AI brand intelligence dashboard for agencies and dealers.',
+    detail: 'Built as a reusable agency workspace — campaign intelligence, brand workflows, AI-assisted briefs, and performance tracking in one system. Architected from day one to be white-labeled and deployed across multiple clients and brand verticals.',
+    tags: ['React', 'AI Workflows', 'White-Label', 'Agency'],
   },
   {
     name: 'DigiJerry',
