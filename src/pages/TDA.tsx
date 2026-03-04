@@ -14,38 +14,38 @@ const fadeUp = {
 const systems = [
   {
     num: '01',
-    title: 'DEAR Prompt Framework',
-    body: 'Codified the six-year DEAR campaign architecture into structured AI prompts. Built Feature → Emotion → Action logic. Designed modular VO + super structure for DCO compatibility. Moved DEAR from creative campaign to programmable retail engine.',
+    title: 'Governance Framework',
+    body: 'Established how AI gets used inside the organization — approved tools, compliance boundaries, sandboxing protocols, and team-specific guidance. Turned ad-hoc AI experimentation into a governed practice with clear rules and accountability.',
   },
   {
     num: '02',
-    title: 'TDA KnowledgeBot',
-    body: 'Designed foundational knowledge infrastructure: vehicles + positioning, regional nuances, offer categories, platform constraints, team chain dependencies. System architecture thinking, not creative output.',
+    title: 'Centralized Knowledge Base',
+    body: 'Designed the intelligence infrastructure that powers the whole system: product positioning, regional nuances, offer categories, platform constraints, and team chain dependencies — all structured as a queryable source of truth for AI-assisted work.',
   },
   {
     num: '03',
-    title: 'Road Rivals DCO',
-    body: 'Contributed to modular video system supporting 33 competitive advantages across 99 sizes. Built versioning logic for dynamic creative at scale. Audited Innovid template structure and identified automation bottlenecks.',
+    title: 'Prompt Architecture',
+    body: 'Codified existing campaign logic into structured AI prompts. Built modular VO and copy frameworks with dynamic content compatibility. Created reusable instruction sets so teams could produce consistent, compliant output without starting from scratch every time.',
   },
   {
     num: '04',
-    title: 'AI Search Pilot',
-    body: 'Introduced contextual product mention strategy for AI search visibility — sitting between Tier 1 brand and Tier 2 retail. Region-specific testing (Denver, Chicago, NY) grounded in Toyota Pressroom data. Upstream innovation tied to downstream sales KPIs.',
+    title: 'Workflow Integration',
+    body: 'Connected the knowledge base and prompt framework to real production tasks — disclaimer swaps, storyboard ideation, deck building, script versioning. Reduced friction at every step where AI could accelerate without introducing risk.',
   },
 ]
 
 const shipped = [
   {
-    title: 'RBNY LED Ribbon',
-    body: 'Developed the creative concept for the soccer field LED ribbon display. Pushed it through approval. Saw it produced and executed live.',
+    title: 'Live Creative',
+    body: 'Shipped real executional work alongside the systems — including a produced LED ribbon concept for an MLS stadium that went from idea through approval to live execution.',
   },
   {
-    title: 'SEED Channel',
-    body: 'Created and ran internal AI upskilling channel inside Marcel. Taught structured prompting, approved tool stacks, and governance boundaries to art directors and creatives across the agency.',
+    title: 'AI Upskilling Program',
+    body: 'Created and ran an internal AI upskilling channel. Taught structured prompting, approved tool stacks, and governance boundaries to art directors and creatives. The goal: teach people to direct AI, not just describe to it.',
   },
   {
-    title: 'Dearware Framework',
-    body: 'Built prompt library and reusable instruction sets. Trained teams to direct AI rather than just describe to it. Reduced production friction across disclaimer swaps, storyboard ideation, and deck building.',
+    title: 'Prompt Library',
+    body: 'Built a reusable prompt library and structured instruction sets mapped to real production tasks. Reduced friction across disclaimer handling, storyboard ideation, script versioning, and deck building.',
   },
 ]
 
@@ -88,7 +88,7 @@ export default function TDA() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Case Study · Saatchi & Saatchi × Toyota TDA
+            Case Study · TDAiOS
           </motion.p>
 
           <motion.h1
@@ -97,7 +97,7 @@ export default function TDA() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Building AI<br />Into the Machine.
+            An Intelligence OS<br />for Creative Teams.
           </motion.h1>
 
           <motion.p
@@ -106,7 +106,7 @@ export default function TDA() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Four months at the intersection of creative, technology, and production — inside one of the most complex retail advertising systems in the world.
+            Designed and deployed an AI intelligence operating system for a major automotive retail advertising group — built around governance, a centralized knowledge base, and structured workflows that gave creative and production teams a single source of truth for AI-assisted work.
           </motion.p>
 
           {/* Stat pills */}
@@ -118,7 +118,7 @@ export default function TDA() {
           >
             {[
               { value: '4 Months', label: 'Embedded Contract' },
-              { value: 'Enterprise Scale', label: 'Toyota Dealer Association' },
+              { value: 'Enterprise Scale', label: 'Automotive Retail Advertising' },
               { value: 'Shipped', label: 'Real creative, real systems' },
             ].map((stat) => (
               <div
@@ -141,17 +141,17 @@ export default function TDA() {
               The Mandate
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
-              Bridge creative and emerging tech.
+              Give the team a system, not just a tool.
             </h2>
             <p className="text-neutral-600 leading-relaxed text-lg mb-10">
-              Brought in as Creative Director, Digital & Technology at Saatchi & Saatchi to align with Toyota TDA's evolving needs. The expectation: advance AI-driven workflows, support DCO and retail personalization, and build scalable systems across creative and production.
+              Brought in as Creative Director, Digital and Technology at a major advertising agency to solve a real problem: creative and production teams were using AI in fragmented, ungoverned ways with no shared context, no consistent output, and no institutional knowledge carrying forward. The mandate was to build the infrastructure that changed that.
             </p>
             <blockquote
               className="border-l-4 pl-6 py-2"
               style={{ borderColor: '#E85D04' }}
             >
               <p className="text-xl font-semibold text-neutral-800 italic leading-relaxed">
-                "The expectation was to bridge creative and tech. What actually happened was bigger."
+                "The goal wasn't to introduce AI. It was to make AI something the whole organization could actually use."
               </p>
             </blockquote>
           </motion.div>
@@ -260,10 +260,10 @@ export default function TDA() {
               What this means for you.
             </h2>
             <p className="text-neutral-600 leading-relaxed text-lg mb-8">
-              In four months: operationalized AI inside a legacy retail system, reinforced and scaled a six-year campaign architecture, shipped real creative, educated teams, reduced risk through structure, and introduced forward-looking experimentation tied to retail outcomes.
+              In four months: built the governance layer, designed the knowledge base, codified the prompt architecture, integrated AI into live production workflows, trained the teams, and shipped real creative. The organization went from fragmented AI use to a system with structure, accountability, and scale.
             </p>
             <p className="text-xl font-bold text-neutral-900 mb-10">
-              This wasn't experimenting with AI. This was building systems that made AI safer, faster, and usable inside an enterprise retail machine.
+              This is what it looks like when someone builds the operating system for AI inside an enterprise — not the experiments, the infrastructure.
             </p>
             <a
               href="mailto:sketchandslogan@gmail.com"

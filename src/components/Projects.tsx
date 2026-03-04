@@ -51,11 +51,11 @@ const projects: Project[] = [
     link: '/case/botique',
   },
   {
-    name: 'Toyota TDA / The Orchard',
+    name: 'TDAiOS',
     status: 'LIVE',
-    description: 'Operationalized AI inside Toyota\'s enterprise retail system at Saatchi & Saatchi.',
-    detail: 'Four months embedded at the intersection of creative, tech, and production for Toyota Dealer Association. Built the DEAR prompt framework — turning a 6-year campaign architecture into a programmable retail engine. Designed the TDA KnowledgeBot knowledge infrastructure. Contributed DCO logic for Road Rivals (33 advantages × 99 sizes). Introduced an AI search / contextual product mention pilot tied directly to Tier 2 retail KPIs. Educated creative and production teams on structured AI use inside Marcel. Shipped real creative — including a produced LED ribbon concept for RBNY. This wasn\'t experimentation. It was systems architecture inside an enterprise machine.',
-    tags: ['DCO', 'AI Strategy', 'Saatchi & Saatchi', 'Toyota TDA', 'Prompt Engineering', 'Retail AI'],
+    description: 'An AI intelligence OS built to govern, centralize, and activate creative workflows at scale.',
+    detail: 'Designed and deployed an intelligence operating system for a major automotive retail advertising group. Built the governance framework, centralized knowledge base, and structured prompt architecture that gave creative and production teams a single source of truth for AI-assisted work. Moved the organization from ad-hoc AI use to a governed, scalable system.',
+    tags: ['AI Governance', 'Knowledge Systems', 'Prompt Architecture', 'DCO', 'Workflow Design'],
     link: '/tda',
   },
 ]
