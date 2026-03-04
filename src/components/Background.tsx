@@ -14,18 +14,24 @@ export default function Background() {
             Background
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-10">
-            Creative director. Product builder. AI native.
+            Creative Generalist. AI Alchemist. Human-Centered Futurist.
           </h2>
 
           <div className="space-y-6 text-neutral-600 leading-relaxed">
             <p>
-              Nearly two decades as an Associate Creative Director at Leo Burnett — one of the most demanding creative environments in the world. Before that, FCB, experiential work for R.J. Reynolds, and national TV and radio at Bridges Media Group. The through-line: moving fast, making things people actually respond to, and selling ideas in rooms that don't want to buy them.
+              In a rapidly evolving advertising landscape, I've built a career rooted in creativity, strategy, and innovation. My passion lies in leveraging emerging technologies like AI and automation to reimagine how we connect with audiences in meaningful ways.
             </p>
             <p>
-              Four years ago I started building with AI before most people knew what to call it. Not prompting — building. Custom agents, generative workflows, autonomous systems running in production. I've shipped platforms, trained teams, and deployed tools that actually got used. The portfolio above isn't a demo reel. It's what's live.
+              Over the past three years, I've led advancements in how creative teams collaborate — integrating cutting-edge tools and crafting campaigns that leave a lasting impact. Beyond campaigns, I've driven programs to upskill talent, enabling teams to adopt new technologies and reimagine workflows.
             </p>
             <p>
-              BFA in Multimedia/Design from Illinois Institute of Art. Based in Chicago. If you're building something that needs both strategic vision and the technical chops to ship it — I'm the person you're looking for.
+              My approach blends bold creativity with a focus on solving problems in smarter, more impactful ways — whether that's rethinking email, digital, or social strategies, or empowering teams with tools to stay ahead of the curve.
+            </p>
+            <p>
+              My work extends beyond advertising. From decentralized art collections and mural projects to exploring the intersection of AI, creativity, and ethics — I believe personal curiosity fuels professional growth. Bold ideas paired with actionable insights can shape not just campaigns, but the way we work, collaborate, and create.
+            </p>
+            <p className="font-medium text-neutral-800">
+              If you're looking for a creative partner who doesn't just adapt to change but drives it — let's connect.
             </p>
           </div>
 
