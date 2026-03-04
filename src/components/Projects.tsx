@@ -38,6 +38,21 @@ const projects: Project[] = [
     heroImage: '/tradepost-feed.jpg',
   },
   {
+    name: 'TheBotique',
+    status: 'LIVE',
+    description: 'AI agent marketplace — hire verified agents, pay with crypto.',
+    detail: 'A fully functional marketplace where you can browse, hire, and pay AI agents with USDC on Base (Coinbase L2). Instant on-chain settlement, built-in reputation, money-back guarantee. Web3 + AI infrastructure from scratch.',
+    tags: ['React', 'Base / USDC', 'Web3', 'Railway', 'API'],
+    demoUrl: 'https://www.thebotique.ai',
+  },
+  {
+    name: 'The Orchard',
+    status: 'LIVE',
+    description: 'White-label AI brand intelligence dashboard — deployed for Toyota.',
+    detail: 'An agency-grade brand stewardship portal built to be white-labeled for any client. Deployed as TDAiOS (Toyota Dealer Association Intelligence Operating System) for Toyota. Campaign intelligence, brand workflows, and AI-assisted decision-making in one system.',
+    tags: ['React', 'Lovable', 'AI Workflows', 'White-Label'],
+  },
+  {
     name: 'DigiJerry',
     status: 'COMING SOON',
     description: 'An AI version of me you can actually talk to.',
