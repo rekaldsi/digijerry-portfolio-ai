@@ -1,4 +1,7 @@
 import { motion } from 'framer-motion'
+import type { Easing } from 'framer-motion'
+
+const breathEase: Easing = 'easeInOut'
 
 const stats = [
   { value: '25', label: 'Years in advertising' },
@@ -30,6 +33,29 @@ export default function Hero() {
           background: 'radial-gradient(ellipse 70% 50% at -5% -5%, rgba(232,93,4,0.15) 0%, transparent 60%)',
         }}
       />
+
+      {/* Animated lime accent glow bottom-right */}
+      <motion.div
+        className="absolute inset-0 pointer-events-none"
+        animate={{ opacity: [0.4, 0.8, 0.4] }}
+        transition={{ duration: 7, repeat: Infinity, ease: breathEase }}
+        style={{
+          background: 'radial-gradient(ellipse 55% 45% at 105% 105%, rgba(200,241,53,0.07) 0%, transparent 60%)',
+        }}
+      />
+
+      {/* Slowly drifting ambient orb */}
+      <motion.div
+        className="absolute pointer-events-none overflow-hidden"
+        style={{ width: '600px', height: '600px', top: '10%', right: '-150px', borderRadius: '50%' }}
+        animate={{ y: [-15, 15, -15], x: [-8, 8, -8] }}
+        transition={{ duration: 14, repeat: Infinity, ease: breathEase }}
+      >
+        <div style={{
+          width: '100%', height: '100%', borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(200,241,53,0.025) 0%, transparent 70%)',
+        }} />
+      </motion.div>
 
       <div className="max-w-6xl mx-auto px-6 pt-24 pb-16 relative z-10 w-full">
         {/* H1 — the statement, not the name */}
@@ -86,7 +112,7 @@ export default function Hero() {
             See My Work ↓
           </a>
           <a
-            href="https://www.instagram.com/sig.seeker/reels/" target="_blank" rel="noopener noreferrer"
+            href="https://www.instagram.com/sig.seeker/reels/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm border border-neutral-700 text-neutral-300 hover:border-neutral-500 transition-colors"

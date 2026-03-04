@@ -47,12 +47,14 @@ const features = [
     title: 'Mesh Transport via Meshtastic LoRa',
     body: 'Lightweight post intents broadcast over LoRa radio: the same long-range, low-power protocol used in disaster relief networks. No internet required for local propagation. Each post hops between mesh nodes, tagged with the originating node ID. The mesh doesn\'t replace the cloud. It activates when the cloud isn\'t there.',
     image: null,
+    caption: null,
   },
   {
     num: '03',
     title: 'E2EE From the Foundation',
     body: 'End-to-end encryption was designed in, not added on. Device key registration, Signal Protocol scaffolding, encrypted payload storage. The server is intentionally blind to offer content. Peer-to-peer mesh transport extends that property: payloads encrypted between devices, no relay decryption at any hop.',
     image: null,
+    caption: null,
   },
   {
     num: '04',
@@ -67,6 +69,7 @@ const features = [
     title: 'Offline Listing Cache',
     body: 'Listings cache locally so the experience doesn\'t degrade when connectivity does. Browse, post, and respond with no active connection. When the network returns (cloud or mesh) state syncs forward. No lost posts, no blank screens, no error states during the exact moments the platform is needed most.',
     image: null,
+    caption: null,
   },
 ]
 
@@ -131,7 +134,7 @@ export default function CaseTradePost() {
             ].map((s) => (
               <div key={s.label} className="rounded-xl px-5 py-3 border border-neutral-800">
                 <div className="text-white font-bold text-sm">{s.value}</div>
-                <div className="text-neutral-500 text-xs mt-0.5">{s.label}</div>
+                <div className="text-neutral-400 text-xs mt-0.5">{s.label}</div>
               </div>
             ))}
           </motion.div>
@@ -143,7 +146,7 @@ export default function CaseTradePost() {
         <div className="max-w-5xl mx-auto">
           <motion.div {...fadeUp}>
             <img src="/tradepost-feed-alert.jpg" alt="Trade Post live feed" className="w-full rounded-2xl border border-neutral-800" />
-            <p className="text-neutral-500 text-xs mt-3 text-center">
+            <p className="text-sm text-neutral-400 mt-3 text-center italic">
               Live, Cook County tornado watch + Pilsen transformer outage. Both alerts propagating through the mesh while the grid was stressed.
             </p>
           </motion.div>
@@ -166,8 +169,8 @@ export default function CaseTradePost() {
                 The deeper problem: most mesh apps treat economic exchange as out of scope. They solve for messaging. Trade Post Mesh targeted the harder use case, can local barter actually operate without centralized infrastructure? Not theoretically. Practically. Post an offer. Match a need. Complete a trade. All of it, without a server in the middle.
               </p>
             </div>
-            <blockquote className="border-l-4 pl-6 py-2 mt-10" style={{ borderColor: '#00C896' }}>
-              <p className="text-xl font-semibold text-neutral-800 italic leading-relaxed">
+            <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-8 italic text-base leading-relaxed">
+              <p className="text-neutral-700 font-medium">
                 "Trade Post proves people will trade locally. OVERWATCH proves the network can support it. Trade Post Mesh makes the exchange independent."
               </p>
             </blockquote>
@@ -182,12 +185,12 @@ export default function CaseTradePost() {
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00C896' }}>The Evolution</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Started as an app. Became an operating system.</h2>
           </motion.div>
-          <div className="space-y-8">
+          <div className="space-y-10">
             {evolution.map((item, i) => (
               <motion.div key={item.phase}
                 initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="flex gap-6 items-start">
+                className="flex gap-6 items-start transition-all duration-200 ease-out">
                 <div className="shrink-0 w-1 self-stretch rounded-full" style={{ backgroundColor: i === evolution.length - 1 ? '#00C896' : '#1f2937' }} />
                 <div>
                   <span className="text-xs font-bold tracking-widest uppercase" style={{ color: i === evolution.length - 1 ? '#00C896' : '#6b7280' }}>
@@ -214,14 +217,14 @@ export default function CaseTradePost() {
               <motion.div key={item.label}
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="rounded-2xl border border-neutral-100 overflow-hidden">
+                className="rounded-2xl border border-neutral-100 overflow-hidden transition-all duration-200 ease-out">
                 <div className="px-5 py-3 border-b border-neutral-100 bg-neutral-50">
-                  <span className="text-neutral-500 text-xs font-bold tracking-widest uppercase">{item.label}</span>
+                  <span className="text-neutral-600 text-xs font-bold tracking-widest uppercase">{item.label}</span>
                 </div>
                 <div className="grid grid-cols-2">
                   <div className="px-5 py-4 border-r border-neutral-100">
-                    <p className="text-xs text-neutral-400 uppercase font-bold mb-2 tracking-wider">Before</p>
-                    <p className="text-neutral-500 text-sm">{item.before}</p>
+                    <p className="text-xs text-neutral-500 uppercase font-bold mb-2 tracking-wider">Before</p>
+                    <p className="text-neutral-600 text-sm">{item.before}</p>
                   </div>
                   <div className="px-5 py-4">
                     <p className="text-xs font-bold mb-2 tracking-wider uppercase" style={{ color: '#00C896' }}>After</p>
@@ -231,6 +234,15 @@ export default function CaseTradePost() {
               </motion.div>
             ))}
           </div>
+
+          {/* Pull quote */}
+          <motion.div {...fadeUp} className="mt-14">
+            <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-6 italic text-base leading-relaxed">
+              <p className="text-neutral-700 font-medium">
+                "If you can do commerce without the internet, messaging is already solved."
+              </p>
+            </blockquote>
+          </motion.div>
         </div>
       </section>
 
@@ -241,27 +253,28 @@ export default function CaseTradePost() {
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00C896' }}>The System</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Built for when things go wrong.</h2>
           </motion.div>
-          <div className="space-y-24">
+          <div className="space-y-28">
             {features.map((item, i) => (
               <motion.div key={item.num}
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                transition={{ duration: 0.5 }}>
+                transition={{ duration: 0.5 }}
+                className="transition-all duration-200 ease-out">
                 {item.image ? (
-                  <div className={`flex flex-col ${i % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-10 items-center`}>
+                  <div className={`flex flex-col ${i % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 items-center`}>
                     <div className="flex-1">
-                      <div className="text-4xl font-black mb-4" style={{ color: '#00C896' }}>{item.num}</div>
-                      <h3 className="text-white font-bold text-2xl mb-4">{item.title}</h3>
+                      <div className="text-4xl font-black mb-5" style={{ color: '#00C896' }}>{item.num}</div>
+                      <h3 className="text-white font-bold text-2xl mb-4 tracking-tight">{item.title}</h3>
                       <p className="text-neutral-400 leading-relaxed">{item.body}</p>
                     </div>
                     <div className="flex-1">
                       <img src={item.image} alt={item.imageAlt} className="w-full rounded-xl border border-neutral-800" />
-                      {item.caption && <p className="text-neutral-500 text-xs mt-3">{item.caption}</p>}
+                      {item.caption && <p className="text-sm text-neutral-500 mt-3 italic">{item.caption}</p>}
                     </div>
                   </div>
                 ) : (
-                  <div className="border-t border-neutral-800 pt-8">
-                    <div className="text-4xl font-black mb-4" style={{ color: '#00C896' }}>{item.num}</div>
-                    <h3 className="text-white font-bold text-2xl mb-4">{item.title}</h3>
+                  <div className="border-t border-neutral-800 pt-10">
+                    <div className="text-4xl font-black mb-5" style={{ color: '#00C896' }}>{item.num}</div>
+                    <h3 className="text-white font-bold text-2xl mb-4 tracking-tight">{item.title}</h3>
                     <p className="text-neutral-400 leading-relaxed max-w-2xl">{item.body}</p>
                   </div>
                 )}
@@ -283,9 +296,9 @@ export default function CaseTradePost() {
               <motion.div key={item.title}
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="border-t-2 pt-8" style={{ borderColor: '#00C896' }}>
-                <h3 className="text-neutral-900 font-bold text-base mb-3">{item.title}</h3>
-                <p className="text-neutral-500 text-sm leading-relaxed">{item.body}</p>
+                className="border-t-2 pt-8 transition-all duration-200 ease-out" style={{ borderColor: '#00C896' }}>
+                <h3 className="text-neutral-900 font-semibold text-base mb-3">{item.title}</h3>
+                <p className="text-neutral-600 text-sm leading-relaxed">{item.body}</p>
               </motion.div>
             ))}
           </div>
@@ -298,7 +311,7 @@ export default function CaseTradePost() {
           <motion.div {...fadeUp} className="mb-4">
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00C896' }}>Concept Visuals</p>
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-3">What it could look like in the wild.</h2>
-            <p className="text-neutral-500 text-sm mb-10">AI-generated concept videos, made with OpenAI Sora. Experimental.</p>
+            <p className="text-neutral-600 text-sm mb-10">AI-generated concept videos, made with OpenAI Sora. Experimental.</p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {['/tradepost-sora-1.mp4', '/tradepost-sora-2.mp4', '/tradepost-sora-3.mp4'].map((src, i) => (
@@ -331,12 +344,14 @@ export default function CaseTradePost() {
             <p className="text-neutral-400 leading-relaxed text-lg mb-8">
               Trade Post Mesh is built on React, Supabase, Meshtastic LoRa, and Signal Protocol scaffolding, with OVERWATCH as the infrastructure intelligence layer that determines when peer-to-peer transport is viable. The feed ran live during a real Cook County tornado watch. The architecture is designed to scale to any neighborhood with sufficient mesh density, as measured by the readiness scoring engine underneath it.
             </p>
-            <p className="text-white font-bold text-lg mb-10">
-              Not anti-cloud. Just cloud-optional. That's the only design target that matters when the grid fails.
-            </p>
+            <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-8 italic text-base leading-relaxed text-left">
+              <p className="text-neutral-300 font-medium">
+                "Not anti-cloud. Just cloud-optional. That's the only design target that matters when the grid fails."
+              </p>
+            </blockquote>
             <a href="/#contact" onClick={(e) => { e.preventDefault(); sessionStorage.setItem("hashNav", "#contact"); window.location.href = "/#contact"; }}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white text-sm transition-opacity hover:opacity-90"
-              style={{ backgroundColor: '#00C896' }}>
+              className="inline-flex items-center gap-2 text-base font-semibold transition-opacity hover:opacity-80"
+              style={{ color: '#00C896' }}>
               Let's talk →
             </a>
           </motion.div>

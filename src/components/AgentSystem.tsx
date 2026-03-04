@@ -134,7 +134,7 @@ export default function AgentSystem() {
           </p>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-20">
             {stats.map((stat, i) => (
               <motion.div
                 key={stat.label}
@@ -143,17 +143,17 @@ export default function AgentSystem() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, ease: 'easeOut', delay: i * 0.1 }}
               >
-                <div className="text-4xl md:text-5xl font-black mb-1" style={{ color: '#E85D04' }}>
+                <div className="text-4xl md:text-5xl font-black mb-2" style={{ color: '#E85D04' }}>
                   {stat.value}
                 </div>
-                <div className="text-sm text-neutral-400">{stat.label}</div>
+                <div className="text-sm text-neutral-300 font-medium">{stat.label}</div>
               </motion.div>
             ))}
           </div>
 
           {/* Agent Grid */}
-          <div className="mb-6">
-            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-neutral-500 mb-6">
+          <div className="mb-8">
+            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-neutral-400 mb-6">
               Agent Fleet, Selected
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -182,7 +182,7 @@ export default function AgentSystem() {
                   {/* Status dot */}
                   <div className="flex items-center gap-1.5 mb-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block"></span>
-                    <span className="text-xs text-neutral-500">Online</span>
+                    <span className="text-xs text-neutral-400">Online</span>
                   </div>
                   {/* Desc */}
                   <p className="text-xs text-neutral-400 leading-relaxed">{agent.desc}</p>
@@ -199,14 +199,14 @@ export default function AgentSystem() {
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
             className="rounded-2xl border border-neutral-800 bg-neutral-800/30 p-6 mt-8 mb-14"
           >
-            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-neutral-500 mb-5">
+            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-neutral-400 mb-5">
               Infrastructure
             </p>
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
+            <div className="grid grid-cols-3 md:grid-cols-6 gap-5">
               {tools.map((tool) => (
                 <div key={tool.name} className="text-center">
                   <div className="text-sm font-semibold text-white mb-1">{tool.name}</div>
-                  <div className="text-xs text-neutral-500">{tool.desc}</div>
+                  <div className="text-xs text-neutral-400">{tool.desc}</div>
                 </div>
               ))}
             </div>
@@ -220,10 +220,10 @@ export default function AgentSystem() {
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.15 }}
             className="mt-8 mb-14"
           >
-            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-neutral-500 mb-6">
+            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-neutral-400 mb-6">
               Tech Stack & Integrations
             </p>
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-5">
               {integrations.map((group, i) => (
                 <motion.div
                   key={group.category}
@@ -231,7 +231,7 @@ export default function AgentSystem() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, ease: 'easeOut', delay: i * 0.07 }}
-                  className="rounded-xl border border-neutral-800 bg-neutral-800/30 p-5"
+                  className="rounded-xl border border-neutral-800 bg-neutral-800/30 p-6"
                 >
                   <div
                     className="text-xs font-bold tracking-wider uppercase mb-4 pb-3 border-b border-neutral-800"
@@ -261,10 +261,9 @@ export default function AgentSystem() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.3 }}
-            className="border-l-4 pl-6 py-2"
-            style={{ borderColor: '#E85D04' }}
+            className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-6 italic text-base leading-relaxed"
           >
-            <p className="text-2xl text-neutral-300 italic font-light">
+            <p className="text-neutral-300 font-medium">
               "It's not a chatbot. It's a system."
             </p>
           </motion.blockquote>

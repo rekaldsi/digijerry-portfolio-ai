@@ -111,10 +111,10 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               <StatusBadge status={project.status} />
             </div>
             <p className="text-neutral-600 font-medium mb-2">{project.description}</p>
-            <p className="text-neutral-400 text-sm leading-relaxed mb-4">{project.detail}</p>
+            <p className="text-neutral-600 text-sm leading-relaxed mb-4">{project.detail}</p>
             <div className="flex flex-wrap gap-2 mb-5">
               {project.tags.map((tag) => (
-                <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-500 font-medium">
+                <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-600 font-medium">
                   {tag}
                 </span>
               ))}
@@ -124,7 +124,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                 to={project.link}
                 state={{ from: '/#projects' }}
                 onClick={() => window.scrollTo(0, 0)}
-                className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2 rounded-full transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2 rounded-full transition-all duration-200 hover:opacity-80"
                 style={{ backgroundColor: '#fff7f3', color: '#E85D04', border: '1px solid #E85D04' }}
               >
                 Read the Chapters →
@@ -157,10 +157,10 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           <div className="p-6">
             <h3 className="text-xl font-bold text-neutral-900 mb-1">{project.name}</h3>
             <p className="text-neutral-600 text-sm font-medium mb-3">{project.description}</p>
-            <p className="text-neutral-400 text-sm leading-relaxed mb-4">{project.detail}</p>
-            <div className="flex flex-wrap gap-1.5 mb-4">
+            <p className="text-neutral-600 text-sm leading-relaxed mb-4">{project.detail}</p>
+            <div className="flex flex-wrap gap-1.5 mb-5">
               {project.tags.map((tag) => (
-                <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-500 font-medium">
+                <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-600 font-medium">
                   {tag}
                 </span>
               ))}
@@ -171,7 +171,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                   href={project.demoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full transition-colors"
+                  className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full transition-all duration-200 hover:opacity-80"
                   style={{ backgroundColor: '#fff7f3', color: '#E85D04', border: '1px solid #E85D04' }}
                 >
                   ▶ Live Demo ↗
@@ -182,7 +182,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                   to={project.link}
                   state={{ from: '/#projects' }}
                   onClick={() => window.scrollTo(0, 0)}
-                  className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full transition-colors"
+                  className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full transition-all duration-200 hover:opacity-80"
                   style={{ backgroundColor: '#fff7f3', color: '#E85D04', border: '1px solid #E85D04' }}
                 >
                   View Case Study →

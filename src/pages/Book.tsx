@@ -345,7 +345,7 @@ export default function Book() {
               The podcast is still in the works. The content is here now.
             </p>
             <a
-              href="https://www.instagram.com/sig.seeker/reels/" target="_blank" rel="noopener noreferrer"
+              href="https://www.instagram.com/sig.seeker/reels/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-semibold px-6 py-3 rounded-full transition-colors"
