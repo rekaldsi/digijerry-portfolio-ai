@@ -31,13 +31,11 @@ export default function Background() {
 
           <div className="mt-10">
             <a
-              href="https://www.instagram.com/sig.seeker/reels/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-semibold transition-colors hover:opacity-80"
-              style={{ color: '#E85D04' }}
+              href="mailto:sketchandslogan@gmail.com"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white transition-opacity hover:opacity-90"
+              style={{ backgroundColor: '#E85D04' }}
             >
-              @sig.seeker →
+              Let's talk → sketchandslogan@gmail.com
             </a>
           </div>
         </motion.div>

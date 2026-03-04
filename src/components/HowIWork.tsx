@@ -3,18 +3,18 @@ import { motion } from 'framer-motion'
 const steps = [
   {
     num: '01',
-    title: 'GSD Mode',
-    body: 'Every project starts with a PRD. Before any code runs, the system builds a plan, validates the architecture, and assigns the right agent to the right task.',
+    title: 'Strategy Before Code',
+    body: 'Every project starts with a plan — not a prompt. Scope is defined, architecture is validated, and the right tools are assigned before a single line runs. This is how you avoid rework.',
   },
   {
     num: '02',
     title: 'Autonomous Execution',
-    body: 'Sub-agents handle research, code, QA, and deploys in parallel. Feature branches, Convex logging, Railway deploys — the infrastructure most companies are still figuring out.',
+    body: 'Specialized agents handle research, coding, QA, and deploys in parallel — while I oversee and steer. Features ship faster, with less overhead, and more consistency than traditional team structures.',
   },
   {
     num: '03',
-    title: 'Persistent Memory',
-    body: 'The system remembers. Daily logs, long-term memory files, session snapshots. Context doesn\'t die between conversations — it compounds.',
+    title: 'Systems That Compound',
+    body: 'Every project builds on the last. Shared memory, persistent context, and documented decisions mean the system gets smarter over time — not slower. Knowledge doesn\'t walk out the door.',
   },
 ]
 
@@ -61,14 +61,17 @@ export default function HowIWork() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.3 }}
-          className="text-center"
+          className="border-t border-neutral-200 pt-14"
         >
-          <p className="text-2xl font-semibold text-neutral-900 relative inline-block">
+          <p className="text-2xl md:text-3xl font-bold text-neutral-900 mb-4 relative inline-block">
             I built the infrastructure most companies are still trying to figure out.
             <span
               className="absolute bottom-0 left-0 right-0 h-0.5 -mb-1"
               style={{ backgroundColor: '#E85D04' }}
             />
+          </p>
+          <p className="text-neutral-500 mt-6 text-base max-w-2xl leading-relaxed">
+            What that means for you: faster shipping, lower overhead, and a creative partner who can lead strategy in the morning and deploy a feature by afternoon. No handoff friction. No translation layer. Just results.
           </p>
         </motion.div>
       </div>
