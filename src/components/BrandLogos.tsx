@@ -71,8 +71,8 @@ export default function BrandLogos() {
                 alt={logo.name}
                 className="opacity-90 hover:opacity-100 transition-opacity duration-300"
                 style={{
-                  width: '90px',
-                  height: '90px',
+                  width: '117px',
+                  height: '117px',
                   objectFit: 'contain',
                   display: 'block',
                 }}
