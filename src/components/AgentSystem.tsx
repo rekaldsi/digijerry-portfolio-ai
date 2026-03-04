@@ -246,6 +246,9 @@ export default function AgentSystem() {
                         {item}
                       </li>
                     ))}
+                    <li className="flex items-center gap-2 pt-1">
+                      <span className="text-xs font-medium tracking-wider" style={{ color: group.color }}>+ more</span>
+                    </li>
                   </ul>
                 </motion.div>
               ))}
