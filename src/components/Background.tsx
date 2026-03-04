@@ -19,19 +19,19 @@ export default function Background() {
 
           <div className="space-y-6 text-neutral-600 leading-relaxed text-base">
             <p>
-              Nearly two decades in advertising. Seventeen of those years as Associate Creative Director at Leo Burnett, working on the kind of brands that don't forgive bad work. Marlboro. Kellogg's. Pull-Ups. United. You learn fast or you don't last.
+              25 years across every layer of the advertising business. I started in production at Bridges Media Group — directing TV and radio commercials, casting talent, learning how ideas actually get made. Then FCB, where I worked on global product launches for Nokia and Sony. Then Mess Marketing, where I ran experiential campaigns for Camel, connecting the brand to independent music culture across major markets.
             </p>
             <p>
-              Before that: Mess Marketing, running experiential campaigns for Camel — connecting the brand to independent record labels and launching new product lines across major markets. Before Mess, FCB, where I worked on the Nokia N-Series launch, Sony Bravia TVs, and spirits. Before that, Bridges Media Group — TV and radio commercials, including Mike Ditka for Majestic Star Casino and Culligan Water. That's where I learned production from the ground up.
+              The longest chapter was Leo Burnett, where I spent 17 years as Associate Creative Director. The brands were serious — Marlboro, Kellogg's, Pull-Ups, United Airlines. The work was high-stakes, high-volume, and unforgiving. That environment teaches you how to think clearly under pressure, sell ideas that scare people, and execute at a level most agencies never reach.
             </p>
             <p>
-              Four years ago I started building with AI before most people knew what to call it. Not using tools. Architecting systems. Custom agents, generative workflows, prompt frameworks with governance baked in, autonomous pipelines that run while I sleep. Most recently embedded at Saatchi and Saatchi as Creative Director, Digital and Technology for Toyota TDA — operationalizing AI inside one of the most complex retail advertising systems in the country.
+              Four years ago I pivoted hard into AI — not as a user, but as a builder. I've architected multi-agent systems, built generative workflows, designed prompt frameworks with governance built in, and shipped production tools that run autonomously. Most recently I was embedded at Saatchi and Saatchi as Creative Director, Digital and Technology for Toyota TDA, where I operationalized AI inside one of the most complex retail advertising systems in the country.
             </p>
             <p>
-              The rare thing I bring is that I can hold both ends of the problem at the same time. I can sit in a strategy session and reframe the brief. I can also open a terminal and ship a feature. Most people do one. I do both, and I know which one the moment needs.
+              What makes me useful is the combination. I understand the creative process at a deep level and I can build the systems that scale it. I can lead strategy in the morning and deploy a feature in the afternoon. That translation layer between creative and technology is rare, and it's where I do my best work.
             </p>
             <p className="text-neutral-800 font-medium">
-              I'm not looking for a job to grow into. I'm looking for a room where the problems are hard enough to be worth solving.
+              I'm not looking for a role to grow into. I'm looking for a problem worth solving and a team serious enough to solve it.
             </p>
           </div>
 
