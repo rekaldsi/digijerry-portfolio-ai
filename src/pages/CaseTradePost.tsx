@@ -292,6 +292,34 @@ export default function CaseTradePost() {
         </div>
       </section>
 
+      {/* SORA VIDEOS */}
+      <section className="bg-white py-24 px-6">
+        <div className="max-w-5xl mx-auto">
+          <motion.div {...fadeUp} className="mb-4">
+            <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00C896' }}>Concept Visuals</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-3">What it could look like in the wild.</h2>
+            <p className="text-neutral-500 text-sm mb-10">AI-generated concept videos, made with OpenAI Sora. Experimental.</p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {['/tradepost-sora-1.mp4', '/tradepost-sora-2.mp4', '/tradepost-sora-3.mp4'].map((src, i) => (
+              <motion.div key={i}
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}>
+                <video
+                  src={src}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full rounded-2xl border border-neutral-200 object-cover"
+                  style={{ aspectRatio: '9/16' }}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* TAKEAWAY */}
       <section style={{ backgroundColor: '#0a0a0a' }} className="py-24 px-6">
         <div className="max-w-3xl mx-auto text-center">
