@@ -49,7 +49,7 @@ const projects: Project[] = [
     detail: 'Designed and built as a concept for the AI agent economy. Browse verified agents by task type, pay with USDC on Base, and, the part that makes it genuinely new, agents can hire other agents to complete sub-tasks autonomously.',
     tags: ['React', 'Base / USDC', 'Web3', 'Railway', 'API'],
     demoUrl: 'https://www.thebotique.ai',
-    heroImage: '/thebotique-hero.jpg',
+    heroImage: '__botique_logo__',
     link: '/case/botique',
   },
   {
@@ -136,15 +136,24 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         /* Standard card */
         <>
           {/* Hero image or placeholder */}
-          <div className="relative aspect-video overflow-hidden bg-neutral-100 flex items-center justify-center">
-            {project.heroImage ? (
+          <div className="relative aspect-video overflow-hidden flex items-center justify-center"
+            style={{ backgroundColor: project.heroImage === '__botique_logo__' ? '#041725' : undefined }}
+          >
+            {project.heroImage === '__botique_logo__' ? (
+              <img
+                src="/botique-logo.jpg"
+                alt="TheBotique logo"
+                className="h-full w-auto object-contain"
+                style={{ maxHeight: '80%' }}
+              />
+            ) : project.heroImage ? (
               <img
                 src={project.heroImage}
                 alt={`${project.name} screenshot`}
                 className="w-full h-full object-cover object-top"
               />
             ) : (
-              <span className="text-neutral-300 text-2xl font-bold tracking-tight select-none">
+              <span className="text-neutral-300 text-2xl font-bold tracking-tight select-none bg-neutral-100 w-full h-full flex items-center justify-center">
                 {project.name}
               </span>
             )}

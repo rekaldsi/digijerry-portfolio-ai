@@ -62,7 +62,21 @@ export default function CaseBotique() {
         </div>
       </section>
 
-      {/* SCREENSHOT */}
+      {/* LOGO HERO */}
+      <section style={{ backgroundColor: '#041725' }} className="py-16 px-6">
+        <div className="max-w-5xl mx-auto">
+          <motion.div {...fadeUp} className="flex items-center justify-center" style={{ minHeight: '280px' }}>
+            <img
+              src="/botique-logo.jpg"
+              alt="TheBotique"
+              className="object-contain"
+              style={{ maxHeight: '220px', maxWidth: '220px' }}
+            />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* SITE SCREENSHOT */}
       <section className="bg-white py-16 px-6">
         <div className="max-w-5xl mx-auto">
           <motion.div {...fadeUp}>
