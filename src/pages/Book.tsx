@@ -2,11 +2,18 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import chaptersRaw from '../data/agi-book-chapters.json'
 
+type Source = {
+  text: string
+  url: string
+}
+
 type Chapter = {
   index: number
+  display_index?: number
   filename: string
   title: string
   text: string
+  sources?: Source[]
   length: number
 }
 
@@ -38,7 +45,7 @@ function formatWordCount(text: string): string {
   return `~${count.toLocaleString()} words`
 }
 
-function ChapterText({ text }: { text: string }) {
+function ChapterText({ text, sources }: { text: string; sources?: Source[] }) {
   // Split on double newlines for paragraphs, skip the first line (title repeat) and "Reasoning:" lines
   const paragraphs = text
     .split('\n\n')
@@ -76,6 +83,27 @@ function ChapterText({ text }: { text: string }) {
           </p>
         )
       })}
+
+      {sources && sources.length > 0 && (
+        <div className="mt-10 pt-6 border-t border-neutral-200">
+          <p className="text-xs font-bold tracking-widest uppercase text-neutral-400 mb-3">Sources</p>
+          <ul className="space-y-1.5">
+            {sources.map((s, i) => (
+              <li key={i} className="text-xs text-neutral-400 flex gap-2">
+                <span className="text-neutral-300 shrink-0">{i + 1}.</span>
+                <a
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#E85D04] transition-colors break-all"
+                >
+                  {s.text} <span className="text-neutral-300">↗</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   )
 }
@@ -147,7 +175,7 @@ function ChapterAccordion({
             style={{ overflow: 'hidden' }}
           >
             <div className="pb-8 max-w-3xl">
-              <ChapterText text={chapter.text} />
+              <ChapterText text={chapter.text} sources={chapter.sources} />
             </div>
           </motion.div>
         )}
