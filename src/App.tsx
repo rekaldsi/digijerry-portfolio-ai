@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import AgentSystem from './components/AgentSystem'
 import Projects from './components/Projects'
 import BrandLogos from './components/BrandLogos'
+import GenerativeWork from './components/GenerativeWork'
 import HowIWork from './components/HowIWork'
 import Background from './components/Background'
 import ContactSection from './components/ContactSection'
@@ -39,6 +40,7 @@ function Home() {
         <Hero />
         <AgentSystem />
         <Projects />
+        <GenerativeWork />
         <BrandLogos />
         <HowIWork />
         <Background />
