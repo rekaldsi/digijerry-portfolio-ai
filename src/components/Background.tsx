@@ -19,10 +19,10 @@ export default function Background() {
 
           <div className="space-y-6 text-neutral-600 leading-relaxed text-base">
             <p>
-              Nearly two decades in advertising. Seventeen of those years as Associate Creative Director at Leo Burnett, working on the kind of brands that don't forgive bad work. Camel. Kellogg's. Pull-Ups. United. You learn fast or you don't last.
+              Nearly two decades in advertising. Seventeen of those years as Associate Creative Director at Leo Burnett, working on the kind of brands that don't forgive bad work. Marlboro. Kellogg's. Pull-Ups. United. You learn fast or you don't last.
             </p>
             <p>
-              Before that: FCB, experiential campaigns for R.J. Reynolds across five cities, national TV and radio at Bridges Media Group. The through-line across all of it is the same thing — figuring out how to make people feel something, and then building the thing that makes it happen.
+              Before that: Mess Marketing, running experiential campaigns for Camel — connecting the brand to independent record labels and launching new product lines across major markets. Before Mess, FCB, where I worked on the Nokia N-Series launch, Sony Bravia TVs, and spirits. Before that, Bridges Media Group — TV and radio commercials, including Mike Ditka for Majestic Star Casino and Culligan Water. That's where I learned production from the ground up.
             </p>
             <p>
               Four years ago I started building with AI before most people knew what to call it. Not using tools. Architecting systems. Custom agents, generative workflows, prompt frameworks with governance baked in, autonomous pipelines that run while I sleep. Most recently embedded at Saatchi and Saatchi as Creative Director, Digital and Technology for Toyota TDA — operationalizing AI inside one of the most complex retail advertising systems in the country.
