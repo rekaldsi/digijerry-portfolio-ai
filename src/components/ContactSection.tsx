@@ -52,10 +52,9 @@ export default function ContactSection() {
           </p>
 
           {status === 'sent' ? (
-            <div className="rounded-2xl border border-green-100 bg-green-50 p-8 text-center">
-              <div className="text-3xl mb-3">✓</div>
-              <p className="font-semibold text-neutral-900 text-lg">Message sent.</p>
-              <p className="text-neutral-500 mt-1">I'll be in touch.</p>
+            <div className="py-8 text-center">
+              <p className="text-2xl font-bold text-neutral-900 mb-2">Message sent.</p>
+              <p className="text-neutral-500">I'll be in touch.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
