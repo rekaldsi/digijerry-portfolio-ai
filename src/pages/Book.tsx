@@ -201,7 +201,7 @@ export default function Book() {
 
           {/* Title */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-none mb-4">
-            When Machines Wake
+            After Intelligence
           </h1>
 
           {/* Subtitle */}
