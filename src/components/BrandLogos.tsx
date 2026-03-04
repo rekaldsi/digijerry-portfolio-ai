@@ -54,7 +54,7 @@ export default function BrandLogos() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-3 md:grid-cols-7 gap-6 md:gap-8"
+          className="grid grid-cols-3 md:grid-cols-7 gap-x-6 gap-y-8"
         >
           {logos.map((logo, i) => (
             <motion.div
@@ -65,13 +65,17 @@ export default function BrandLogos() {
               transition={{ duration: 0.4, delay: i * 0.04 }}
               title={logo.name}
               className="flex items-center justify-center"
-              style={{ height: '110px' }}
             >
               <img
                 src={logo.file}
                 alt={logo.name}
                 className="opacity-90 hover:opacity-100 transition-opacity duration-300"
-                style={{ maxHeight: '80px', maxWidth: '100%', width: 'auto', height: 'auto', display: 'block' }}
+                style={{
+                  width: '100%',
+                  height: '80px',
+                  objectFit: 'contain',
+                  display: 'block',
+                }}
               />
             </motion.div>
           ))}
