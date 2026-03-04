@@ -20,6 +20,7 @@ const projects: Project[] = [
     description: 'Comic collection intelligence platform for serious collectors.',
     detail: 'Tracks your collection like a stock portfolio, real-time pricing, cover art matching, signing planner, key issue flags, and an insights dashboard built for collectors who take it seriously.',
     tags: ['React', 'Vite', 'Supabase', 'Railway', 'ComicVine API'],
+    heroImage: '/kodex-card.jpg',
     link: '/case/kodex',
   },
   {
@@ -28,6 +29,7 @@ const projects: Project[] = [
     description: 'Civilian spatial intelligence platform.',
     detail: 'A live multi-layer grid covering aircraft, mesh nodes, BLE/WiFi scatter, traffic, and incidents across a city. Started as a mesh network planning tool. Evolved into infrastructure for urban intelligence and autonomous systems.',
     tags: ['React', 'MapLibre', 'Supabase', 'Railway'],
+    heroImage: '/overwatch-card.jpg',
     link: '/case/overwatch',
   },
   {
@@ -56,6 +58,7 @@ const projects: Project[] = [
     description: 'An AI intelligence OS built to govern, centralize, and activate creative workflows at scale.',
     detail: 'Designed and deployed an intelligence operating system for a major automotive retail advertising group. Built the governance framework, centralized knowledge base, and structured prompt architecture that gave creative and production teams a single source of truth for AI-assisted work. Moved the organization from ad-hoc AI use to a governed, scalable system.',
     tags: ['AI Governance', 'Knowledge Systems', 'Prompt Architecture', 'DCO', 'Workflow Design'],
+    heroImage: '/tdaios-card.jpg',
     link: '/tda',
   },
 ]
