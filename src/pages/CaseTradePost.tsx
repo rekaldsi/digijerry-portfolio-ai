@@ -22,7 +22,7 @@ const evolution = [
   },
   {
     phase: 'Trade Post Mesh',
-    desc: 'The full system. Mesh-native transport activated by OVERWATCH intelligence. Offers, needs, and alerts broadcast through Meshtastic LoRa radio when the internet is down. E2EE payloads. Offline listing cache. Cloud becomes optional sync, not required infrastructure. The neighborhood OS.',
+    desc: 'The full vision, now a working prototype. Mesh-native transport activated by OVERWATCH intelligence. Offers, needs, and alerts broadcast through Meshtastic LoRa radio when the internet is down. E2EE payloads. Offline listing cache. Cloud becomes optional sync, not required infrastructure. Currently preparing for neighborhood pilot testing in Chicagoland.',
   },
 ]
 
@@ -39,8 +39,8 @@ const features = [
     title: 'Offer / Need / Alert Feed',
     body: 'The core coordination surface. Post what you have, what you need, or what the neighborhood needs to know right now. Posts are typed — OFFER, NEED, ALERT, PIN — tagged with a node ID and set to expire. Browse without filtering noise from outside your area. When the grid is up, it syncs to cloud. When it isn\'t, the mesh carries it.',
     image: '/tradepost-feed-alert.jpg',
-    imageAlt: 'Trade Post live feed, tornado watch and Pilsen power outage alerts',
-    caption: 'Live feed during a real Cook County tornado watch and Pilsen transformer outage. Both alerts propagating through the mesh while the grid was stressed.',
+    imageAlt: 'Trade Post feed showing tornado watch and power outage alerts',
+    caption: 'Prototype feed modeled on real Cook County emergency scenarios. The mesh network itself has performed well during previous Chicago-area emergencies.',
   },
   {
     num: '02',
@@ -84,7 +84,7 @@ const decisions = [
   },
   {
     title: 'Economic Exchange as the Hard Use Case',
-    body: 'Most mesh apps solve for messaging. Trade Post Mesh targeted the harder problem: economic coordination. Matching offers with needs, propagating trade intent hop-by-hop, caching listings locally, completing transactions peer-to-peer. If you can do commerce without the internet, messaging is already solved.',
+    body: 'Most mesh apps solve for messaging. Trade Post Mesh targets the harder problem: economic coordination. Matching offers with needs, propagating trade intent hop-by-hop, caching listings locally. Discovery and coordination travel over mesh — settlement syncs when the grid returns. If you can coordinate commerce without the internet, messaging is already solved.',
   },
   {
     title: 'Designed for the Scenarios That Matter Most',
@@ -122,7 +122,7 @@ export default function CaseTradePost() {
           </motion.h1>
           <motion.p className="text-neutral-400 text-lg max-w-2xl leading-relaxed mb-14"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
-            I built a neighborhood coordination platform that works when the internet doesn't. Trade Post started as a barter app and became a decentralized operating system for local economic exchange — one that ran live during a real Cook County tornado watch. Built on Meshtastic LoRa mesh, E2EE, and OVERWATCH infrastructure intelligence.
+            Trade Post started as a neighborhood barter app and became a decentralized operating system for local economic coordination — designed to keep working when the internet doesn't. Built on Meshtastic LoRa mesh, E2EE, and OVERWATCH infrastructure intelligence. Currently a working prototype headed for pilot testing in Chicagoland, using OVERWATCH to identify the right neighborhoods to deploy first.
           </motion.p>
 
           {/* Hero stat cards — gradient accent, emoji icons */}
@@ -132,7 +132,7 @@ export default function CaseTradePost() {
               { icon: '📻', value: 'LoRa Mesh', label: 'Primary transport', accent: '#00C896' },
               { icon: '🔐', value: 'E2EE', label: 'Signal Protocol scaffolding', accent: '#C8F135' },
               { icon: '📴', value: 'Offline-first', label: 'Cloud as optional sync', accent: '#00C896' },
-              { icon: '🌪️', value: 'Live', label: 'Ran during real emergencies', accent: '#C8F135' },
+              { icon: '🌪️', value: 'Prototype', label: 'Pilot testing in Chicagoland', accent: '#C8F135' },
             ].map((s, i) => (
               <motion.div key={s.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -153,9 +153,9 @@ export default function CaseTradePost() {
       <section style={{ backgroundColor: '#0a0a0a' }} className="pb-16 px-6">
         <div className="max-w-5xl mx-auto">
           <motion.div {...fadeUp}>
-            <img src="/tradepost-feed-alert.jpg" alt="Trade Post live feed" className="w-full rounded-2xl border border-neutral-800" />
+            <img src="/tradepost-feed-alert.jpg" alt="Trade Post feed" className="w-full rounded-2xl border border-neutral-800" />
             <p className="text-sm text-neutral-400 mt-3 text-center italic">
-              Live, Cook County tornado watch + Pilsen transformer outage. Both alerts propagating through the mesh while the grid was stressed.
+              Prototype feed built around real Chicago emergency scenarios. The underlying Meshtastic mesh network has proven reliable during actual grid stress events.
             </p>
           </motion.div>
         </div>
@@ -174,7 +174,7 @@ export default function CaseTradePost() {
                 Facebook Marketplace. Craigslist. Nextdoor. Every tool built for neighborhood coordination routes through centralized cloud infrastructure. When the grid goes down — tornado, power outage, infrastructure failure — they go down with it. During the exact moments when neighbors most need to coordinate, share supplies, post safety alerts, and find what's available nearby, the tools disappear.
               </p>
               <p>
-                The deeper problem: most mesh apps treat economic exchange as out of scope. They solve for messaging. Trade Post Mesh targeted the harder use case — can local barter actually operate without centralized infrastructure? Not theoretically. Practically. Post an offer. Match a need. Complete a trade. All of it, without a server in the middle.
+                The deeper problem: most mesh apps treat economic exchange as out of scope. They solve for messaging. Trade Post Mesh targets the harder question — can neighborhood coordination actually work without centralized infrastructure? Post an offer. Find a need. Coordinate the exchange. Discovery and intent propagate peer-to-peer over mesh radio. Settlement syncs when connectivity returns.
               </p>
             </div>
 
@@ -351,10 +351,10 @@ export default function CaseTradePost() {
           <motion.div {...fadeUp}>
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00C896' }}>The Takeaway</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              A real emergency. A working system.
+              Ideas that build on each other.
             </h2>
             <p className="text-neutral-400 leading-relaxed text-lg mb-8">
-              Built on React, Supabase, Meshtastic LoRa, and Signal Protocol scaffolding — with OVERWATCH as the infrastructure intelligence layer that determines when peer-to-peer transport is viable. The feed ran live during a real Cook County tornado watch. Alerts propagated. The mesh held. The architecture is designed to scale to any neighborhood with sufficient mesh density, as measured by the readiness scoring engine underneath it.
+              Built on React, Supabase, Meshtastic LoRa, and Signal Protocol scaffolding — with OVERWATCH as the infrastructure intelligence layer that determines when peer-to-peer transport is viable. The underlying mesh network has performed well during real Chicago-area emergencies. The platform itself is a working prototype, developed in collaboration with the Chicago mesh community and headed for neighborhood pilot testing — using OVERWATCH to identify the right areas to deploy first. Each project in this system informed the next. Curiosity became insight. Insight became architecture.
             </p>
 
             {/* Final pull quote — gradient bar, left-aligned */}
