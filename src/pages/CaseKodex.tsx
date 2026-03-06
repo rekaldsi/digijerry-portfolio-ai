@@ -200,25 +200,12 @@ export default function CaseKodex() {
         </div>
       </section>
 
-      {/* PULL QUOTE */}
-      <section style={{ backgroundColor: '#0f0f0f' }} className="pb-16 px-6">
-        <div className="max-w-3xl mx-auto">
-          <motion.div {...fadeUp}>
-            <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-6 italic text-base leading-relaxed">
-              <p className="text-neutral-300 font-medium">
-                "The enrichment pipeline was built to handle 185,000+ catalog records before the UI was finished. Getting the data layer right at scale meant the collector experience would always have something to display."
-              </p>
-            </blockquote>
-          </motion.div>
-        </div>
-      </section>
-
       {/* THE PIPELINE */}
-      <section className="bg-white py-24 px-6">
+      <section style={{ backgroundColor: '#0f0f0f' }} className="py-24 px-6 border-t border-neutral-800">
         <div className="max-w-3xl mx-auto">
           <motion.div {...fadeUp}>
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#E85D04' }}>The Data Pipeline</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-8">One scan. Seven steps. A fully enriched record.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">One scan. Seven steps. A fully enriched record.</h2>
             <div className="space-y-4">
               {pipeline.map((step, i) => (
                 <motion.div key={i}
@@ -228,29 +215,34 @@ export default function CaseKodex() {
                   <span className="text-sm font-black mt-0.5 shrink-0" style={{ color: '#E85D04' }}>
                     {String(i + 1).padStart(2, '0')}
                   </span>
-                  <p className="text-neutral-600 text-sm leading-relaxed">{step}</p>
+                  <p className="text-neutral-400 text-sm leading-relaxed">{step}</p>
                 </motion.div>
               ))}
             </div>
+            <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 mt-12 italic text-base leading-relaxed">
+              <p className="text-neutral-300 font-medium">
+                "The enrichment pipeline was built to handle 185,000+ catalog records before the UI was finished. Getting the data layer right at scale meant the collector experience would always have something to display."
+              </p>
+            </blockquote>
           </motion.div>
         </div>
       </section>
 
       {/* DESIGN DECISIONS */}
-      <section style={{ backgroundColor: '#0f0f0f' }} className="py-24 px-6">
+      <section className="bg-white py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <motion.div {...fadeUp} className="mb-14">
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#E85D04' }}>Design Decisions</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">The thinking behind the product.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">The thinking behind the product.</h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {decisions.map((item, i) => (
               <motion.div key={item.title}
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="rounded-2xl p-8 border border-neutral-800 transition-all duration-200 ease-out">
-                <h3 className="text-white font-semibold text-base mb-3">{item.title}</h3>
-                <p className="text-neutral-400 text-sm leading-relaxed">{item.body}</p>
+                className="rounded-2xl p-8 border border-neutral-200 transition-all duration-200 ease-out">
+                <h3 className="text-neutral-900 font-semibold text-base mb-3">{item.title}</h3>
+                <p className="text-neutral-600 text-sm leading-relaxed">{item.body}</p>
               </motion.div>
             ))}
           </div>
