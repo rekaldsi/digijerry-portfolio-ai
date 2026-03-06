@@ -85,12 +85,11 @@ const decisions = [
 ]
 
 const techStack = [
-  { icon: '⚛️', label: 'Frontend', value: 'React, Vite, TypeScript, Tailwind' },
-  { icon: '🗄️', label: 'Database', value: 'Supabase (PostgreSQL) + SQLite' },
-  { icon: '🔌', label: 'APIs', value: 'ComicVine, GCD, PriceCharting, GoCollect, Metron' },
-  { icon: '🧠', label: 'AI / ML', value: 'Claude API (DEX), GPT-4o (cover recognition)' },
-  { icon: '🚀', label: 'Infrastructure', value: 'Railway, PM2, Convex' },
-  { icon: '📈', label: 'Scale', value: '200K+ records, architected for millions' },
+  { label: 'Frontend', value: 'React · Vite · TypeScript · Tailwind' },
+  { label: 'Database', value: 'Supabase (PostgreSQL) · SQLite' },
+  { label: 'APIs', value: 'ComicVine · GCD · PriceCharting · GoCollect · Metron' },
+  { label: 'AI', value: 'Claude API · GPT-4o' },
+  { label: 'Infra', value: 'Railway · PM2 · Convex' },
 ]
 
 export default function CaseKodex() {
@@ -221,17 +220,13 @@ export default function CaseKodex() {
             ))}
           </div>
 
-          {/* Tech Stack — individual cards, not cramped row */}
-          <motion.div {...fadeUp}>
-            <p className="text-xs font-bold tracking-[0.2em] uppercase mb-5 text-neutral-500">Built With</p>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {techStack.map((item) => (
-                <div key={item.label} className="rounded-lg p-4 border border-neutral-800 bg-neutral-900/30">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-lg">{item.icon}</span>
-                    <span className="text-[11px] font-bold tracking-[0.15em] uppercase" style={{ color: '#E85D04' }}>{item.label}</span>
-                  </div>
-                  <div className="text-white text-sm leading-snug">{item.value}</div>
+          {/* Tech Stack — compact inline strip */}
+          <motion.div {...fadeUp} className="border-t border-neutral-800 pt-10">
+            <div className="flex flex-wrap gap-x-8 gap-y-3">
+              {techStack.map((item, i) => (
+                <div key={item.label} className="flex items-baseline gap-2">
+                  <span className="text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-500">{item.label}</span>
+                  <span className="text-neutral-300 text-xs">{item.value}</span>
                 </div>
               ))}
             </div>
@@ -240,11 +235,11 @@ export default function CaseKodex() {
       </section>
 
       {/* FEATURES */}
-      <section style={{ backgroundColor: '#0f0f0f' }} className="py-24 px-6 border-t border-neutral-800">
+      <section className="bg-white py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <motion.div {...fadeUp} className="mb-16">
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#E85D04' }}>The System</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">Five capabilities. Each one powered by the intelligence layer.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">Five capabilities. Each one powered by the intelligence layer.</h2>
           </motion.div>
 
           <div className="space-y-28">
@@ -256,12 +251,12 @@ export default function CaseKodex() {
                 <div className={`flex flex-col ${i % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 items-center`}>
                   <div className="flex-1">
                     <div className="text-sm font-bold tracking-[0.2em] uppercase mb-3" style={{ color: '#E85D04' }}>{item.num}</div>
-                    <h3 className="text-white font-black text-3xl mb-5 tracking-tight leading-tight">{item.title}</h3>
-                    <p className="text-neutral-400 leading-relaxed text-base">{item.body}</p>
+                    <h3 className="text-neutral-900 font-black text-3xl mb-5 tracking-tight leading-tight">{item.title}</h3>
+                    <p className="text-neutral-600 leading-relaxed text-base">{item.body}</p>
                   </div>
                   {item.image && (
                     <div className="flex-1">
-                      <div className="rounded-xl overflow-hidden border border-neutral-800 shadow-lg shadow-black/30">
+                      <div className="rounded-xl overflow-hidden border border-neutral-200 shadow-lg shadow-black/10">
                         <img src={item.image} alt={item.imageAlt ?? ''} className="w-full" />
                       </div>
                       {item.caption && <p className="text-sm text-neutral-500 mt-3 italic">{item.caption}</p>}
@@ -275,7 +270,7 @@ export default function CaseKodex() {
       </section>
 
       {/* THE PIPELINE */}
-      <section style={{ backgroundColor: '#0f0f0f' }} className="py-24 px-6 border-t border-neutral-800">
+      <section style={{ backgroundColor: '#0f0f0f' }} className="py-24 px-6">
         <div className="max-w-3xl mx-auto">
           <motion.div {...fadeUp}>
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#E85D04' }}>The Scanner & Enrichment Pipeline</p>
