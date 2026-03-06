@@ -126,7 +126,7 @@ export default function CaseKodex() {
       <section className="bg-white pt-16 pb-4 px-6">
         <div className="max-w-5xl mx-auto">
           <motion.div {...fadeUp}>
-            <img src="/kodex-dashboard.jpg" alt="KØDEX dashboard" className="w-full rounded-2xl border border-neutral-100 shadow-sm" />
+            <video src="/kodex-dashboard-loop.mp4" autoPlay loop muted playsInline className="w-full rounded-2xl border border-neutral-100 shadow-sm" />
             <p className="text-sm text-neutral-500 mt-3 text-center italic">Dashboard, collection value, 30-day trend, key issue counts, and run completion intelligence</p>
           </motion.div>
         </div>
