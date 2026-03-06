@@ -23,7 +23,7 @@ const features = [
   {
     num: '02',
     title: 'Collection Grid',
-    body: 'Every issue rendered with cover art auto-matched from a database of millions of covers. CGC and CBCS slab presentation, duplicate copy detection with visual badges, barcode scan import, and deep filtering by publisher, series, creator, era, or grade. Designed to handle collections from 50 books to 50,000.',
+    body: 'Every issue rendered with cover art auto-matched from a database of millions of covers. CGC and CBCS slab presentation, duplicate copy detection with visual badges, and deep filtering by publisher, series, creator, era, or grade. Designed to handle collections from 50 books to 50,000.',
     image: '/kodex-comic-grid.png',
     imageAlt: 'KØDEX Collection grid with cover art, grade badges, and filtering',
     caption: 'Collection grid with auto-matched cover art, slab presentation, and deep filtering.',
@@ -55,11 +55,12 @@ const features = [
 ]
 
 const pipeline = [
-  'Collector scans a barcode or searches a title to add an issue',
-  'ComicVine API matches the issue to series metadata, creator credits, and cover art',
-  'Grand Comics Database (GCD) layers in publisher data, print runs, and key issue flags',
+  'Collector points the camera at a comic cover, scans a barcode, or searches a title',
+  'Cover recognition runs the image through the intelligence layer to identify the exact issue, variant, and printing',
+  'CGC/CBCS barcode scanner reads the slab label to pull certified grade and cert number directly',
+  'ComicVine API enriches the match with series data, creator credits, and high-resolution cover art',
+  'Grand Comics Database layers in publisher data, print runs, and key issue flags',
   'PriceCharting and GoCollect APIs attach live market pricing across raw and graded tiers',
-  'Metron cross-references variant editions, story arcs, and character appearances',
   'The issue appears in the vault, fully enriched: art, metadata, pricing, grade, and value',
   'DEX and the Insights Engine immediately factor the new issue into portfolio intelligence',
 ]
@@ -74,8 +75,8 @@ const decisions = [
     body: 'The real moat is the intelligence layer underneath. Millions of records spanning comics, covers, creators, pricing history, convention schedules, and variant editions, all cross-referenced and continuously enriched by five APIs running in parallel. The UI is the window. The database is the brain.',
   },
   {
-    title: 'Zero Manual Entry',
-    body: 'Scan a barcode and the system builds the full record: cover art, metadata, pricing, creator credits, key issue status. The collector should never type a series name. The enrichment pipeline does in seconds what would take a human 20 minutes of manual research.',
+    title: 'Three-Mode Scanner',
+    body: 'Cover recognition is the primary input: point the camera at any comic and the intelligence layer identifies it. Barcode scan handles standard UPCs. CGC label scan reads graded slab barcodes directly. Three ways in, zero manual entry required. The scanner is in active beta testing and performing well with select testers.',
   },
   {
     title: 'AI That Knows You',
@@ -84,12 +85,12 @@ const decisions = [
 ]
 
 const techStack = [
-  { label: 'Frontend', value: 'React + Vite + TypeScript + Tailwind' },
-  { label: 'Database', value: 'Supabase (PostgreSQL) + SQLite local cache' },
-  { label: 'APIs', value: 'ComicVine, GCD, PriceCharting, GoCollect, Metron' },
-  { label: 'AI/ML', value: 'Claude API (DEX agent), GPT-4o (cover recognition)' },
-  { label: 'Infra', value: 'Railway, PM2, Convex (orchestration)' },
-  { label: 'Scale', value: '200K+ records today, architected for millions' },
+  { icon: '⚛️', label: 'Frontend', value: 'React, Vite, TypeScript, Tailwind' },
+  { icon: '🗄️', label: 'Database', value: 'Supabase (PostgreSQL) + SQLite' },
+  { icon: '🔌', label: 'APIs', value: 'ComicVine, GCD, PriceCharting, GoCollect, Metron' },
+  { icon: '🧠', label: 'AI / ML', value: 'Claude API (DEX), GPT-4o (cover recognition)' },
+  { icon: '🚀', label: 'Infrastructure', value: 'Railway, PM2, Convex' },
+  { icon: '📈', label: 'Scale', value: '200K+ records, architected for millions' },
 ]
 
 export default function CaseKodex() {
@@ -124,17 +125,25 @@ export default function CaseKodex() {
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
             A massive comic intelligence database, millions of records deep, connected to five live data APIs, real-time market pricing, and a conversational AI agent that knows every comic ever published AND everything in your personal collection. Built from scratch. Running in production.
           </motion.p>
-          <motion.div className="flex flex-wrap gap-4"
+
+          {/* Hero stat cards — visual, bold, with icons and gradient accents */}
+          <motion.div className="grid grid-cols-1 sm:grid-cols-3 gap-5"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
             {[
-              { value: 'Millions', label: 'of data points across comics, covers, creators, and pricing' },
-              { value: '5 APIs', label: 'feeding a continuous enrichment pipeline' },
-              { value: 'AI Agent', label: 'that knows your collection and the entire market' },
-            ].map((s) => (
-              <div key={s.label} className="rounded-xl px-5 py-3 border border-neutral-800 max-w-[280px]">
-                <div className="text-white font-bold text-sm">{s.value}</div>
-                <div className="text-neutral-400 text-xs mt-0.5">{s.label}</div>
-              </div>
+              { icon: '🧬', value: 'Millions', sub: 'of data points across comics, covers, creators, and pricing', accent: '#E85D04' },
+              { icon: '🔗', value: '5 Live APIs', sub: 'feeding a continuous enrichment pipeline around the clock', accent: '#C8F135' },
+              { icon: '🤖', value: 'AI Agent', sub: 'that knows the entire market and your personal collection', accent: '#E85D04' },
+            ].map((s, i) => (
+              <motion.div key={s.value}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.4 + i * 0.1 }}
+                className="relative rounded-xl p-5 border border-neutral-700/60 bg-gradient-to-br from-neutral-900 to-neutral-800/80 overflow-hidden group">
+                <div className="absolute top-0 left-0 w-full h-[2px]" style={{ background: `linear-gradient(90deg, ${s.accent}, transparent)` }} />
+                <div className="text-3xl mb-3">{s.icon}</div>
+                <div className="text-white font-black text-xl tracking-tight">{s.value}</div>
+                <div className="text-neutral-400 text-xs mt-1.5 leading-relaxed">{s.sub}</div>
+              </motion.div>
             ))}
           </motion.div>
         </div>
@@ -169,16 +178,19 @@ export default function CaseKodex() {
                 KØDEX was built to be that unification layer, and to put a conversational AI on top of it that makes all of that intelligence accessible in plain language.
               </p>
             </div>
-            <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-8 italic text-base leading-relaxed">
-              <p className="text-neutral-700 font-medium">
-                "What if your comic collection had the same intelligence infrastructure as a stock portfolio?"
+
+            {/* Pull quote — larger, bolder treatment */}
+            <div className="my-12 relative pl-6 md:pl-8">
+              <div className="absolute left-0 top-0 bottom-0 w-1 rounded-full" style={{ background: 'linear-gradient(to bottom, #E85D04, #C8F135)' }} />
+              <p className="text-xl md:text-2xl font-semibold text-neutral-900 leading-snug italic">
+                What if your comic collection had the same intelligence infrastructure as a stock portfolio?
               </p>
-            </blockquote>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* THE INTELLIGENCE DATABASE — new section */}
+      {/* THE INTELLIGENCE DATABASE */}
       <section style={{ backgroundColor: '#0f0f0f' }} className="py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <motion.div {...fadeUp} className="mb-16">
@@ -209,13 +221,17 @@ export default function CaseKodex() {
             ))}
           </div>
 
-          {/* Tech Stack Bar */}
-          <motion.div {...fadeUp} className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-6">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          {/* Tech Stack — individual cards, not cramped row */}
+          <motion.div {...fadeUp}>
+            <p className="text-xs font-bold tracking-[0.2em] uppercase mb-5 text-neutral-500">Built With</p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {techStack.map((item) => (
-                <div key={item.label}>
-                  <div className="text-[10px] font-bold tracking-[0.2em] uppercase mb-1" style={{ color: '#E85D04' }}>{item.label}</div>
-                  <div className="text-white text-xs leading-snug">{item.value}</div>
+                <div key={item.label} className="rounded-lg p-4 border border-neutral-800 bg-neutral-900/30">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-lg">{item.icon}</span>
+                    <span className="text-[11px] font-bold tracking-[0.15em] uppercase" style={{ color: '#E85D04' }}>{item.label}</span>
+                  </div>
+                  <div className="text-white text-sm leading-snug">{item.value}</div>
                 </div>
               ))}
             </div>
@@ -223,7 +239,7 @@ export default function CaseKodex() {
         </div>
       </section>
 
-      {/* FEATURES, alternating with screenshots */}
+      {/* FEATURES */}
       <section style={{ backgroundColor: '#0f0f0f' }} className="py-24 px-6 border-t border-neutral-800">
         <div className="max-w-5xl mx-auto">
           <motion.div {...fadeUp} className="mb-16">
@@ -239,9 +255,9 @@ export default function CaseKodex() {
                 className="transition-all duration-200 ease-out">
                 <div className={`flex flex-col ${i % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 items-center`}>
                   <div className="flex-1">
-                    <div className="text-4xl font-black mb-5 leading-none" style={{ color: '#E85D04' }}>{item.num}</div>
-                    <h3 className="text-white font-bold text-2xl mb-4 tracking-tight">{item.title}</h3>
-                    <p className="text-neutral-400 leading-relaxed">{item.body}</p>
+                    <div className="text-sm font-bold tracking-[0.2em] uppercase mb-3" style={{ color: '#E85D04' }}>{item.num}</div>
+                    <h3 className="text-white font-black text-3xl mb-5 tracking-tight leading-tight">{item.title}</h3>
+                    <p className="text-neutral-400 leading-relaxed text-base">{item.body}</p>
                   </div>
                   {item.image && (
                     <div className="flex-1">
@@ -262,26 +278,32 @@ export default function CaseKodex() {
       <section style={{ backgroundColor: '#0f0f0f' }} className="py-24 px-6 border-t border-neutral-800">
         <div className="max-w-3xl mx-auto">
           <motion.div {...fadeUp}>
-            <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#E85D04' }}>The Enrichment Pipeline</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">One scan. Seven steps. A fully enriched record.</h2>
+            <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#E85D04' }}>The Scanner & Enrichment Pipeline</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Three ways to add. One intelligence layer to match.</h2>
+            <p className="text-neutral-400 text-base leading-relaxed mb-10">
+              The scanner is a three-mode intake system. Point the camera at a comic cover and the intelligence layer identifies the exact issue, variant, and printing through cover recognition. Scan a standard barcode for instant UPC lookup. Or scan a CGC slab label to pull the certified grade and cert number directly from the graded book database. Bulk CSV imports run through an enhancement system that matches imported data against the intelligence layer, working with the collector to resolve ambiguities like volume numbers and series years. Currently in beta with select testers.
+            </p>
             <div className="space-y-5">
               {pipeline.map((step, i) => (
                 <motion.div key={i}
                   initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.07 }}
                   className="flex items-start gap-4">
-                  <span className="text-sm font-black mt-0.5 shrink-0 w-6 text-center" style={{ color: '#E85D04' }}>
+                  <span className="text-sm font-black mt-0.5 w-6 shrink-0 text-center" style={{ color: '#E85D04' }}>
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <p className="text-neutral-400 text-sm leading-relaxed">{step}</p>
                 </motion.div>
               ))}
             </div>
-            <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 mt-12 italic text-base leading-relaxed">
-              <p className="text-neutral-300 font-medium">
-                "The collector scans a barcode. Seven seconds later, the system knows the comic, the creators, the cover, the market value, and which conventions have signings for it. That's the pipeline."
+
+            {/* Pull quote — bold treatment */}
+            <div className="mt-14 relative pl-6 md:pl-8">
+              <div className="absolute left-0 top-0 bottom-0 w-1 rounded-full" style={{ background: 'linear-gradient(to bottom, #E85D04, #C8F135)' }} />
+              <p className="text-lg md:text-xl font-semibold text-white leading-snug italic">
+                Point the camera at a comic. The system identifies it, enriches it, prices it, and adds it to your vault. That's the pipeline.
               </p>
-            </blockquote>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -313,16 +335,20 @@ export default function CaseKodex() {
           <motion.div {...fadeUp}>
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#E85D04' }}>The Takeaway</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Not a collector app. A collector intelligence platform.</h2>
-            <p className="text-neutral-400 leading-relaxed text-lg mb-8">
-              KØDEX is what happens when you build a massive, continuously enriched comic database, connect it to real market pricing feeds, layer AI on top of it, and let a collector plug their personal library into all of that intelligence. Five APIs. Hundreds of thousands of records today, designed for millions. A conversational agent that knows every comic and knows YOUR comics. Built from scratch by one person. Running in production. Getting smarter every day.
+            <p className="text-neutral-400 leading-relaxed text-lg mb-10">
+              KØDEX is what happens when you build a massive, continuously enriched comic database, connect it to real market pricing feeds, layer AI on top of it, and let a collector plug their personal library into all of that intelligence. Five APIs. Hundreds of thousands of records today, designed for millions. A three-mode scanner powered by cover recognition. A conversational agent that knows every comic and knows YOUR comics. Built from scratch by one person. Running in production. Getting smarter every day.
             </p>
-            <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-8 italic text-base leading-relaxed text-left">
-              <p className="text-neutral-300 font-medium">
-                "The collector experience was designed first. The intelligence infrastructure was built to power it."
+
+            {/* Final quote — bold treatment */}
+            <div className="my-10 relative pl-6 md:pl-8 text-left">
+              <div className="absolute left-0 top-0 bottom-0 w-1 rounded-full" style={{ background: 'linear-gradient(to bottom, #E85D04, #C8F135)' }} />
+              <p className="text-lg md:text-xl font-semibold text-white leading-snug italic">
+                The collector experience was designed first. The intelligence infrastructure was built to power it.
               </p>
-            </blockquote>
+            </div>
+
             <a href="/#contact" onClick={(e) => { e.preventDefault(); sessionStorage.setItem("hashNav", "#contact"); window.location.href = "/#contact"; }}
-              className="inline-flex items-center gap-2 text-base font-semibold transition-opacity hover:opacity-80"
+              className="inline-flex items-center gap-2 text-base font-semibold transition-opacity hover:opacity-80 mt-4"
               style={{ color: '#E85D04' }}>
               Let's talk →
             </a>
