@@ -84,13 +84,7 @@ const decisions = [
   },
 ]
 
-const techStack = [
-  { label: 'Frontend', value: 'React · Vite · TypeScript · Tailwind' },
-  { label: 'Database', value: 'Supabase (PostgreSQL) · SQLite' },
-  { label: 'APIs', value: 'ComicVine · GCD · PriceCharting · GoCollect · Metron' },
-  { label: 'AI', value: 'Claude API · GPT-4o' },
-  { label: 'Infra', value: 'Railway · PM2 · Convex' },
-]
+/* Tech stack section removed — APIs already called out in Intelligence Database cards */
 
 export default function CaseKodex() {
   const navigate = useNavigate()
@@ -220,17 +214,7 @@ export default function CaseKodex() {
             ))}
           </div>
 
-          {/* Tech Stack — compact inline strip */}
-          <motion.div {...fadeUp} className="border-t border-neutral-800 pt-10">
-            <div className="flex flex-wrap gap-x-8 gap-y-3">
-              {techStack.map((item) => (
-                <div key={item.label} className="flex items-baseline gap-2">
-                  <span className="text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-500">{item.label}</span>
-                  <span className="text-neutral-300 text-xs">{item.value}</span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
+{/* Tech stack removed — was causing visual clutter */}
         </div>
       </section>
 
