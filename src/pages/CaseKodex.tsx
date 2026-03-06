@@ -223,7 +223,7 @@ export default function CaseKodex() {
           {/* Tech Stack — compact inline strip */}
           <motion.div {...fadeUp} className="border-t border-neutral-800 pt-10">
             <div className="flex flex-wrap gap-x-8 gap-y-3">
-              {techStack.map((item, i) => (
+              {techStack.map((item) => (
                 <div key={item.label} className="flex items-baseline gap-2">
                   <span className="text-[10px] font-bold tracking-[0.15em] uppercase text-neutral-500">{item.label}</span>
                   <span className="text-neutral-300 text-xs">{item.value}</span>
