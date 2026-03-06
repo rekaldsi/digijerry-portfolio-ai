@@ -15,23 +15,23 @@ const features = [
   {
     num: '01',
     title: 'Portfolio Valuation Engine',
-    body: 'Every comic tracked against real market pricing data. The dashboard shows total collection value, 30-day trend, and per-issue fair market estimates. Same mental model as a brokerage account, applied to a long box.',
+    body: 'Real market pricing pulled from PriceCharting and GoCollect APIs, mapped to every issue in a collector\'s vault. Total portfolio value, 30-day trend lines, per-issue fair market estimates for both raw and CGC-graded books. The same mental model as a brokerage account, applied to a long box.',
     image: '/kodex-portfolio-value.png',
-    imageAlt: 'KØDEX portfolio valuation showing $63,772 total value with 30-day trend',
-    caption: 'Portfolio valuation: $63,772 tracked value, 30-day trend, and per-issue fair market estimates.',
+    imageAlt: 'KØDEX portfolio valuation with total value, 30-day trend, and pricing coverage',
+    caption: 'Portfolio valuation: real-time pricing from PriceCharting and GoCollect, raw and graded FMV per issue.',
   },
   {
     num: '02',
     title: 'Collection Grid',
-    body: 'A visual grid of every issue in the collection, cover art matched from the ComicVine enrichment pipeline, graded/raw status, duplicate detection, barcode scan import, and filter by publisher, series, or creator. 8,300+ issues and counting.',
+    body: 'Every issue displayed with cover art auto-matched from ComicVine, graded slab presentation for CGC/CBCS books, duplicate copy detection, barcode scan import, and deep filtering by publisher, series, creator, or grade. Built to handle collections of any size.',
     image: '/kodex-comic-grid.png',
-    imageAlt: 'KØDEX Collection grid showing Amazing Spider-Man covers with grade badges',
-    caption: 'Collection grid: 8,300+ issues, cover art matched by the enrichment pipeline.',
+    imageAlt: 'KØDEX Collection grid with cover art, grade badges, and filtering',
+    caption: 'Collection grid: cover art matched automatically, graded and raw status at a glance.',
   },
   {
     num: '03',
     title: 'Signing Planner',
-    body: 'Cross-references your collection against convention guest lists in real time. Shows you which books to bring to which events (by creator, by event, by city) so you never miss a signing opportunity for something you already own.',
+    body: 'Cross-references a collector\'s entire library against convention guest lists in real time. Surfaces which books to bring to which events, by creator, by event, by city, so no signing opportunity gets missed for something already in the collection.',
     image: null,
     imageAlt: null,
     caption: null,
@@ -39,15 +39,15 @@ const features = [
   {
     num: '04',
     title: 'Smart Insights and Milestones',
-    body: 'AI-powered collection analytics surface patterns a collector wouldn\'t find manually, run completion status, key issue flags, publisher concentration, milestone alerts ("Your collection crossed $50,000 in value"), and growth trends over time.',
+    body: 'AI-powered collection analytics that surface patterns a collector wouldn\'t find manually. Run completion tracking, key issue flags, publisher concentration, milestone alerts, growth trends, and investment performance, all generated automatically from the data already in the system.',
     image: '/kodex-smart-insights.png',
     imageAlt: 'KØDEX Smart Insights showing milestone alerts, trend analysis, and collection intelligence',
-    caption: 'Smart Insights: milestone alerts, trend analysis, and collection intelligence, all generated automatically.',
+    caption: 'Smart Insights: milestone alerts, trend analysis, and investment intelligence, generated automatically.',
   },
   {
     num: '05',
     title: 'DEX, the Collection Intelligence Agent',
-    body: 'A conversational AI assistant built into KØDEX that knows your entire collection. Ask it what your most valuable books are, which issues you\'re missing from a run, whether something is worth grading, or how to use any feature. Every answer is scoped to your personal data, not generic advice.',
+    body: 'A conversational AI assistant embedded in the platform that understands a collector\'s entire library. Most valuable books, missing issues in a run, grading recommendations, feature guidance. Every answer is scoped to the user\'s personal data, not generic advice pulled from the internet.',
     image: '/kodex-dex.png',
     imageAlt: 'DEX, the KØDEX AI assistant, answering collection questions in a chat interface',
     caption: 'DEX: a personal comic intelligence agent, scoped to your collection data.',
@@ -56,12 +56,12 @@ const features = [
 
 const pipeline = [
   'Collector scans a barcode or searches a title to add an issue',
-  'ComicVine enrichment pipeline matches the issue to series data, creator credits, and cover art',
-  'GCD bulk data fills in publisher, print run, and key issue metadata',
-  'PriceCharting and GoCollect feeds attach real market pricing',
-  'Issue appears in the collection grid with full art, grade, and value',
+  'ComicVine API matches the issue to series data, creator credits, and cover art',
+  'Grand Comics Database (GCD) fills in publisher, print run, and key issue metadata',
+  'PriceCharting and GoCollect APIs attach real market pricing for raw and graded books',
+  'Issue appears in the collection grid with full cover art, grade status, and fair market value',
   'Signing Planner cross-references the issue against upcoming convention guest lists',
-  'Insights dashboard recalculates portfolio value, trend, and smart alerts',
+  'Insights engine recalculates portfolio value, trend lines, and smart alerts',
 ]
 
 const decisions = [
@@ -79,7 +79,7 @@ const decisions = [
   },
   {
     title: 'Scale First, Polish After',
-    body: 'The enrichment pipeline was built to handle 185,000+ catalog records before the UI was finished. Getting the data layer right at scale meant the collector experience would always have something to display, even during development.',
+    body: 'The enrichment pipeline was built to handle hundreds of thousands of catalog records before the UI was finished. The database is designed to house millions of books, covers, creators, and pricing data. Getting the data layer right at scale meant the collector experience would always have something to display.',
   },
 ]
 
@@ -118,9 +118,9 @@ export default function CaseKodex() {
           <motion.div className="flex flex-wrap gap-4"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
             {[
-              { value: '4,099', label: 'Comics in collection' },
-              { value: '$52K+', label: 'Portfolio value tracked' },
-              { value: '185K+', label: 'Catalog records enriched' },
+              { value: '200K+', label: 'Catalog records and growing' },
+              { value: '5', label: 'Data source APIs integrated' },
+              { value: 'Real-time', label: 'Raw + graded pricing feeds' },
             ].map((s) => (
               <div key={s.label} className="rounded-xl px-5 py-3 border border-neutral-800">
                 <div className="text-white font-bold text-sm">{s.value}</div>
@@ -221,7 +221,7 @@ export default function CaseKodex() {
             </div>
             <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 mt-12 italic text-base leading-relaxed">
               <p className="text-neutral-300 font-medium">
-                "The enrichment pipeline was built to handle 185,000+ catalog records before the UI was finished. Getting the data layer right at scale meant the collector experience would always have something to display."
+                "Five APIs, 200,000+ records, and a pipeline designed to scale to millions. The data layer was built before the UI because the collector experience would only be as good as what powered it."
               </p>
             </blockquote>
           </motion.div>
@@ -256,7 +256,7 @@ export default function CaseKodex() {
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#E85D04' }}>The Takeaway</p>
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">Built from scratch. Running in production. Getting smarter every day.</h2>
             <p className="text-neutral-600 leading-relaxed text-lg mb-8">
-              KØDEX is a full-stack SaaS application built with React, Vite, Supabase, and Railway. The enrichment pipeline runs continuously, processing ComicVine, GCD, GoCollect, and PriceCharting data across 185,000+ catalog records. This is what it looks like when a creative person learns to think like a product engineer and build accordingly.
+              KØDEX is a full-stack SaaS platform built with React, Vite, Supabase, and Railway. Five external APIs feed a continuously running enrichment pipeline: ComicVine, Grand Comics Database, PriceCharting, GoCollect, and Metron. The catalog already holds 200,000+ records and is architected to scale to millions. This is what it looks like when a creative person learns to think like a product engineer and builds accordingly.
             </p>
             <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-8 italic text-base leading-relaxed text-left">
               <p className="text-neutral-700 font-medium">
