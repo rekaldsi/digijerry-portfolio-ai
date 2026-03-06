@@ -14,11 +14,11 @@ const fadeUp = {
 const evolution = [
   {
     phase: 'Trade Post',
-    desc: 'A neighborhood barter and coordination app. Post offers, post needs, browse listings, send messages. Cloud-hosted on Supabase. Standard client-server architecture. Solid foundation, but dependent on the internet to function.',
+    desc: 'A neighborhood barter and coordination app. Post offers, post needs, browse listings, send messages. Cloud-hosted on Supabase. Standard client-server architecture. Solid foundation — but dependent on the internet to function.',
   },
   {
     phase: 'Trade Post + OVERWATCH',
-    desc: 'Added the infrastructure intelligence layer. OVERWATCH measured real neighborhood signal density, WiFi, BLE, LoRa mesh nodes, and produced a 0–100 Neighborhood Readiness Index. Now the platform knew whether the local network could actually support peer-to-peer traffic.',
+    desc: 'Added the infrastructure intelligence layer. OVERWATCH measured real neighborhood signal density — WiFi, BLE, LoRa mesh nodes — and produced a 0–100 Neighborhood Readiness Index. Now the platform knew whether the local network could actually support peer-to-peer traffic.',
   },
   {
     phase: 'Trade Post Mesh',
@@ -37,7 +37,7 @@ const features = [
   {
     num: '01',
     title: 'Offer / Need / Alert Feed',
-    body: 'The core coordination surface. Post what you have, what you need, or what the neighborhood needs to know right now. Posts are typed, OFFER, NEED, ALERT, PIN, tagged with a node ID and set to expire. Browse without filtering noise from outside your area. When the grid is up, it syncs to cloud. When it isn\'t, the mesh carries it.',
+    body: 'The core coordination surface. Post what you have, what you need, or what the neighborhood needs to know right now. Posts are typed — OFFER, NEED, ALERT, PIN — tagged with a node ID and set to expire. Browse without filtering noise from outside your area. When the grid is up, it syncs to cloud. When it isn\'t, the mesh carries it.',
     image: '/tradepost-feed-alert.jpg',
     imageAlt: 'Trade Post live feed, tornado watch and Pilsen power outage alerts',
     caption: 'Live feed during a real Cook County tornado watch and Pilsen transformer outage. Both alerts propagating through the mesh while the grid was stressed.',
@@ -59,7 +59,7 @@ const features = [
   {
     num: '04',
     title: 'OVERWATCH-Driven Mesh Activation',
-    body: 'Mesh transport isn\'t always-on. It\'s conditional, activated when OVERWATCH reports sufficient BLE density, mesh node coverage, and redundancy for the local area. If the neighborhood can support it, offers route peer-to-peer. If not, the system uses cloud relay and flags the gap. Infrastructure viability drives transport selection automatically.',
+    body: 'Mesh transport isn\'t always-on. It\'s conditional — activated when OVERWATCH reports sufficient BLE density, mesh node coverage, and redundancy for the local area. If the neighborhood can support it, offers route peer-to-peer. If not, the system uses cloud relay and flags the gap. Infrastructure viability drives transport selection automatically.',
     image: '/overwatch-map-full.jpg',
     imageAlt: 'OVERWATCH Chicago intelligence grid, the layer that determines when mesh activates',
     caption: 'OVERWATCH: the intelligence layer underneath. 5.2M scans, 368 mesh nodes, real-time readiness scoring tells Trade Post Mesh when to go peer-to-peer.',
@@ -67,7 +67,7 @@ const features = [
   {
     num: '05',
     title: 'Offline Listing Cache',
-    body: 'Listings cache locally so the experience doesn\'t degrade when connectivity does. Browse, post, and respond with no active connection. When the network returns (cloud or mesh) state syncs forward. No lost posts, no blank screens, no error states during the exact moments the platform is needed most.',
+    body: 'Listings cache locally so the experience doesn\'t degrade when connectivity does. Browse, post, and respond with no active connection. When the network returns — cloud or mesh — state syncs forward. No lost posts, no blank screens, no error states during the exact moments the platform is needed most.',
     image: null,
     caption: null,
   },
@@ -76,7 +76,7 @@ const features = [
 const decisions = [
   {
     title: 'Start With the App, Then Earn the Mesh',
-    body: 'Trade Post launched as a standard cloud app first. Proving people would actually use a neighborhood coordination platform before building the harder mesh infrastructure on top. The evolution to Mesh wasn\'t scope creep. It was the original destination, reached in the right order.',
+    body: 'Trade Post launched as a standard cloud app first. Proving people would actually use a neighborhood coordination platform before building harder mesh infrastructure on top. The evolution to Mesh wasn\'t scope creep. It was the original destination, reached in the right order.',
   },
   {
     title: 'Cloud-Optional, Not Anti-Cloud',
@@ -88,7 +88,7 @@ const decisions = [
   },
   {
     title: 'Designed for the Scenarios That Matter Most',
-    body: 'Disaster events, grid failures, low-connectivity environments, community-run infrastructure. These aren\'t edge cases, they\'re the primary design targets. Every architecture decision was made by asking: does this work when the grid goes down at the worst possible time?',
+    body: 'Disaster events, grid failures, low-connectivity environments, community-run infrastructure. These aren\'t edge cases — they\'re the primary design targets. Every architecture decision was made by asking: does this work when the grid goes down at the worst possible time?',
   },
 ]
 
@@ -122,20 +122,28 @@ export default function CaseTradePost() {
           </motion.h1>
           <motion.p className="text-neutral-400 text-lg max-w-2xl leading-relaxed mb-14"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
-            Trade Post started as a neighborhood barter app. It became something bigger: a decentralized operating system for local economic coordination, one that functions when WiFi is down, cellular is congested, and the cloud is unreachable. Built on Meshtastic LoRa mesh, E2EE, and OVERWATCH infrastructure intelligence.
+            I built a neighborhood coordination platform that works when the internet doesn't. Trade Post started as a barter app and became a decentralized operating system for local economic exchange — one that ran live during a real Cook County tornado watch. Built on Meshtastic LoRa mesh, E2EE, and OVERWATCH infrastructure intelligence.
           </motion.p>
-          <motion.div className="flex flex-wrap gap-4"
+
+          {/* Hero stat cards — gradient accent, emoji icons */}
+          <motion.div className="grid grid-cols-2 sm:grid-cols-4 gap-4"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
             {[
-              { value: 'LoRa Mesh', label: 'Primary transport' },
-              { value: 'E2EE', label: 'Signal Protocol scaffolding' },
-              { value: 'Offline-first', label: 'Cloud as optional sync' },
-              { value: 'Live', label: 'Ran during real emergencies' },
-            ].map((s) => (
-              <div key={s.label} className="rounded-xl px-5 py-3 border border-neutral-800">
-                <div className="text-white font-bold text-sm">{s.value}</div>
-                <div className="text-neutral-400 text-xs mt-0.5">{s.label}</div>
-              </div>
+              { icon: '📻', value: 'LoRa Mesh', label: 'Primary transport', accent: '#00C896' },
+              { icon: '🔐', value: 'E2EE', label: 'Signal Protocol scaffolding', accent: '#C8F135' },
+              { icon: '📴', value: 'Offline-first', label: 'Cloud as optional sync', accent: '#00C896' },
+              { icon: '🌪️', value: 'Live', label: 'Ran during real emergencies', accent: '#C8F135' },
+            ].map((s, i) => (
+              <motion.div key={s.label}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.4 + i * 0.08 }}
+                className="relative rounded-xl p-4 border border-neutral-700/60 bg-gradient-to-br from-neutral-900 to-neutral-800/80 overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-[2px]" style={{ background: `linear-gradient(90deg, ${s.accent}, transparent)` }} />
+                <div className="text-2xl mb-2">{s.icon}</div>
+                <div className="text-white font-black text-base tracking-tight">{s.value}</div>
+                <div className="text-neutral-400 text-xs mt-1 leading-relaxed">{s.label}</div>
+              </motion.div>
             ))}
           </motion.div>
         </div>
@@ -163,17 +171,20 @@ export default function CaseTradePost() {
             </h2>
             <div className="space-y-5 text-neutral-600 leading-relaxed text-lg">
               <p>
-                Facebook Marketplace. Craigslist. Nextdoor. Every tool built for neighborhood coordination routes through centralized cloud infrastructure. When the grid goes down, tornado, power outage, infrastructure failure, they go down with it. During the exact moments when neighbors most need to coordinate, share supplies, post safety alerts, and find what's available nearby, the tools disappear.
+                Facebook Marketplace. Craigslist. Nextdoor. Every tool built for neighborhood coordination routes through centralized cloud infrastructure. When the grid goes down — tornado, power outage, infrastructure failure — they go down with it. During the exact moments when neighbors most need to coordinate, share supplies, post safety alerts, and find what's available nearby, the tools disappear.
               </p>
               <p>
-                The deeper problem: most mesh apps treat economic exchange as out of scope. They solve for messaging. Trade Post Mesh targeted the harder use case, can local barter actually operate without centralized infrastructure? Not theoretically. Practically. Post an offer. Match a need. Complete a trade. All of it, without a server in the middle.
+                The deeper problem: most mesh apps treat economic exchange as out of scope. They solve for messaging. Trade Post Mesh targeted the harder use case — can local barter actually operate without centralized infrastructure? Not theoretically. Practically. Post an offer. Match a need. Complete a trade. All of it, without a server in the middle.
               </p>
             </div>
-            <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-8 italic text-base leading-relaxed">
-              <p className="text-neutral-700 font-medium">
-                "Trade Post proves people will trade locally. OVERWATCH proves the network can support it. Trade Post Mesh makes the exchange independent."
+
+            {/* Pull quote — gradient bar, no quotation marks */}
+            <div className="my-12 relative pl-6 md:pl-8">
+              <div className="absolute left-0 top-0 bottom-0 w-1 rounded-full" style={{ background: 'linear-gradient(to bottom, #00C896, #C8F135)' }} />
+              <p className="text-xl md:text-2xl font-semibold text-neutral-900 leading-snug italic">
+                Trade Post proves people will trade locally. OVERWATCH proves the network can support it. Trade Post Mesh makes the exchange independent.
               </p>
-            </blockquote>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -235,13 +246,14 @@ export default function CaseTradePost() {
             ))}
           </div>
 
-          {/* Pull quote */}
+          {/* Pull quote — gradient bar */}
           <motion.div {...fadeUp} className="mt-14">
-            <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-6 italic text-base leading-relaxed">
-              <p className="text-neutral-700 font-medium">
-                "If you can do commerce without the internet, messaging is already solved."
+            <div className="relative pl-6 md:pl-8">
+              <div className="absolute left-0 top-0 bottom-0 w-1 rounded-full" style={{ background: 'linear-gradient(to bottom, #00C896, #C8F135)' }} />
+              <p className="text-xl md:text-2xl font-semibold text-neutral-900 leading-snug italic">
+                If you can do commerce without the internet, messaging is already solved.
               </p>
-            </blockquote>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -262,19 +274,19 @@ export default function CaseTradePost() {
                 {item.image ? (
                   <div className={`flex flex-col ${i % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 items-center`}>
                     <div className="flex-1">
-                      <div className="text-4xl font-black mb-5" style={{ color: '#00C896' }}>{item.num}</div>
-                      <h3 className="text-white font-bold text-2xl mb-4 tracking-tight">{item.title}</h3>
+                      <div className="text-sm font-bold tracking-[0.2em] uppercase mb-3" style={{ color: '#00C896' }}>{item.num}</div>
+                      <h3 className="text-white font-black text-3xl mb-5 tracking-tight leading-tight">{item.title}</h3>
                       <p className="text-neutral-400 leading-relaxed">{item.body}</p>
                     </div>
                     <div className="flex-1">
-                      <img src={item.image} alt={item.imageAlt} className="w-full rounded-xl border border-neutral-800" />
+                      <img src={item.image} alt={item.imageAlt ?? ''} className="w-full rounded-xl border border-neutral-800" />
                       {item.caption && <p className="text-sm text-neutral-500 mt-3 italic">{item.caption}</p>}
                     </div>
                   </div>
                 ) : (
                   <div className="border-t border-neutral-800 pt-10">
-                    <div className="text-4xl font-black mb-5" style={{ color: '#00C896' }}>{item.num}</div>
-                    <h3 className="text-white font-bold text-2xl mb-4 tracking-tight">{item.title}</h3>
+                    <div className="text-sm font-bold tracking-[0.2em] uppercase mb-3" style={{ color: '#00C896' }}>{item.num}</div>
+                    <h3 className="text-white font-black text-3xl mb-5 tracking-tight leading-tight">{item.title}</h3>
                     <p className="text-neutral-400 leading-relaxed max-w-2xl">{item.body}</p>
                   </div>
                 )}
@@ -339,16 +351,20 @@ export default function CaseTradePost() {
           <motion.div {...fadeUp}>
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00C896' }}>The Takeaway</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              A proof of concept for economic coordination without the cloud.
+              A real emergency. A working system.
             </h2>
             <p className="text-neutral-400 leading-relaxed text-lg mb-8">
-              Trade Post Mesh is built on React, Supabase, Meshtastic LoRa, and Signal Protocol scaffolding, with OVERWATCH as the infrastructure intelligence layer that determines when peer-to-peer transport is viable. The feed ran live during a real Cook County tornado watch. The architecture is designed to scale to any neighborhood with sufficient mesh density, as measured by the readiness scoring engine underneath it.
+              Built on React, Supabase, Meshtastic LoRa, and Signal Protocol scaffolding — with OVERWATCH as the infrastructure intelligence layer that determines when peer-to-peer transport is viable. The feed ran live during a real Cook County tornado watch. Alerts propagated. The mesh held. The architecture is designed to scale to any neighborhood with sufficient mesh density, as measured by the readiness scoring engine underneath it.
             </p>
-            <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-8 italic text-base leading-relaxed text-left">
-              <p className="text-neutral-300 font-medium">
-                "Not anti-cloud. Just cloud-optional. That's the only design target that matters when the grid fails."
+
+            {/* Final pull quote — gradient bar, left-aligned */}
+            <div className="my-10 relative pl-6 md:pl-8 text-left">
+              <div className="absolute left-0 top-0 bottom-0 w-1 rounded-full" style={{ background: 'linear-gradient(to bottom, #00C896, #C8F135)' }} />
+              <p className="text-lg md:text-xl font-semibold text-white leading-snug italic">
+                Not anti-cloud. Just cloud-optional. That's the only design target that matters when the grid fails.
               </p>
-            </blockquote>
+            </div>
+
             <a href="/#contact" onClick={(e) => { e.preventDefault(); sessionStorage.setItem("hashNav", "#contact"); window.location.href = "/#contact"; }}
               className="inline-flex items-center gap-2 text-base font-semibold transition-opacity hover:opacity-80"
               style={{ color: '#00C896' }}>

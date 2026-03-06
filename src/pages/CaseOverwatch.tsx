@@ -12,17 +12,17 @@ const fadeUp = {
 }
 
 const phases = [
-  { phase: 'Phase 1', name: 'ScanMap', desc: 'Wardrive upload and visualization. Map clustering. A technical instrument panel for WiFi and BLE signal density.' },
-  { phase: 'Phase 2', name: 'Mesh Readiness', desc: 'Viability scoring, coverage gap analysis, bridge node detection, relay placement modeling. The tool starts making recommendations.' },
-  { phase: 'Phase 3', name: 'OVERWATCH', desc: 'Full infrastructure intelligence engine. Strategic planning dashboard. AI-assisted resilience assessment. Signals treated as environmental infrastructure.' },
-  { phase: 'Phase 4', name: 'Live Integration (Planned)', desc: 'Real-time mesh ingestion via MQTT. Event-aware infrastructure alerts. Trade Post transport-layer integration.' },
+  { phase: 'Phase 1', name: 'ScanMap', desc: 'Wardrive upload and visualization. Map clustering. A technical instrument panel for WiFi and BLE signal density. Useful — but narrow.' },
+  { phase: 'Phase 2', name: 'Mesh Readiness', desc: 'Viability scoring, coverage gap analysis, bridge node detection, relay placement modeling. The tool starts making recommendations, not just pictures.' },
+  { phase: 'Phase 3', name: 'OVERWATCH', desc: 'Full infrastructure intelligence engine. Strategic planning dashboard. AI-assisted resilience assessment. Signals treated as environmental infrastructure — the same way you\'d model roads or power lines.' },
+  { phase: 'Phase 4', name: 'Live Integration (Planned)', desc: 'Real-time mesh ingestion via MQTT. Event-aware infrastructure alerts. Trade Post transport-layer integration. The neighborhood OS comes online.' },
 ]
 
 const capabilities = [
   {
     num: '01',
     title: 'Neighborhood Readiness Index',
-    body: 'A 0–100 composite score computed from four weighted metrics: BLE device density, mesh node coverage, WiFi relay potential, and signal quality. The first formalized metric for whether a neighborhood can support decentralized coordination without cloud dependency.',
+    body: 'A 0–100 composite score computed from four weighted metrics: BLE device density, mesh node coverage, WiFi relay potential, and signal quality. The first formalized metric for whether a neighborhood can support decentralized coordination without cloud dependency. Not an estimate. A score, with data behind it.',
     image: '/overwatch-status.jpg',
     imageAlt: 'OVERWATCH system status panel, 5.2M scans, Supabase connected, ADS-B live',
     caption: 'System status panel: 5.2M cumulative scans, Supabase connected, ADS-B live feed active.',
@@ -30,7 +30,7 @@ const capabilities = [
   {
     num: '02',
     title: 'Live Data Layer System',
-    body: 'Nine toggleable intelligence layers on one map: live aircraft (ADS-B), BLE devices (50,000+), WiFi scatter, mesh nodes, street traffic, speed cams, earthquakes, weather radar, and GDACS global alerts. Each layer sourced, ingested, and rendered in real time.',
+    body: 'Nine toggleable intelligence layers on one map: live aircraft (ADS-B), BLE devices (50,000+), WiFi scatter, mesh nodes, street traffic, speed cams, earthquakes, weather radar, and GDACS global alerts. Each layer sourced, ingested, and rendered in real time. One dashboard. Nine signal feeds. Zero aggregation tools on the market do this at neighborhood scale.',
     image: '/overwatch-layers.jpg',
     imageAlt: 'OVERWATCH data layers panel, 9 layers including BLE, mesh, aircraft, traffic',
     caption: 'Data layers panel: 9 real-time intelligence layers, toggled independently on a single map.',
@@ -38,7 +38,7 @@ const capabilities = [
   {
     num: '03',
     title: 'Spatial Intelligence Grid',
-    body: 'Grid-based coverage analysis at ~100m cell resolution. Each cell scored for mesh viability, relay potential, and redundancy. Gap detection surfaces exactly where the network is thin. Relay placement recommendations tell you where to put hardware to fix it.',
+    body: 'Grid-based coverage analysis at ~100m cell resolution. Each cell scored for mesh viability, relay potential, and redundancy. Gap detection surfaces exactly where the network is thin. Relay placement recommendations tell you where to put hardware to fix it. This is infrastructure planning, not map decoration.',
     image: '/overwatch-map-full.jpg',
     imageAlt: 'OVERWATCH Chicago intelligence grid, full wardrive coverage visualization',
     caption: 'Chicago intelligence grid: full wardrive coverage, 368 mesh nodes, 5.2M cumulative scans.',
@@ -46,7 +46,7 @@ const capabilities = [
   {
     num: '04',
     title: 'Bridge Node and Topology Modeling',
-    body: 'Critical connectivity modeling identifies which nodes, if lost, would fragment the mesh. BitChat-style hop simulation estimates redundancy across the network. These aren\'t visualizations, they\'re planning tools for infrastructure deployment.',
+    body: 'Critical connectivity modeling identifies which nodes, if lost, would fragment the mesh. BitChat-style hop simulation estimates redundancy across the network. These aren\'t visualizations — they\'re planning tools for infrastructure deployment. Know what breaks before it breaks.',
     image: null,
     caption: null,
   },
@@ -55,15 +55,15 @@ const capabilities = [
 const decisions = [
   {
     title: 'ScanMap Describes the Tool. Overwatch Describes What It Is.',
-    body: 'The rename wasn\'t branding. ScanMap visualized signals. Overwatch models infrastructure resilience. When the pivot happened — once formal viability scoring, gap analysis, bridge node detection, and AI insights were in place — the original name was no longer accurate. The new name is.',
+    body: 'The rename wasn\'t branding. ScanMap visualized signals. Overwatch models infrastructure resilience. When formal viability scoring, gap analysis, bridge node detection, and AI insights were in place, the original name was no longer accurate. The new name is.',
   },
   {
     title: 'Signals Are Infrastructure, Not Surveillance',
-    body: 'The system ingests WiFi, BLE, and mesh signals without identity tracking, payload interception, or personal data collection. Signals are treated the same way you\'d treat road data or power grid topology, as environmental infrastructure. That framing was designed in from the start.',
+    body: 'The system ingests WiFi, BLE, and mesh signals without identity tracking, payload interception, or personal data collection. Signals are treated the same way you\'d treat road data or power grid topology — as environmental infrastructure. That framing was designed in from day one.',
   },
   {
     title: 'AI Grounded in Local Scan Data',
-    body: 'The Gemini-powered insights layer doesn\'t generate generic recommendations. It reasons from the actual scan data for the actual area being analyzed. Relay suggestions, redundancy warnings, and coverage assessments are all grounded in what the field scanner found on the ground.',
+    body: 'The Gemini-powered insights layer doesn\'t generate generic recommendations. It reasons from the actual scan data for the actual area being analyzed. Relay suggestions, redundancy warnings, and coverage assessments are grounded in what the field scanner found on the ground.',
   },
   {
     title: 'Infrastructure Awareness Before Coordination',
@@ -72,10 +72,10 @@ const decisions = [
 ]
 
 const stats = [
-  { value: '5.2M+', label: 'Field scans processed' },
-  { value: '1.3M', label: 'WiFi APs mapped' },
-  { value: '182K', label: 'BLE devices cataloged' },
-  { value: '368', label: 'Active mesh nodes' },
+  { icon: '📡', value: '5.2M+', label: 'Field scans processed' },
+  { icon: '📶', value: '1.3M', label: 'WiFi APs mapped' },
+  { icon: '🔵', value: '182K', label: 'BLE devices cataloged' },
+  { icon: '🔗', value: '368', label: 'Active mesh nodes' },
 ]
 
 export default function CaseOverwatch() {
@@ -104,19 +104,27 @@ export default function CaseOverwatch() {
           </motion.p>
           <motion.h1 className="text-5xl md:text-7xl font-black text-white leading-none tracking-tight mb-6"
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
-            A Spatial Intelligence<br />Layer for the Real World.
+            Spatial Intelligence<br />Infrastructure.
           </motion.h1>
           <motion.p className="text-neutral-400 text-lg max-w-2xl leading-relaxed mb-14"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
-            What started as a wardrive visualizer became a neighborhood-scale infrastructure intelligence engine. OVERWATCH transforms raw RF signal data, WiFi, BLE, LoRa mesh, into a structured resilience model that answers one question: can this neighborhood function without the internet?
+            No one was modeling neighborhood connectivity as infrastructure. So I built a system that does. OVERWATCH transforms raw RF signal data — WiFi, BLE, LoRa mesh — into a structured resilience model that answers one question: can this neighborhood function without the internet?
           </motion.p>
-          <motion.div className="flex flex-wrap gap-4"
+
+          {/* Hero stat cards — gradient accent, emoji icons */}
+          <motion.div className="grid grid-cols-2 sm:grid-cols-4 gap-4"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
-            {stats.map((s) => (
-              <div key={s.label} className="rounded-xl px-5 py-3 border border-neutral-800">
-                <div className="text-white font-bold text-sm">{s.value}</div>
-                <div className="text-neutral-400 text-xs mt-0.5">{s.label}</div>
-              </div>
+            {stats.map((s, i) => (
+              <motion.div key={s.label}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.4 + i * 0.08 }}
+                className="relative rounded-xl p-4 border border-neutral-700/60 bg-gradient-to-br from-neutral-900 to-neutral-800/80 overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-[2px]" style={{ background: 'linear-gradient(90deg, #00BFFF, transparent)' }} />
+                <div className="text-2xl mb-2">{s.icon}</div>
+                <div className="text-white font-black text-lg tracking-tight">{s.value}</div>
+                <div className="text-neutral-400 text-xs mt-1 leading-relaxed">{s.label}</div>
+              </motion.div>
             ))}
           </motion.div>
         </div>
@@ -144,20 +152,23 @@ export default function CaseOverwatch() {
             </h2>
             <div className="space-y-5 text-neutral-600 leading-relaxed text-lg">
               <p>
-                ScanMap was built to visualize wardriving data, upload WiFi and BLE scans, see signal density on a map, analyze mesh readiness. A technical instrument panel. Useful, but narrow.
+                ScanMap was built to visualize wardriving data — upload WiFi and BLE scans, see signal density on a map, analyze mesh readiness. A technical instrument panel. Useful, but narrow.
               </p>
               <p>
-                The pivot happened when the analysis started generating real insight: mesh viability could be scored. Coverage gaps could be located precisely. Bridge nodes (the critical single points of failure) could be identified. Relay placement could be recommended algorithmically. AI could reason about local infrastructure from local data.
+                The pivot happened when the analysis started generating real insight: mesh viability could be scored. Coverage gaps could be located precisely. Bridge nodes — the critical single points of failure — could be identified. Relay placement could be recommended algorithmically. AI could reason about local infrastructure from local data.
               </p>
               <p>
-                At that point, this wasn't a mapping tool anymore. It was a strategic planning engine for neighborhood-scale infrastructure resilience. ScanMap described what it did. OVERWATCH describes what it is.
+                At that point, this wasn't a mapping tool anymore. It was a strategic planning engine for neighborhood-scale infrastructure resilience. 5.2 million scans processed. 9 live data layers. A formal scoring engine. ScanMap described what it did. OVERWATCH describes what it is.
               </p>
             </div>
-            <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-8 italic text-base leading-relaxed">
-              <p className="text-neutral-700 font-medium">
-                "Most neighborhood platforms assume connectivity. OVERWATCH measures it."
+
+            {/* Pull quote — gradient bar, no quotation marks */}
+            <div className="my-12 relative pl-6 md:pl-8">
+              <div className="absolute left-0 top-0 bottom-0 w-1 rounded-full" style={{ background: 'linear-gradient(to bottom, #00BFFF, #C8F135)' }} />
+              <p className="text-xl md:text-2xl font-semibold text-neutral-900 leading-snug italic">
+                Most neighborhood platforms assume connectivity. OVERWATCH measures it.
               </p>
-            </blockquote>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -203,20 +214,20 @@ export default function CaseOverwatch() {
                 {item.image ? (
                   <div className={`flex flex-col ${i % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 items-center`}>
                     <div className="flex-1">
-                      <div className="text-4xl font-black mb-5" style={{ color: '#00BFFF' }}>{item.num}</div>
-                      <h3 className="text-neutral-900 font-bold text-2xl mb-4 tracking-tight">{item.title}</h3>
+                      <div className="text-sm font-bold tracking-[0.2em] uppercase mb-3" style={{ color: '#00BFFF' }}>{item.num}</div>
+                      <h3 className="text-neutral-900 font-black text-3xl mb-5 tracking-tight leading-tight">{item.title}</h3>
                       <p className="text-neutral-600 leading-relaxed">{item.body}</p>
                     </div>
                     <div className="flex-1">
-                      <img src={item.image} alt={item.imageAlt}
+                      <img src={item.image} alt={item.imageAlt ?? ''}
                         className="w-full rounded-xl border border-neutral-100 shadow-sm" />
                       {item.caption && <p className="text-sm text-neutral-500 mt-3 italic">{item.caption}</p>}
                     </div>
                   </div>
                 ) : (
                   <div className="border-t pt-10 border-neutral-100">
-                    <div className="text-4xl font-black mb-5" style={{ color: '#00BFFF' }}>{item.num}</div>
-                    <h3 className="text-neutral-900 font-bold text-2xl mb-4 tracking-tight">{item.title}</h3>
+                    <div className="text-sm font-bold tracking-[0.2em] uppercase mb-3" style={{ color: '#00BFFF' }}>{item.num}</div>
+                    <h3 className="text-neutral-900 font-black text-3xl mb-5 tracking-tight leading-tight">{item.title}</h3>
                     <p className="text-neutral-600 leading-relaxed max-w-2xl">{item.body}</p>
                   </div>
                 )}
@@ -224,13 +235,14 @@ export default function CaseOverwatch() {
             ))}
           </div>
 
-          {/* Pull quote */}
+          {/* Pull quote — gradient bar */}
           <motion.div {...fadeUp} className="mt-16">
-            <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-6 italic text-base leading-relaxed">
-              <p className="text-neutral-700 font-medium">
-                "Nine live data layers. A formal mesh viability scoring engine. AI-grounded infrastructure insights. This is what applied spatial intelligence looks like when it's built to answer a real question."
+            <div className="relative pl-6 md:pl-8">
+              <div className="absolute left-0 top-0 bottom-0 w-1 rounded-full" style={{ background: 'linear-gradient(to bottom, #00BFFF, #C8F135)' }} />
+              <p className="text-xl md:text-2xl font-semibold text-neutral-900 leading-snug italic">
+                Nine live data layers. A formal mesh viability scoring engine. AI-grounded infrastructure insights. This is applied spatial intelligence built to answer a real question.
               </p>
-            </blockquote>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -265,7 +277,7 @@ export default function CaseOverwatch() {
               The intelligence spine of a larger system.
             </h2>
             <p className="text-neutral-600 leading-relaxed text-lg mb-6">
-              OVERWATCH doesn't stand alone. It's the infrastructure awareness layer of Neighborhood OS, the full stack that includes SIVOPS (the offline field scanner) and Trade Post (the coordination and barter platform). The pipeline is: SIVOPS collects signals in the field, OVERWATCH models what those signals mean for infrastructure resilience, Trade Post uses that intelligence to route coordination through mesh when the grid fails.
+              OVERWATCH doesn't stand alone. It's the infrastructure awareness layer of Neighborhood OS — the full stack that includes SIVOPS (the offline field scanner) and Trade Post (the coordination and barter platform). The pipeline: SIVOPS collects signals in the field, OVERWATCH models what those signals mean for infrastructure resilience, Trade Post uses that intelligence to route coordination through mesh when the grid fails.
             </p>
             <p className="text-neutral-600 leading-relaxed text-lg">
               OVERWATCH answers the question every other layer depends on: is this neighborhood ready to operate independently?
@@ -288,13 +300,17 @@ export default function CaseOverwatch() {
               Resilience modeling. Running in production.
             </h2>
             <p className="text-neutral-400 leading-relaxed text-lg mb-8">
-              OVERWATCH is built on React, TypeScript, Supabase, MapLibre GL, and Gemini, processing over 5 million field scans from a custom Android scanner running offline in real neighborhoods. Nine live data layers. A formal mesh viability scoring engine. AI-grounded infrastructure insights. This is what applied spatial intelligence looks like when it's built to answer a real question.
+              Built on React, TypeScript, Supabase, MapLibre GL, and Gemini — processing over 5 million field scans from a custom Android scanner running offline in real neighborhoods. Nine live data layers. A formal mesh viability scoring engine. AI-grounded infrastructure insights. This isn't a hobby map. It's infrastructure planning.
             </p>
-            <blockquote className="border-l-2 border-[#C8F135] pl-4 md:pl-6 my-8 italic text-base leading-relaxed text-left">
-              <p className="text-neutral-300 font-medium">
-                "Not a wardriving tool. An infrastructure resilience engine."
+
+            {/* Final pull quote — gradient bar, left-aligned */}
+            <div className="my-10 relative pl-6 md:pl-8 text-left">
+              <div className="absolute left-0 top-0 bottom-0 w-1 rounded-full" style={{ background: 'linear-gradient(to bottom, #00BFFF, #C8F135)' }} />
+              <p className="text-lg md:text-xl font-semibold text-white leading-snug italic">
+                Not a wardriving tool. An infrastructure resilience engine.
               </p>
-            </blockquote>
+            </div>
+
             <a href="/#contact" onClick={(e) => { e.preventDefault(); sessionStorage.setItem("hashNav", "#contact"); window.location.href = "/#contact"; }}
               className="inline-flex items-center gap-2 text-base font-semibold transition-opacity hover:opacity-80"
               style={{ color: '#00BFFF' }}>
