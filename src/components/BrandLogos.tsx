@@ -39,7 +39,7 @@ export default function BrandLogos() {
             className="text-xs font-bold tracking-[0.3em] uppercase mb-3"
             style={{ color: '#E85D04' }}
           >
-            25 Years of Brands
+            The Brand Roster
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-white">
             Clients I've shaped.

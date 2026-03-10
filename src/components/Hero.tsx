@@ -5,10 +5,10 @@ import GridParticles from './GridParticles'
 const breathEase: Easing = 'easeInOut'
 
 const stats = [
-  { value: '25', label: 'Years in advertising' },
   { value: '4+', label: 'Years in AI' },
   { value: '42', label: 'Active agents' },
   { value: '4', label: 'Products live' },
+  { value: 'FCB', label: 'Leo Burnett · Saatchi' },
 ]
 
 export default function Hero() {
