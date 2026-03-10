@@ -6,9 +6,8 @@ const breathEase: Easing = 'easeInOut'
 
 const stats = [
   { value: '4+', label: 'Years in AI' },
-  { value: '42', label: 'Active agents' },
+  { value: '18', label: 'Active agents' },
   { value: '4', label: 'Products live' },
-  { value: 'FCB', label: 'Leo Burnett · Saatchi' },
 ]
 
 export default function Hero() {
@@ -133,7 +132,7 @@ export default function Hero() {
 
         {/* Stat strip */}
         <motion.div
-          className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-neutral-800 rounded-2xl overflow-hidden border border-neutral-800"
+          className="grid grid-cols-3 gap-px bg-neutral-800 rounded-2xl overflow-hidden border border-neutral-800"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.7 }}

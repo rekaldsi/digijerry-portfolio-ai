@@ -13,7 +13,7 @@ export default function Footer() {
         @sig.seeker
       </a>
       <p className="text-neutral-400 text-xs mt-6">© 2026 Jerry Cieslik</p>
-      <p className="text-neutral-500 text-xs mt-2 italic">42 agents running. Zero of them know what time it is.</p>
+      <p className="text-neutral-500 text-xs mt-2 italic">18 agents running. Zero of them know what time it is.</p>
     </footer>
   )
 }
