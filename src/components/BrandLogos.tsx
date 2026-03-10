@@ -45,7 +45,7 @@ export default function BrandLogos() {
             Clients I've shaped.
           </h2>
           <p className="text-neutral-500 mt-3 text-base max-w-xl mx-auto">
-            Fortune 500 brands across tobacco, CPG, tech, food, travel, and automotive. 25 years of campaigns that moved product and shifted culture.
+            Fortune 500 brands across tobacco, CPG, tech, food, travel, and automotive. Campaigns that moved product and shifted culture.
           </p>
         </motion.div>
 

@@ -19,7 +19,7 @@ export default function Background() {
 
           <div className="space-y-6 text-neutral-600 leading-relaxed text-base">
             <p>
-              25 years across every layer of the advertising business. I started in production at Bridges Media Group, directing TV and radio commercials, casting talent, learning how ideas actually get made. Then FCB, where I worked on global product launches for Nokia and Sony. Then Mess Marketing, where I ran experiential campaigns for Camel, connecting the brand to independent music culture across major markets.
+              I've worked across every layer of the advertising business — from production at Bridges Media Group, directing TV and radio commercials, casting talent, learning how ideas actually get made. Then FCB, where I worked on global product launches for Nokia and Sony. Then Mess Marketing, where I ran experiential campaigns for Camel, connecting the brand to independent music culture across major markets.
             </p>
             <p>
               The longest chapter was Leo Burnett, where I spent 17 years as Associate Creative Director. The brands were serious: Marlboro, Kellogg's, Pull-Ups, United Airlines. The work was high-stakes, high-volume, and unforgiving. That environment teaches you how to think clearly under pressure, sell ideas that scare people, and execute at a level most agencies never reach.

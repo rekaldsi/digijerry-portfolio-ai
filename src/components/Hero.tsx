@@ -98,7 +98,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          25 years of creative strategy. 4 years of AI. Built to ship.
+          Creative strategy. AI systems. Built to ship.
         </motion.p>
 
         {/* CTAs */}
