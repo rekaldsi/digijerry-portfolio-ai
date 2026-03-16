@@ -416,8 +416,8 @@ export default function CaseTradePost() {
         <div className="max-w-4xl mx-auto">
           <motion.div {...fadeUp} className="mb-10">
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00C896' }}>The Hardware</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">No special gear required. Just a radio.</h2>
-            <p className="text-neutral-600 text-lg leading-relaxed">Off-the-shelf Meshtastic devices, pre-flashed and ready. Three options at three price points — all compatible with the ChiMesh network and Trade Post Mesh out of the box.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">You need a radio. That's the point.</h2>
+            <p className="text-neutral-600 text-lg leading-relaxed">A small LoRa radio is what makes this system independent. No cell tower. No router. No monthly bill. Off-the-shelf Meshtastic devices start at $40, come pre-flashed, and work with Trade Post Mesh out of the box. The radio is the infrastructure — and you own it.</p>
           </motion.div>
           <motion.div {...fadeUp}>
             <img src="/tradepost-hardware.png" alt="Recommended Meshtastic hardware — Seeed T1000-E, WisMesh Pocket, Seeed Solar Node" className="w-full rounded-2xl border border-neutral-200 shadow-sm" />
