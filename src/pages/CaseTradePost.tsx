@@ -472,7 +472,7 @@ export default function CaseTradePost() {
             <div className="my-10 relative pl-6 md:pl-8 text-left">
               <div className="absolute left-0 top-0 bottom-0 w-1 rounded-full" style={{ background: 'linear-gradient(to bottom, #00C896, #C8F135)' }} />
               <p className="text-lg md:text-xl font-semibold text-white leading-snug italic">
-                Not anti-cloud. Just cloud-optional. That's the only design target that matters when your neighbors need you most.
+                The tools people rely on most disappear exactly when they're needed most. This one doesn't.
               </p>
             </div>
 
