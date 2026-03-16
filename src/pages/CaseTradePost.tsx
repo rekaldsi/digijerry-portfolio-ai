@@ -27,10 +27,34 @@ const evolution = [
 ]
 
 const contrast = [
-  { label: 'Transport', before: 'Client → Supabase → Client', after: 'Client → LoRa / BLE / WiFi → Client' },
-  { label: 'Connectivity', before: 'Grid required', after: 'Offline-first, cloud as memory' },
-  { label: 'Encryption', before: 'Server-visible payloads', after: 'E2EE, server blind' },
-  { label: 'Mesh activation', before: 'N/A', after: 'Conditional, triggered by OVERWATCH readiness score' },
+  {
+    label: 'Transport',
+    icon: '📶',
+    after: 'Peer-to-peer over LoRa, BLE, and WiFi',
+    afterSub: 'Messages travel device-to-device without touching a server.',
+    before: 'Previously: Client to Supabase to Client',
+  },
+  {
+    label: 'Connectivity',
+    icon: '🔌',
+    after: 'Offline-first. Cloud as memory, not dependency.',
+    afterSub: 'The app works when the grid is down. Cloud syncs when it comes back.',
+    before: 'Previously: Internet required to function',
+  },
+  {
+    label: 'Encryption',
+    icon: '🔐',
+    after: 'End-to-end encrypted. The server is blind.',
+    afterSub: 'Payloads are encrypted before they leave the device. Nothing in transit is readable.',
+    before: 'Previously: Server-visible payloads',
+  },
+  {
+    label: 'Mesh Activation',
+    icon: '🗺️',
+    after: 'Conditional. Triggered by OVERWATCH readiness score.',
+    afterSub: 'The system knows when a neighborhood can support mesh and switches automatically.',
+    before: 'Previously: Not possible',
+  },
 ]
 
 const features = [
@@ -223,24 +247,20 @@ export default function CaseTradePost() {
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00C896' }}>The Architecture Shift</p>
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">Cloud-optional. Not anti-cloud.</h2>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="space-y-4">
             {contrast.map((item, i) => (
               <motion.div key={item.label}
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="rounded-2xl border border-neutral-100 overflow-hidden transition-all duration-200 ease-out">
-                <div className="px-5 py-3 border-b border-neutral-100 bg-neutral-50">
-                  <span className="text-neutral-600 text-xs font-bold tracking-widest uppercase">{item.label}</span>
+                className="flex gap-6 items-start py-6 border-b border-neutral-100 last:border-b-0">
+                <div className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-2xl bg-neutral-50 border border-neutral-100">
+                  {item.icon}
                 </div>
-                <div className="grid grid-cols-2">
-                  <div className="px-5 py-4 border-r border-neutral-100">
-                    <p className="text-xs text-neutral-500 uppercase font-bold mb-2 tracking-wider">Before</p>
-                    <p className="text-neutral-600 text-sm">{item.before}</p>
-                  </div>
-                  <div className="px-5 py-4">
-                    <p className="text-xs font-bold mb-2 tracking-wider uppercase" style={{ color: '#00C896' }}>After</p>
-                    <p className="text-neutral-900 text-sm font-medium">{item.after}</p>
-                  </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs font-bold tracking-[0.2em] uppercase mb-2" style={{ color: '#00C896' }}>{item.label}</p>
+                  <p className="text-neutral-900 font-bold text-lg leading-snug mb-1">{item.after}</p>
+                  <p className="text-neutral-500 text-sm leading-relaxed mb-3">{item.afterSub}</p>
+                  <p className="text-neutral-400 text-xs">{item.before}</p>
                 </div>
               </motion.div>
             ))}
