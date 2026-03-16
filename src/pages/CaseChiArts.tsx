@@ -64,17 +64,17 @@ const context = [
   {
     icon: '🏫',
     title: 'What ChiArts Is',
-    body: 'Chicago High School for the Arts is a public magnet school in Chicago\'s Loop — one of the few schools in the country that offers a full arts conservatory education inside a public high school. Music, Theatre, Dance, Visual Arts, and Creative Writing. Tuition-free, audition-based, serving some of Chicago\'s most talented young people.',
+    body: 'Chicago High School for the Arts is a public magnet school in the Loop — one of the few schools in the country offering a full conservatory arts education inside a public high school. Music, Theatre, Dance, Visual Arts, Creative Writing. Tuition-free, audition-based, serving some of the most talented young people in the city.',
   },
   {
     icon: '⚠️',
-    title: 'The Crisis',
-    body: 'In 2025, the ChiArts Foundation — the independent board that had governed and funded the school for over a decade — disbanded and returned operational control to Chicago Public Schools. The school retained its identity and programs, but lost the fundraising infrastructure that had sustained them.',
+    title: 'What Happened',
+    body: 'Midway through the 2024–25 school year, the ChiArts Foundation board disbanded and returned control to Chicago Public Schools. The fundraising infrastructure — the relationships, the pipelines, the institutional knowledge — disappeared with it. Parents started running pizza days. Teachers were looking for partners to cover graduation fees kids couldn\'t afford. Theater kids were practicing for shows without food.',
   },
   {
     icon: '🎯',
-    title: 'The Gap',
-    body: 'A school that had relied on an organized development operation suddenly needed to rebuild its donor relationships, partnership pipeline, and funding strategy — with a staff not trained in institutional development and no centralized tools to support them.',
+    title: 'The Gap I Saw',
+    body: 'The PSO, the Foundation staff, and ChiArts teachers were scrambling — passionate, committed, and operating with no tools. No centralized partner list. No grant calendar. No way to generate outreach letters at scale. I had 20 years in the Chicago creative industry and a working knowledge of the exact organizations that could help. That combination felt like a responsibility.',
   },
 ]
 
@@ -107,11 +107,11 @@ export default function CaseChiArts() {
           </motion.p>
           <motion.h1 className="text-5xl md:text-7xl font-black text-white leading-none tracking-tight mb-6"
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
-            Built to keep a school alive.
+            My daughter goes to this school.
           </motion.h1>
           <motion.p className="text-neutral-400 text-lg max-w-2xl leading-relaxed mb-10"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
-            When Chicago High School for the Arts lost its independent foundation board and returned to CPS governance, the school's fundraising infrastructure went with it. The ChiArts Supporter Hub is a development operations tool built to replace it — a partner directory, grant calendar, outreach generator, and matching gifts lookup, purpose-built for a school trying to rebuild its funding pipeline from scratch.
+            Midway through her freshman year, the board disbanded. Fundraising infrastructure gone. Parents scrambling with pizza days and snack drives. Teachers looking for partners to cover graduation fees kids couldn't afford. I'm a strategist and a builder. So I built something.
           </motion.p>
 
           {/* CTA */}
@@ -135,7 +135,7 @@ export default function CaseChiArts() {
               { icon: '🏛️', value: '97', label: 'Vetted partners and funders', accent: GOLD },
               { icon: '📋', value: '12', label: 'Funding categories', accent: GOLD_LIGHT },
               { icon: '🎓', value: '5', label: 'Conservatory disciplines', accent: GOLD },
-              { icon: '✉️', value: 'Ready', label: 'Outreach letters on demand', accent: GOLD_LIGHT },
+              { icon: '✉️', value: '90 sec', label: 'Outreach letter, ready to send', accent: GOLD_LIGHT },
             ].map((s, i) => (
               <motion.div key={s.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -195,7 +195,56 @@ export default function CaseChiArts() {
             <div className="my-14 relative pl-6 md:pl-8">
               <div className="absolute left-0 top-0 bottom-0 w-1 rounded-full" style={{ background: `linear-gradient(to bottom, ${GOLD}, ${GOLD_LIGHT})` }} />
               <p className="text-xl md:text-2xl font-semibold text-neutral-900 leading-snug italic">
-                The programs survived. The infrastructure to fund them didn't. This tool is the bridge.
+                The programs survived. The infrastructure to fund them didn't. I had the skills to build it. So I did.
+              </p>
+            </div>
+
+            {/* My Role */}
+            <div className="mt-12 pt-10 border-t border-neutral-200">
+              <p className="text-xs font-bold tracking-[0.3em] uppercase mb-6" style={{ color: GOLD }}>My Role</p>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                {[
+                  { label: 'Strategy', detail: 'Defined the platform concept, scope, and toolset from scratch' },
+                  { label: 'Research', detail: '97 organizations manually vetted, every description and letter template authored' },
+                  { label: 'Product Design', detail: 'UX architecture, information hierarchy, interaction design' },
+                  { label: 'Development', detail: 'Full-stack build — React, Vite, Tailwind, deployed to production' },
+                ].map((r) => (
+                  <div key={r.label} className="border border-neutral-200 rounded-xl p-4 bg-neutral-50">
+                    <p className="font-bold text-neutral-900 text-sm mb-1">{r.label}</p>
+                    <p className="text-neutral-500 text-xs leading-relaxed">{r.detail}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* WHY IT MATTERS */}
+      <section className="bg-white py-24 px-6">
+        <div className="max-w-3xl mx-auto">
+          <motion.div {...fadeUp}>
+            <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: GOLD }}>Why It Matters</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
+              This isn't a portfolio project. It's personal.
+            </h2>
+            <div className="space-y-5 text-neutral-600 leading-relaxed text-lg">
+              <p>
+                I watched my daughter go through this. I watched teachers scramble. I watched parents run pizza days to cover rehearsal snacks for kids who just wanted to be there. These are talented young people — Music, Theatre, Dance, Visual Arts, Creative Writing — who earned their place at this school through an audition. They didn't earn a fundraising crisis.
+              </p>
+              <p>
+                I've spent 20 years working alongside the exact organizations that could help ChiArts — the agencies, the foundations, the corporate partners. I know these rooms. So I built the tool that maps all of them, writes the outreach letters, tracks the deadlines, and hands it to the people who can actually use it.
+              </p>
+              <p>
+                The Supporter Hub won't solve the underlying problem of how public arts education is funded in this city. But it means the next development conversation happens instead of getting lost in a spreadsheet. That's worth building.
+              </p>
+            </div>
+
+            {/* Pull quote */}
+            <div className="my-12 relative pl-6 md:pl-8">
+              <div className="absolute left-0 top-0 bottom-0 w-1 rounded-full" style={{ background: `linear-gradient(to bottom, ${GOLD}, ${GOLD_LIGHT})` }} />
+              <p className="text-xl md:text-2xl font-semibold text-neutral-900 leading-snug italic">
+                When good institutions lose their infrastructure, they don't fail loudly. They just quietly stop being what they were.
               </p>
             </div>
           </motion.div>
@@ -273,56 +322,25 @@ export default function CaseChiArts() {
         </div>
       </section>
 
-      {/* WHY IT MATTERS */}
-      <section className="bg-white py-24 px-6">
-        <div className="max-w-3xl mx-auto">
-          <motion.div {...fadeUp}>
-            <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: GOLD }}>Why It Matters</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
-              This isn't a marketing project. It's a survival tool.
-            </h2>
-            <div className="space-y-5 text-neutral-600 leading-relaxed text-lg">
-              <p>
-                Public arts education in Chicago is underfunded by design. Schools like ChiArts exist because independent foundations fought for them. When that foundation structure disappears, the school doesn't close immediately — but the clock starts. Without an active development pipeline, programs get cut, teachers leave, and the school slowly stops being what it was built to be.
-              </p>
-              <p>
-                The Supporter Hub doesn't solve that problem. But it gives the people trying to solve it a tool that actually works — instead of a spreadsheet, a stack of PDFs, and institutional knowledge walking out the door with the last development director.
-              </p>
-              <p>
-                Ninety-seven partners. Twelve categories. Grant deadlines surfaced automatically. Letters ready in 90 seconds. None of that sounds glamorous. But it's the difference between a development conversation that happens and one that doesn't.
-              </p>
-            </div>
-
-            {/* Pull quote */}
-            <div className="my-12 relative pl-6 md:pl-8">
-              <div className="absolute left-0 top-0 bottom-0 w-1 rounded-full" style={{ background: `linear-gradient(to bottom, ${GOLD}, ${GOLD_LIGHT})` }} />
-              <p className="text-xl md:text-2xl font-semibold text-neutral-900 leading-snug italic">
-                When good institutions lose their infrastructure, they don't fail loudly. They just quietly stop being what they were.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* TAKEAWAY */}
       <section style={{ backgroundColor: '#0d0d0d' }} className="py-24 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div {...fadeUp}>
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: GOLD }}>The Takeaway</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Technology in service of something that matters.
+              What this says about how I work.
             </h2>
             <p className="text-neutral-400 leading-relaxed text-lg mb-6">
-              This project wasn't commissioned. It was built because the need was real and the solution was obvious. A school full of talented kids, five world-class conservatory programs, and a development staff suddenly starting from zero — that's not a technology problem. But technology can make the human work a lot easier.
+              I saw a problem that involved people I care about, in an institution I believe in, in a city I've worked in for 20 years. I didn't wait to be asked. I defined the product, did the research, designed the UX, and built it — start to shipped — because that's what the situation required.
             </p>
             <p className="text-neutral-400 leading-relaxed text-lg mb-10">
-              The Supporter Hub is a working tool, live at chiarts.support, available to ChiArts staff and anyone in their network who wants to help. The partner directory grows. The grant calendar updates. The letters go out. The school keeps going.
+              The Supporter Hub is live at chiarts.support. The partner directory keeps growing. The letters go out. The school keeps going. My daughter is still there.
             </p>
 
             <div className="my-10 relative pl-6 md:pl-8 text-left">
               <div className="absolute left-0 top-0 bottom-0 w-1 rounded-full" style={{ background: `linear-gradient(to bottom, ${GOLD}, ${GOLD_LIGHT})` }} />
               <p className="text-lg md:text-xl font-semibold text-white leading-snug italic">
-                The best tool is the one that gets used. This one was built to be used on day one.
+                The best reason to build something is because you can't not.
               </p>
             </div>
 
