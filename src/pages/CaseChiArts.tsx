@@ -27,16 +27,19 @@ const tools = [
 
 const context = [
   {
+    icon: '🏫',
     title: 'What ChiArts Is',
     body: 'Chicago High School for the Arts is a public magnet school in the Loop. Tuition-free, audition-based, and built around conservatory training in Music, Theatre, Dance, Visual Arts, and Creative Writing.',
   },
   {
-    title: 'What Changed',
-    body: 'During the 2024-25 school year, the ChiArts Foundation board disbanded and fundraising operations reset under CPS. Program needs remained, but donor infrastructure, partner tracking, and process continuity dropped off quickly.',
+    icon: '⚠️',
+    title: 'What Happened',
+    body: 'During the 2024–25 school year, the ChiArts Foundation board disbanded and fundraising operations reset under CPS. Parents were running pizza days. Teachers were looking for partners to cover graduation fees kids couldn\'t afford.',
   },
   {
+    icon: '🎯',
     title: 'What Needed To Exist',
-    body: 'A practical operating system for fundraising: partner intelligence, faster outreach, and a live grants cadence that staff and parent volunteers could use immediately with zero onboarding.',
+    body: 'A practical operating system for fundraising: partner intelligence, faster outreach, and a live grants cadence that staff and parent volunteers could use immediately — with zero onboarding.',
   },
 ]
 
@@ -212,6 +215,7 @@ export default function CaseChiArts() {
             <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
               {context.map((item) => (
                 <div key={item.title} className="rounded-xl border border-neutral-200 bg-neutral-50 p-5">
+                  <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl border border-neutral-100 bg-white text-xl">{item.icon}</div>
                   <h3 className="mb-2 text-sm font-bold uppercase tracking-wide text-neutral-900">{item.title}</h3>
                   <p className="text-sm leading-relaxed text-neutral-600">{item.body}</p>
                 </div>
@@ -362,9 +366,9 @@ export default function CaseChiArts() {
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em]" style={{ color: GOLD }}>
               Outcomes
             </p>
-            <h2 className="mb-6 text-3xl font-bold text-neutral-900 md:text-4xl">What this demonstrates to a hiring team.</h2>
+            <h2 className="mb-6 text-3xl font-bold text-neutral-900 md:text-4xl">Strategy. Research. Design. Code. All of it.</h2>
             <p className="max-w-3xl text-lg leading-relaxed text-neutral-600">
-              I can take a high-stakes, messy problem and deliver a working product that combines strategy, editorial rigor, UX clarity, and engineering execution.
+              This wasn't a team project or an agency brief. One person, one week, a real problem — and a working platform that shipped to production. If that's the kind of person you're looking for, keep reading.
             </p>
 
             <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -391,10 +395,10 @@ export default function CaseChiArts() {
             </p>
             <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">What this says about how I work.</h2>
             <p className="mb-6 text-lg leading-relaxed text-neutral-400">
-              I saw a problem that affected real people, defined the product, built the system, and shipped it end-to-end.
+              I saw a problem that involved people I care about, in an institution I believe in, in a city I've worked in for 20 years. I didn't wait to be asked. I defined the product, did the research, designed the UX, and built it — start to shipped — because that's what the situation required.
             </p>
             <p className="mb-10 text-lg leading-relaxed text-neutral-400">
-              The Supporter Hub is live. It is being used. It keeps mission-critical work moving.
+              The Supporter Hub is live at chiarts.support. The partner directory keeps growing. The letters go out. The school keeps going. My daughter is still there.
             </p>
 
             <div className="my-10 text-left">
