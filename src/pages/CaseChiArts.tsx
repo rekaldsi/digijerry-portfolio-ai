@@ -340,7 +340,7 @@ export default function CaseChiArts() {
             <div className="my-10 relative pl-6 md:pl-8 text-left">
               <div className="absolute left-0 top-0 bottom-0 w-1 rounded-full" style={{ background: `linear-gradient(to bottom, ${GOLD}, ${GOLD_LIGHT})` }} />
               <p className="text-lg md:text-xl font-semibold text-white leading-snug italic">
-                The best reason to build something is because you can't not.
+                The best work comes from problems you refuse to leave unsolved.
               </p>
             </div>
 
