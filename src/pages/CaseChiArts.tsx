@@ -406,7 +406,7 @@ export default function CaseChiArts() {
             </p>
             <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">Good institutions don't fail loudly. They quietly stop being what they were. Not this one.</h2>
             <p className="mb-6 text-lg leading-relaxed text-neutral-400">
-              I saw a problem that involved people I care about, in an institution I believe in, in a city I've worked in for 20 years. I didn't wait to be asked. I defined the product, did the research, designed the UX, and built it — start to shipped — because that's what the situation required.
+              I saw a problem that involved people I care about, in an institution I believe in, in a city I know well. I didn't wait to be asked. I defined the product, did the research, designed the UX, and built it — start to shipped — because that's what the situation required.
             </p>
             <p className="mb-10 text-lg leading-relaxed text-neutral-400">
               The Supporter Hub is live at chiarts.support. The partner directory keeps growing. The letters go out. The school keeps going. My daughter is still there.
