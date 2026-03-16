@@ -5,9 +5,9 @@ import GridParticles from './GridParticles'
 const breathEase: Easing = 'easeInOut'
 
 const stats = [
-  { value: '4+', label: 'Years in AI' },
-  { value: '18', label: 'Active agents' },
-  { value: '4', label: 'Products live' },
+  { value: '4+', label: 'Years building AI' },
+  { value: '18+', label: 'Active agents' },
+  { value: '8', label: 'Products live' },
 ]
 
 export default function Hero() {
