@@ -42,7 +42,7 @@ export default function EmbedGrantCalendar() {
       )}
 
       {/* Grant list */}
-      <div className="max-h-[440px] overflow-y-auto divide-y divide-gray-100 bg-white">
+      <div className="max-h-[380px] overflow-y-auto divide-y divide-gray-100 bg-white">
         {activeGrants.map((grant, i) => (
           <div key={i} className="px-5 py-4 hover:bg-gray-50 transition-colors">
             <div className="flex items-start justify-between gap-3 mb-1.5">

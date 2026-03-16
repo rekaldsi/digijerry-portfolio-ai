@@ -289,30 +289,30 @@ export default function CaseChiArts() {
               </div>
             </motion.div>
 
-            {/* Modules 2+3 side by side */}
+            {/* Modules 2+3 side by side — equal height, top-aligned */}
             <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
 
               {/* Letter Generator */}
-              <div>
-                <div className="mb-6">
+              <div className="flex flex-col">
+                <div className="mb-6 min-h-[88px]">
                   <span className="text-xs font-bold tracking-[0.2em] uppercase" style={{ color: GOLD }}>02</span>
                   <h3 className="text-white font-black text-2xl mt-1">Letter Generator</h3>
                   <p className="text-neutral-400 text-sm mt-1">Select a partner type, enter a name, get a personalized outreach letter. Try it.</p>
                 </div>
-                <div className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+                <div className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 flex-1">
                   <EmbedLetterGenerator />
                 </div>
               </div>
 
               {/* Grant Calendar */}
-              <div>
-                <div className="mb-6">
+              <div className="flex flex-col">
+                <div className="mb-6 min-h-[88px]">
                   <span className="text-xs font-bold tracking-[0.2em] uppercase" style={{ color: GOLD }}>03</span>
                   <h3 className="text-white font-black text-2xl mt-1">Grant Calendar</h3>
                   <p className="text-neutral-400 text-sm mt-1">Active funding opportunities sorted by urgency. The first view every Monday morning.</p>
                 </div>
-                <div className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+                <div className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 flex-1">
                   <EmbedGrantCalendar />
                 </div>
               </div>

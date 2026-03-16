@@ -75,7 +75,7 @@ export default function EmbedLetterGenerator() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
           <div>
             <label className="text-xs font-bold uppercase tracking-wide text-[#0f1b2d] block mb-1">Partner Type</label>
             <select value={templateType} onChange={(e) => setTemplateType(e.target.value)}
@@ -104,22 +104,26 @@ export default function EmbedLetterGenerator() {
       </div>
 
       {/* Output */}
-      {letter ? (
-        <div ref={letterRef} className="px-6 py-5 bg-[#0f1b2d]">
-          <div className="flex items-center justify-between mb-4">
-            <p className="text-xs font-bold text-[#d4a017] tracking-widest uppercase">Your Letter</p>
-            <button onClick={handleCopy}
-              className={`text-xs font-bold px-4 py-1.5 rounded transition-colors ${copied ? "bg-green-600 text-white" : "bg-[#d4a017] text-[#0f1b2d] hover:bg-[#f59e0b]"}`}>
-              {copied ? "✓ Copied" : "📋 Copy"}
-            </button>
+      <div className="px-6 py-5 bg-[#0f1b2d] min-h-[120px]">
+        {letter ? (
+          <>
+            <div className="flex items-center justify-between mb-4">
+              <p className="text-xs font-bold text-[#d4a017] tracking-widest uppercase">Your Letter</p>
+              <button onClick={handleCopy}
+                className={`text-xs font-bold px-4 py-1.5 rounded transition-colors ${copied ? "bg-green-600 text-white" : "bg-[#d4a017] text-[#0f1b2d] hover:bg-[#f59e0b]"}`}>
+                {copied ? "✓ Copied" : "📋 Copy"}
+              </button>
+            </div>
+            <div className="max-h-[320px] overflow-y-auto pr-1">
+              <LetterBody text={letter} />
+            </div>
+          </>
+        ) : (
+          <div className="flex items-center justify-center h-[120px]">
+            <p className="text-gray-500 text-sm text-center">Select a partner type, enter a name,<br />and generate a letter.</p>
           </div>
-          <LetterBody text={letter} />
-        </div>
-      ) : (
-        <div className="px-6 py-8 bg-[#0f1b2d] text-center">
-          <p className="text-gray-500 text-sm">Select a partner type, enter a name, and generate a letter.</p>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }

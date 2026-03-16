@@ -5,7 +5,7 @@ export default function DirectoryCard({ entry, templateType, onGenerate, isGov }
   const isFoundationPartner = Boolean(entry.foundationPartner);
 
   return (
-    <div className={`bg-white border p-6 flex flex-col gap-4 transition-colors duration-200 rounded-sm ${isFoundationPartner ? "border-emerald-300 hover:border-emerald-500" : "border-gray-200 hover:border-[#d4a017]"}`}>
+    <div className={`bg-white border p-6 flex flex-col gap-4 transition-colors duration-200 rounded-sm h-full ${isFoundationPartner ? "border-emerald-300 hover:border-emerald-500" : "border-gray-200 hover:border-[#d4a017]"}`}>
       {/* Name + badges */}
       <div className="flex items-start justify-between gap-2">
         <h4 className="font-bold text-[#0f1b2d] text-base leading-tight">{entry.name}</h4>

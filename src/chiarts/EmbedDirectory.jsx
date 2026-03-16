@@ -79,7 +79,7 @@ export default function EmbedDirectory({ onGenerateLetter }) {
       </div>
 
       {/* Filter pills */}
-      <div className="px-6 py-4 border-b border-gray-200 bg-white flex flex-wrap gap-2">
+      <div className="px-6 py-4 border-b border-gray-200 bg-white flex flex-wrap gap-2 overflow-x-auto">
         {PILLS.map(({ key, label }) => {
           const isActive = activeFilter === key;
           const isFoundation = key === "foundation";
@@ -118,7 +118,7 @@ export default function EmbedDirectory({ onGenerateLetter }) {
               </span>
               <div className="flex-1 h-px bg-gray-200" />
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 items-stretch">
               {group.entries.slice(0, 6).map((entry) => (
                 <DirectoryCard
                   key={entry.name}
