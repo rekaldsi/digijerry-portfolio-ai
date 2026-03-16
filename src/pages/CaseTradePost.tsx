@@ -265,28 +265,6 @@ export default function CaseTradePost() {
         </div>
       </section>
 
-      {/* USE CASES */}
-      <section style={{ backgroundColor: '#0a0a0a' }} className="py-24 px-6">
-        <div className="max-w-5xl mx-auto">
-          <motion.div {...fadeUp} className="mb-16">
-            <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00C896' }}>What It's For</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">One platform. Many reasons to use it.</h2>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {usecases.map((item, i) => (
-              <motion.div key={item.title}
-                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.07 }}
-                className="rounded-2xl p-6 border border-neutral-800 bg-neutral-900/60">
-                <div className="text-3xl mb-4">{item.icon}</div>
-                <h3 className="text-white font-bold text-base mb-3">{item.title}</h3>
-                <p className="text-neutral-400 text-sm leading-relaxed">{item.body}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* EVOLUTION */}
       <section style={{ backgroundColor: '#0a0a0a' }} className="py-24 px-6">
         <div className="max-w-5xl mx-auto">
@@ -308,6 +286,28 @@ export default function CaseTradePost() {
                   <h3 className="text-white font-bold text-xl mt-1 mb-2">{item.phase}</h3>
                   <p className="text-neutral-400 text-sm leading-relaxed">{item.desc}</p>
                 </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* USE CASES */}
+      <section className="bg-white py-24 px-6">
+        <div className="max-w-5xl mx-auto">
+          <motion.div {...fadeUp} className="mb-16">
+            <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00C896' }}>What It's For</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">One platform. Many reasons to use it.</h2>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {usecases.map((item, i) => (
+              <motion.div key={item.title}
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.07 }}
+                className="rounded-2xl p-6 border border-neutral-200 bg-neutral-50">
+                <div className="text-3xl mb-4">{item.icon}</div>
+                <h3 className="text-neutral-900 font-bold text-base mb-3">{item.title}</h3>
+                <p className="text-neutral-600 text-sm leading-relaxed">{item.body}</p>
               </motion.div>
             ))}
           </div>
@@ -357,7 +357,7 @@ export default function CaseTradePost() {
         <div className="max-w-5xl mx-auto">
           <motion.div {...fadeUp} className="mb-16">
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00C896' }}>The System</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">Built for when things go wrong.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white">How it works — every day, and when it matters most.</h2>
           </motion.div>
           <div className="space-y-28">
             {features.map((item, i) => (
@@ -411,6 +411,20 @@ export default function CaseTradePost() {
         </div>
       </section>
 
+      {/* HARDWARE */}
+      <section className="bg-white py-24 px-6">
+        <div className="max-w-4xl mx-auto">
+          <motion.div {...fadeUp} className="mb-10">
+            <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00C896' }}>The Hardware</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">No special gear required. Just a radio.</h2>
+            <p className="text-neutral-600 text-lg leading-relaxed">Off-the-shelf Meshtastic devices, pre-flashed and ready. Three options at three price points — all compatible with the ChiMesh network and Trade Post Mesh out of the box.</p>
+          </motion.div>
+          <motion.div {...fadeUp}>
+            <img src="/tradepost-hardware.png" alt="Recommended Meshtastic hardware — Seeed T1000-E, WisMesh Pocket, Seeed Solar Node" className="w-full rounded-2xl border border-neutral-200 shadow-sm" />
+          </motion.div>
+        </div>
+      </section>
+
       {/* SORA VIDEOS */}
       <section className="bg-white py-24 px-6">
         <div className="max-w-5xl mx-auto">
@@ -436,20 +450,6 @@ export default function CaseTradePost() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* HARDWARE */}
-      <section className="bg-white py-24 px-6">
-        <div className="max-w-4xl mx-auto">
-          <motion.div {...fadeUp} className="mb-10">
-            <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00C896' }}>The Hardware</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">No special gear required. Just a radio.</h2>
-            <p className="text-neutral-600 text-lg leading-relaxed">Off-the-shelf Meshtastic devices, pre-flashed and ready. Three options at three price points — all compatible with the ChiMesh network and Trade Post Mesh out of the box.</p>
-          </motion.div>
-          <motion.div {...fadeUp}>
-            <img src="/tradepost-hardware.png" alt="Recommended Meshtastic hardware — Seeed T1000-E, WisMesh Pocket, Seeed Solar Node" className="w-full rounded-2xl border border-neutral-200 shadow-sm" />
-          </motion.div>
         </div>
       </section>
 
