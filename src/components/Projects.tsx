@@ -19,8 +19,8 @@ const projects: Project[] = [
     name: 'KØDEX',
     status: 'LIVE',
     description: 'Full-stack AI platform for serious comic collectors.',
-    detail: 'Built end-to-end: enrichment pipeline processing 185,000+ catalog records, real-time market pricing, cover art matching, a signing planner that cross-references your collection against convention guest lists, and an insights dashboard that treats your collection the way a financial advisor treats a portfolio. This is what happens when a product builder takes a personal obsession and ships it properly.',
-    tags: ['React', 'Vite', 'Supabase', 'Railway', 'ComicVine API'],
+    detail: 'A personal obsession shipped as a real product. KØDEX runs an autonomous enrichment pipeline across 1.9M+ ComicVine catalog records, matches cover art, tracks live market pricing, and cross-references your collection against convention signing guests. The insights dashboard treats your collection the way a financial advisor treats a portfolio. Every piece built to scale — for 10,000 collectors, not just one.',
+    tags: ['React', 'Vite', 'TypeScript', 'Supabase', 'Railway', 'ComicVine API', 'AI Enrichment', 'Autonomous Pipeline'],
     heroImage: '/kodex-card.jpg',
     link: '/case/kodex',
   },
@@ -28,17 +28,17 @@ const projects: Project[] = [
     name: 'OVERWATCH',
     status: 'LIVE',
     description: 'Real-time civilian spatial intelligence platform.',
-    detail: 'A live, multi-layer geospatial grid displaying aircraft, mesh nodes, BLE/WiFi signals, traffic flow, and local incidents across a city, in real time. Started as infrastructure for mesh network planning. Grew into a full urban intelligence layer with autonomous data ingestion and alert routing. Built from scratch, running in production.',
-    tags: ['React', 'MapLibre', 'Supabase', 'Railway'],
+    detail: '19 live intelligence layers — aircraft, mesh nodes, BLE/WiFi signals, IDOT traffic cameras, weather, protests, incidents — unified into one geospatial grid. Built from scratch on field-collected data from a Raspberry Pi in a Jeep. Not a demo: 1.5M+ data points, running in production, with an AI query console that lets you ask the map questions in plain English.',
+    tags: ['React', 'MapLibre GL', 'TypeScript', 'Supabase', 'Railway', 'ADS-B', 'Meshtastic', 'Gemini AI'],
     heroImage: '/overwatch-card.jpg',
     link: '/case/overwatch',
   },
   {
     name: 'Trade Post Mesh',
     status: 'ACTIVE / FIELD TESTING',
-    description: 'Cloud-optional neighborhood OS built on LoRa mesh radio.',
-    detail: 'A fully decentralized platform for local communities to trade, barter, request help, and broadcast alerts without internet or cell service. Built on Meshtastic LoRa hardware. No tracking, no central server, no dependency on infrastructure that can fail. If you can do commerce without the internet, messaging is already solved. Field-tested in real conditions.',
-    tags: ['Meshtastic', 'Python', 'Raspberry Pi', 'LoRa'],
+    description: 'Neighborhood OS that works when the grid doesn\'t.',
+    detail: 'A decentralized platform for trading, bartering, requesting help, and broadcasting alerts — no internet, no cell service, no central server. Built on Meshtastic LoRa hardware. The same platform that handles an insulin emergency in a blackout also handles everyday mutual aid, neighborhood coordination, and barter economy. Field-tested. Runs on a $35 radio.',
+    tags: ['Meshtastic', 'LoRa / RF', 'React', 'Supabase', 'MQTT', 'Raspberry Pi', 'Offline-First'],
     demoUrl: 'https://trade-post-mesh-production.up.railway.app/app?demo=1',
     heroImage: '/tradepost-main.png',
     link: '/case/tradepost',
@@ -47,9 +47,9 @@ const projects: Project[] = [
     name: 'ChiArts Supporter Hub',
     status: 'LIVE' as const,
     accent: '#C9A84C',
-    description: 'Development operations tool for an arts school in crisis.',
-    detail: 'When Chicago High School for the Arts lost its independent foundation board and returned to CPS, it lost the infrastructure that funded it. I built a development operations tool to replace it — a vetted directory of 97 partners and funders, a grant calendar, an outreach letter generator, and a corporate matching gifts lookup. Purpose-built for a school trying to rebuild its funding pipeline from scratch.',
-    tags: ['React', 'Vite', 'Arts Education', 'Nonprofit', 'Development Ops'],
+    description: 'Development infrastructure for a school that lost its funding foundation.',
+    detail: 'When the ChiArts Foundation board disbanded, the school kept going. The fundraising infrastructure didn\'t. I built a development operations platform to replace it: 97 vetted partners and funders across 12 categories, a grant calendar with deadline urgency tracking, an outreach letter generator that writes in 60 seconds, and a corporate matching gifts guide. No commission. No brief. Just a problem that needed solving.',
+    tags: ['React', 'Vite', 'TypeScript', 'Nonprofit Tech', 'Arts Education', 'Product Strategy', 'No-Code Adjacent'],
     demoUrl: 'https://chiarts.support',
     heroImage: '/chiarts-card.jpg',
     link: '/case/chiarts',
@@ -57,9 +57,9 @@ const projects: Project[] = [
   {
     name: 'TheJacket',
     status: 'LIVE' as const,
-    description: 'Voter intelligence platform for Cook County, Illinois.',
-    detail: 'Every candidate on the March 17, 2026 Illinois primary ballot — campaign finance, documented red flags, transparency grades, judicial ratings, and a personal ballot builder. 81 candidates, 44 races, 23 judges. Built as a product: scoring engine, autonomous AI enrichment pipeline running 3x daily, static JSON architecture for zero-cost deploys. The data is public. Making it usable is the work.',
-    tags: ['Next.js 15', 'TypeScript', 'Civic Tech', 'AI Enrichment', 'Vercel'],
+    description: 'Civic transparency platform. Every Cook County candidate. Every dollar. Every flag.',
+    detail: '81 candidates, 44 races, 23 judges — all on one platform with A–F transparency grades, documented red flags sourced to original FEC and court records, a live AI enrichment pipeline, and a personal ballot builder that saves only on your device. The data was always public. The problem was making it usable by someone with 10 minutes before they walk into a booth.',
+    tags: ['Next.js 15', 'TypeScript', 'Civic Tech', 'AI Enrichment', 'FEC / ILSBE Data', 'Scoring Engine', 'Vercel'],
     demoUrl: 'https://thejacket.cc',
     heroImage: '/jacket-main.png',
     link: '/case/jacket',
@@ -67,9 +67,9 @@ const projects: Project[] = [
   {
     name: 'TheBotique',
     status: 'LIVE',
-    description: 'A marketplace designed for the autonomous agent economy.',
-    detail: 'An agent commerce platform where humans and AI agents can discover, hire, and pay verified agents by task type using USDC on Base. The part that makes it genuinely new: agents can hire other agents to complete sub-tasks autonomously. Designed as a concept for where the agent economy is heading, built as a working platform to prove it.',
-    tags: ['React', 'Base / USDC', 'Web3', 'Railway', 'API'],
+    description: 'A marketplace built for the autonomous agent economy.',
+    detail: 'A commerce platform where humans and AI agents can discover, hire, and pay verified agents by task — using USDC on Base. The part that makes it genuinely new: agents can hire other agents to complete sub-tasks without a human in the loop. Designed as a concept for where the agent economy is heading. Built as a working platform to prove it\'s already here.',
+    tags: ['React', 'TypeScript', 'Web3', 'Base / USDC', 'Agent Commerce', 'Railway', 'Solidity Adjacent'],
     demoUrl: 'https://www.thebotique.ai',
     heroImage: '/thebotique-hero.jpg',
     link: '/case/botique',
@@ -77,9 +77,9 @@ const projects: Project[] = [
   {
     name: 'TDA iOS',
     status: 'CONCEPT',
-    description: 'Intelligent operating system designed for retail marketing at scale.',
-    detail: 'During a 4-month engagement at Saatchi and Saatchi New York, embedded with the Toyota Dealer Association retail division, I designed TDA iOS: a centralized intelligence platform with a Knowledge Layer, Creative Intelligence Layer, and Governance Layer to connect fragmented teams, structured knowledge, and automation into one operating framework. Presented directly to client leadership and the technology team.',
-    tags: ['AI Governance', 'Knowledge Systems', 'Creative Operations', 'Workflow Design'],
+    description: 'Intelligent operating system for retail marketing at national scale.',
+    detail: 'Designed during a 4-month engagement at Saatchi & Saatchi NY, embedded with the Toyota Dealer Association retail division. TDA iOS is a three-layer intelligence platform: a Knowledge Layer that centralizes institutional memory, a Creative Intelligence Layer that surfaces insights at brief, and a Governance Layer that keeps 1,200+ dealers and four agency tiers aligned. Presented to client leadership and the technology team.',
+    tags: ['AI Strategy', 'Knowledge Architecture', 'Creative Operations', 'Workflow Design', 'Agency System Design'],
     heroImage: '/tdaios-card.png',
     link: '/tda',
   },
@@ -194,8 +194,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                   href={project.demoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full transition-all duration-200 hover:opacity-80"
-                  style={{ backgroundColor: '#fff7f3', color: '#E85D04', border: '1px solid #E85D04' }}
+                  className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full transition-all duration-200 hover:opacity-90 hover:scale-[1.02]"
+                  style={{ backgroundColor: '#E85D04', color: '#fff' }}
                 >
                   ▶ Live Demo ↗
                 </a>
@@ -206,9 +206,9 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                   state={{ from: '/#projects' }}
                   onClick={() => window.scrollTo(0, 0)}
                   className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full transition-all duration-200 hover:opacity-80"
-                  style={{ backgroundColor: '#fff7f3', color: '#E85D04', border: '1px solid #E85D04' }}
+                  style={{ backgroundColor: 'transparent', color: '#E85D04', border: '1px solid #E85D04' }}
                 >
-                  View Case Study →
+                  Case Study →
                 </Link>
               )}
             </div>
