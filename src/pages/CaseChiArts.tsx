@@ -2,6 +2,12 @@ import { motion } from 'framer-motion'
 import type { Easing } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
+// @ts-ignore
+import EmbedDirectory from '../chiarts/EmbedDirectory'
+// @ts-ignore
+import EmbedLetterGenerator from '../chiarts/EmbedLetterGenerator'
+// @ts-ignore
+import EmbedGrantCalendar from '../chiarts/EmbedGrantCalendar'
 
 const ease: Easing = 'easeOut'
 const fadeUp = {
@@ -196,39 +202,73 @@ export default function CaseChiArts() {
         </div>
       </section>
 
-      {/* WHAT WAS BUILT */}
+      {/* WHAT WAS BUILT — Live Module Board */}
       <section style={{ backgroundColor: '#0d0d0d' }} className="py-24 px-6">
-        <div className="max-w-5xl mx-auto">
-          <motion.div {...fadeUp} className="mb-16">
+        <div className="max-w-6xl mx-auto">
+          <motion.div {...fadeUp} className="mb-6">
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: GOLD }}>What Was Built</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">Five tools. One goal: make development work easier.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">Five tools. Try three of them right here.</h2>
+            <p className="text-neutral-400 max-w-2xl">The modules below are pulled directly from the live platform — not screenshots, not mockups. Partner directory, letter generator, grant calendar. Interactive, working, real.</p>
           </motion.div>
-          <div className="space-y-28">
-            {tools.map((item, i) => (
-              <motion.div key={item.num}
-                initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                transition={{ duration: 0.5 }}>
-                {item.image ? (
-                  <div className={`flex flex-col ${i % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 items-center`}>
-                    <div className="flex-1">
-                      <div className="text-sm font-bold tracking-[0.2em] uppercase mb-3" style={{ color: GOLD }}>{item.num}</div>
-                      <h3 className="text-white font-black text-3xl mb-5 tracking-tight leading-tight">{item.title}</h3>
-                      <p className="text-neutral-400 leading-relaxed">{item.body}</p>
-                    </div>
-                    <div className="flex-1">
-                      <img src={item.image} alt={item.imageAlt ?? ''} className="w-full rounded-xl border border-neutral-800" />
-                      {item.caption && <p className="text-sm text-neutral-500 mt-3 italic">{item.caption}</p>}
-                    </div>
-                  </div>
-                ) : (
-                  <div className="border-t border-neutral-800 pt-10">
-                    <div className="text-sm font-bold tracking-[0.2em] uppercase mb-3" style={{ color: GOLD }}>{item.num}</div>
-                    <h3 className="text-white font-black text-3xl mb-5 tracking-tight leading-tight">{item.title}</h3>
-                    <p className="text-neutral-400 leading-relaxed max-w-2xl">{item.body}</p>
-                  </div>
-                )}
-              </motion.div>
-            ))}
+
+          {/* Tool list — text only for tools 4+5 */}
+          <motion.div {...fadeUp} className="mb-16">
+            <div className="flex flex-wrap gap-4 mt-6">
+              {tools.map((t) => (
+                <span key={t.num} className="flex items-center gap-2 text-sm text-neutral-400 border border-neutral-800 rounded-full px-4 py-1.5">
+                  <span className="font-bold" style={{ color: GOLD }}>{t.num}</span>
+                  <span>{t.title}</span>
+                </span>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Module board — dark card layout */}
+          <div className="space-y-20">
+
+            {/* Module 1: Partner Directory */}
+            <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+              <div className="mb-6 flex items-end gap-4">
+                <div>
+                  <span className="text-xs font-bold tracking-[0.2em] uppercase" style={{ color: GOLD }}>01</span>
+                  <h3 className="text-white font-black text-2xl mt-1">Partner & Funder Directory</h3>
+                  <p className="text-neutral-400 text-sm mt-1 max-w-xl">97 vetted organizations across 12 categories. Filter by type, see foundation partners flagged, and launch a personalized letter from any card.</p>
+                </div>
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+                <EmbedDirectory />
+              </div>
+            </motion.div>
+
+            {/* Modules 2+3 side by side */}
+            <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
+              className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+              {/* Letter Generator */}
+              <div>
+                <div className="mb-6">
+                  <span className="text-xs font-bold tracking-[0.2em] uppercase" style={{ color: GOLD }}>02</span>
+                  <h3 className="text-white font-black text-2xl mt-1">Letter Generator</h3>
+                  <p className="text-neutral-400 text-sm mt-1">Select a partner type, enter a name, get a personalized outreach letter. Try it.</p>
+                </div>
+                <div className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+                  <EmbedLetterGenerator />
+                </div>
+              </div>
+
+              {/* Grant Calendar */}
+              <div>
+                <div className="mb-6">
+                  <span className="text-xs font-bold tracking-[0.2em] uppercase" style={{ color: GOLD }}>03</span>
+                  <h3 className="text-white font-black text-2xl mt-1">Grant Calendar</h3>
+                  <p className="text-neutral-400 text-sm mt-1">Active funding opportunities sorted by urgency. The first view every Monday morning.</p>
+                </div>
+                <div className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+                  <EmbedGrantCalendar />
+                </div>
+              </div>
+
+            </motion.div>
           </div>
         </div>
       </section>
