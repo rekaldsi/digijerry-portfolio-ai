@@ -100,22 +100,55 @@ const features = [
   },
 ]
 
+const usecases = [
+  {
+    icon: '🌪️',
+    title: 'Disaster Response',
+    body: 'When the grid fails — tornado, flood, ice storm, power outage — every cloud-dependent tool goes dark. Trade Post Mesh stays on. Neighbors can post alerts, request supplies, and coordinate mutual aid over LoRa radio without touching a cell tower or router.',
+  },
+  {
+    icon: '🏘️',
+    title: 'Neighborhood Mutual Aid',
+    body: 'A digital layer for the way neighborhoods already work. Post what you have. Find what you need. Coordinate locally without a middleman, a fee, or a platform that monetizes your data. Designed for the kind of reciprocity that already exists in tight-knit communities.',
+  },
+  {
+    icon: '🔄',
+    title: 'Barter and Local Trade',
+    body: 'Cash-optional exchange for goods and services. Tools, food, labor, childcare, rides — coordinate trades directly with neighbors. The mesh carries intent; settlement happens in person. No payment processor required.',
+  },
+  {
+    icon: '📡',
+    title: 'Off-Grid Communities',
+    body: 'Rural areas, intentional communities, event campgrounds, protest sites, festival grounds — anywhere centralized internet is unavailable, unreliable, or politically compromised. Trade Post Mesh is the coordination layer that works regardless of grid status.',
+  },
+  {
+    icon: '🏗️',
+    title: 'Community Infrastructure',
+    body: 'Tool libraries, community gardens, maker spaces, mutual aid networks — any shared resource that requires coordination between neighbors. Pin permanent nodes, publish availability, track who has what and what\'s needed. The platform scales from one block to a whole city.',
+  },
+  {
+    icon: '🛡️',
+    title: 'Privacy-Critical Organizing',
+    body: 'E2EE from the foundation. The server is intentionally blind. Location fuzzes to ±500m by default. No user tracking, no metadata leakage, no platform with access to what neighbors are trading or requesting. Built for communities where discretion is not optional.',
+  },
+]
+
 const decisions = [
   {
     title: 'Start With the App, Then Earn the Mesh',
-    body: 'Trade Post launched as a standard cloud app first. Proving people would actually use a neighborhood coordination platform before building harder mesh infrastructure on top. The evolution to Mesh wasn\'t scope creep. It was the original destination, reached in the right order.',
+    body: 'Trade Post launched as a standard cloud app first — proving people would actually use a neighborhood coordination platform before building harder mesh infrastructure on top. The evolution to Mesh wasn\'t scope creep. It was the original destination, reached in the right order.',
   },
   {
     title: 'Cloud-Optional, Not Anti-Cloud',
-    body: 'The ambition was never to eliminate cloud infrastructure. It was to make the platform function when cloud isn\'t available. Supabase stays in the stack as secondary memory and sync layer. The shift is in what\'s required vs. what\'s optional. Cloud becomes a nice-to-have, not a dependency.',
+    body: 'The ambition was never to eliminate cloud infrastructure — it was to stop requiring it. Supabase stays in the stack as secondary memory and sync. The shift is in what\'s required vs. what\'s preferred. Cloud becomes a nice-to-have, not a dependency. That\'s a fundamentally different architecture contract.',
   },
   {
     title: 'Economic Exchange as the Hard Use Case',
-    body: 'Most mesh apps solve for messaging. Trade Post Mesh targets the harder problem: economic coordination. Matching offers with needs, propagating trade intent hop-by-hop, caching listings locally. Discovery and coordination travel over mesh — settlement syncs when the grid returns. If you can coordinate commerce without the internet, messaging is already solved.',
+    body: 'Most mesh apps solve for messaging. Trade Post Mesh targets the harder problem: economic coordination. Matching offers with needs, propagating trade intent hop-by-hop, caching listings locally. Discovery and coordination travel over mesh — settlement syncs when the grid returns. If you can do commerce without the internet, messaging is already solved.',
   },
   {
-    title: 'Designed for the Scenarios That Matter Most',
-    body: 'Disaster events, grid failures, low-connectivity environments, community-run infrastructure. These aren\'t edge cases — they\'re the primary design targets. Every architecture decision was made by asking: does this work when the grid goes down at the worst possible time?',
+    title: 'Built for the Worst Moment, Not the Average One',
+    body: 'Every architecture decision was stress-tested against one question: does this work when the grid goes down at the exact moment the community needs it most? That constraint ruled out every conventional approach and forced the design toward something genuinely resilient.',
   },
 ]
 
@@ -149,7 +182,7 @@ export default function CaseTradePost() {
           </motion.h1>
           <motion.p className="text-neutral-400 text-lg max-w-2xl leading-relaxed mb-8"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
-            Trade Post started as a neighborhood barter app and became a decentralized operating system for local economic coordination — designed to keep working when the internet doesn't. Built on Meshtastic LoRa mesh, E2EE, and OVERWATCH infrastructure intelligence. Currently a working prototype headed for pilot testing in Chicagoland, using OVERWATCH to identify the right neighborhoods to deploy first.
+            Trade Post Mesh is a communication infrastructure and neighborhood operating system for barter, mutual aid, and local coordination — built to function without the internet. Trade goods, request help, post alerts, organize your block. It works over LoRa mesh radio when the grid is up, and keeps working when it isn't. Built on Meshtastic, end-to-end encryption, and OVERWATCH infrastructure intelligence. Currently a working prototype preparing for pilot deployment in Chicagoland.
           </motion.p>
 
           {/* Live Demo CTA */}
@@ -193,16 +226,10 @@ export default function CaseTradePost() {
 
       {/* HERO SCREENSHOT */}
       <section style={{ backgroundColor: '#0a0a0a' }} className="pb-16 px-6">
-        <div className="max-w-5xl mx-auto">
-          <motion.div {...fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <img src="/tradepost-main.png" alt="Trade Post Mesh NEED feed — insulin storage emergency" className="w-full rounded-2xl border border-neutral-800" />
-              <p className="text-sm text-neutral-500 mt-3 text-center italic">Live NEED post — insulin storage, power out, Back of the Yards</p>
-            </div>
-            <div>
-              <img src="/tradepost-map.png" alt="Trade Post Mesh neighborhood map with post pins across Chicago" className="w-full rounded-2xl border border-neutral-800" />
-              <p className="text-sm text-neutral-500 mt-3 text-center italic">Neighborhood map — offers, needs, and alerts pinned across Chicago</p>
-            </div>
+        <div className="max-w-2xl mx-auto">
+          <motion.div {...fadeUp}>
+            <img src="/tradepost-main.png" alt="Trade Post Mesh NEED feed — insulin storage emergency" className="w-full rounded-2xl border border-neutral-800" />
+            <p className="text-sm text-neutral-500 mt-3 text-center italic">Live NEED post — power out, insulin needs refrigeration, Back of the Yards. No internet. No cell service. Neighbors still coordinating.</p>
           </motion.div>
         </div>
       </section>
@@ -213,25 +240,50 @@ export default function CaseTradePost() {
           <motion.div {...fadeUp}>
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00C896' }}>The Problem</p>
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
-              Every local platform assumes the grid stays on.
+              Every platform built for neighbors assumes the grid stays on.
             </h2>
             <div className="space-y-5 text-neutral-600 leading-relaxed text-lg">
               <p>
-                Facebook Marketplace. Craigslist. Nextdoor. Every tool built for neighborhood coordination routes through centralized cloud infrastructure. When the grid goes down — tornado, power outage, infrastructure failure — they go down with it. During the exact moments when neighbors most need to coordinate, share supplies, post safety alerts, and find what's available nearby, the tools disappear.
+                Facebook Marketplace. Craigslist. Nextdoor. Every tool built for neighborhood coordination routes through centralized cloud infrastructure. When the grid goes down — tornado, power outage, infrastructure failure — they disappear. During the exact moments when neighbors most need to find supplies, post safety alerts, request help, and coordinate exchange, the tools stop working.
               </p>
               <p>
-                The deeper problem: most mesh apps treat economic exchange as out of scope. They solve for messaging. Trade Post Mesh targets the harder question — can neighborhood coordination actually work without centralized infrastructure? Post an offer. Find a need. Coordinate the exchange. Discovery and intent propagate peer-to-peer over mesh radio. Settlement syncs when connectivity returns.
+                But the problem runs deeper than disaster preparedness. Even on a normal day, local coordination is broken. Mutual aid networks run on spreadsheets. Barter happens through private DMs on platforms that take a cut. Community resources — tool libraries, shared gardens, skill exchanges — have no shared operating layer. Neighbors are willing to help each other. The infrastructure to facilitate it doesn't exist.
+              </p>
+              <p>
+                Trade Post Mesh is that infrastructure. A neighborhood operating system for trade, mutual aid, and local coordination — built to work at full capacity when the internet is available, and to keep working when it isn't.
               </p>
             </div>
 
-            {/* Pull quote — gradient bar, no quotation marks */}
+            {/* Pull quote */}
             <div className="my-12 relative pl-6 md:pl-8">
               <div className="absolute left-0 top-0 bottom-0 w-1 rounded-full" style={{ background: 'linear-gradient(to bottom, #00C896, #C8F135)' }} />
               <p className="text-xl md:text-2xl font-semibold text-neutral-900 leading-snug italic">
-                Trade Post proves people will trade locally. OVERWATCH proves the network can support it. Trade Post Mesh makes the exchange independent.
+                Neighbors are willing to help each other. The infrastructure to make it easy has never existed. Until now.
               </p>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* USE CASES */}
+      <section style={{ backgroundColor: '#0a0a0a' }} className="py-24 px-6">
+        <div className="max-w-5xl mx-auto">
+          <motion.div {...fadeUp} className="mb-16">
+            <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00C896' }}>What It's For</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white">One platform. Many reasons to use it.</h2>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {usecases.map((item, i) => (
+              <motion.div key={item.title}
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.07 }}
+                className="rounded-2xl p-6 border border-neutral-800 bg-neutral-900/60">
+                <div className="text-3xl mb-4">{item.icon}</div>
+                <h3 className="text-white font-bold text-base mb-3">{item.title}</h3>
+                <p className="text-neutral-400 text-sm leading-relaxed">{item.body}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -407,17 +459,20 @@ export default function CaseTradePost() {
           <motion.div {...fadeUp}>
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00C896' }}>The Takeaway</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ideas that build on each other.
+              A new category of platform.
             </h2>
+            <p className="text-neutral-400 leading-relaxed text-lg mb-6">
+              Most platforms are built to extract value from local communities — taking a cut of every transaction, selling attention back to advertisers, centralizing data they don't need to hold. Trade Post Mesh inverts that model. No fees. No ads. No platform in the middle of what neighbors do for each other.
+            </p>
             <p className="text-neutral-400 leading-relaxed text-lg mb-8">
-              Built on React, Supabase, Meshtastic LoRa, and Signal Protocol scaffolding — with OVERWATCH as the infrastructure intelligence layer that determines when peer-to-peer transport is viable. The underlying mesh network has performed well during real Chicago-area emergencies. The platform itself is a working prototype, developed in collaboration with the Chicago mesh community and headed for neighborhood pilot testing — using OVERWATCH to identify the right areas to deploy first. Each project in this system informed the next. Curiosity became insight. Insight became architecture.
+              It's a working prototype today. It's an open infrastructure play tomorrow. The mesh network is already growing in Chicago through the ChiMesh community. OVERWATCH maps where coverage is strong enough to go fully peer-to-peer. The pilot neighborhoods are already identified. What's next is deployment — and proving this works at city scale.
             </p>
 
             {/* Final pull quote — gradient bar, left-aligned */}
             <div className="my-10 relative pl-6 md:pl-8 text-left">
               <div className="absolute left-0 top-0 bottom-0 w-1 rounded-full" style={{ background: 'linear-gradient(to bottom, #00C896, #C8F135)' }} />
               <p className="text-lg md:text-xl font-semibold text-white leading-snug italic">
-                Not anti-cloud. Just cloud-optional. That's the only design target that matters when the grid fails.
+                Not anti-cloud. Just cloud-optional. That's the only design target that matters when your neighbors need you most.
               </p>
             </div>
 
