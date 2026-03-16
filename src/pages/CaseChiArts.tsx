@@ -107,11 +107,11 @@ export default function CaseChiArts() {
           </motion.p>
           <motion.h1 className="text-5xl md:text-7xl font-black text-white leading-none tracking-tight mb-6"
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
-            Talented kids shouldn't lose their school because nobody built the right spreadsheet.
+            This school didn't need saving. It needed better tools.
           </motion.h1>
           <motion.p className="text-neutral-400 text-lg max-w-2xl leading-relaxed mb-10"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
-            Midway through her freshman year, the board disbanded. Fundraising infrastructure gone. Parents scrambling with pizza days and snack drives. Teachers looking for partners to cover graduation fees kids couldn't afford. I'm a strategist and a builder. So I built something.
+            When the ChiArts Foundation board disbanded, the school kept going. The fundraising infrastructure didn't. My daughter was a freshman there. I had 20 years of Chicago creative industry contacts and the skills to build something useful. So I did.
           </motion.p>
 
           {/* CTA */}
