@@ -131,12 +131,12 @@ export default function CaseJacket() {
 
           <motion.h1 className="text-5xl md:text-7xl font-black text-white leading-none tracking-tight mb-6"
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
-            Civic data is public.<br />Making it usable is the work.
+            Your ballot. Their donors.<br />Now you know.
           </motion.h1>
 
           <motion.p className="text-neutral-400 text-lg max-w-2xl leading-relaxed mb-10"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
-            TheJacket is a voter intelligence platform for Cook County, Illinois. 81 candidates, 44 races, 23 judges — every campaign finance record, every documented red flag, every transparency grade in one place. Built as a product, not a spreadsheet.
+            TheJacket is a voter intelligence platform for Cook County, Illinois. 81 candidates, 44 races, 23 judges — every campaign finance record, every documented red flag, every transparency grade in one place. Built as a product, not a PDF buried on a .gov page.
           </motion.p>
 
           <motion.div className="flex flex-wrap gap-3 mb-14"
@@ -296,23 +296,41 @@ export default function CaseJacket() {
 
       {/* TAKEAWAY */}
       <section style={{ backgroundColor: '#0a0a0a' }} className="py-24 px-6">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto">
           <motion.div {...fadeUp}>
-            <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: AMBER }}>The Takeaway</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              What this says about how I work.
-            </h2>
-            <p className="text-neutral-400 leading-relaxed text-lg mb-6">
-              TheJacket is a civic information product — not a political one. The platform covers every candidate on the ballot regardless of party, sources every claim to its original document, and makes the methodology public. The goal was a tool voters could trust, built by someone who cares about the same things they do.
-            </p>
-            <p className="text-neutral-400 leading-relaxed text-lg mb-10">
-              It required a scoring engine, an autonomous data pipeline, an editorial policy, a UI system, and 81 individual candidate research files — all built by one person. That's the range this project demonstrates.
-            </p>
+            <p className="text-xs font-bold tracking-[0.3em] uppercase mb-6" style={{ color: AMBER }}>The Takeaway</p>
 
-            <div className="my-10 relative pl-6 md:pl-8 text-left">
+            {/* Stat callout */}
+            <div className="flex flex-wrap gap-8 mb-10 pb-10 border-b border-neutral-800">
+              {[
+                { n: '81', label: 'candidates researched' },
+                { n: '44', label: 'races documented' },
+                { n: '3×', label: 'daily AI enrichment runs' },
+                { n: '0', label: 'partisan shortcuts taken' },
+              ].map(s => (
+                <div key={s.label}>
+                  <div className="text-4xl font-black" style={{ color: AMBER }}>{s.n}</div>
+                  <div className="text-neutral-500 text-sm mt-1">{s.label}</div>
+                </div>
+              ))}
+            </div>
+
+            <h2 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tight mb-8 max-w-3xl">
+              The voters always had a right to know. They just needed someone to do the work.
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <p className="text-neutral-400 leading-relaxed text-lg">
+                Eighty-one research files. A scoring engine with a published methodology. An enrichment pipeline that committed new intelligence to GitHub three times a day without anyone touching it. On primary day, the site was ready. Every claim sourced. Every flag confirmed. Every grade explained.
+              </p>
+              <p className="text-neutral-400 leading-relaxed text-lg">
+                This is what civic tech should look like — not a PDF of voting records buried on a .gov page, but a product. Searchable. Graded. Built for someone with 10 minutes before they walk into a booth. The data was always public. It was never organized. Now it is.
+              </p>
+            </div>
+
+            <div className="relative pl-6 md:pl-8 mb-12">
               <div className="absolute left-0 top-0 bottom-0 w-1 rounded-full" style={{ background: `linear-gradient(to bottom, ${AMBER}, ${AMBER_LIGHT})` }} />
-              <p className="text-lg md:text-xl font-semibold text-white leading-snug italic">
-                The best work comes from problems you refuse to leave unsolved.
+              <p className="text-xl md:text-2xl font-semibold text-white leading-snug italic">
+                Politicians have always known who funds them. Now everyone does.
               </p>
             </div>
 
