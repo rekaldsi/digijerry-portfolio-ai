@@ -215,16 +215,16 @@ export default function CaseChiArts() {
             <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
               {context.map((item) => (
                 <div key={item.title} className="relative overflow-hidden rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
-                  {/* Gold top accent bar */}
-                  <div className="absolute left-0 top-0 h-[3px] w-full" style={{ background: `linear-gradient(90deg, ${GOLD}, ${GOLD_LIGHT}, transparent)` }} />
-                  {/* Large faded icon background */}
-                  <div className="absolute right-3 top-3 text-5xl opacity-[0.07] select-none pointer-events-none">{item.icon}</div>
-                  {/* Icon badge */}
-                  <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl text-2xl" style={{ background: `linear-gradient(135deg, ${GOLD}22, ${GOLD}11)`, border: `1px solid ${GOLD}44` }}>
-                    {item.icon}
+                  {/* Gold left border accent */}
+                  <div className="absolute left-0 top-0 h-full w-[3px] rounded-l-2xl" style={{ background: `linear-gradient(to bottom, ${GOLD}, ${GOLD_LIGHT})` }} />
+                  <div className="pl-2">
+                    {/* Icon badge */}
+                    <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl text-2xl" style={{ background: `linear-gradient(135deg, ${GOLD}22, ${GOLD}11)`, border: `1px solid ${GOLD}44` }}>
+                      {item.icon}
+                    </div>
+                    <h3 className="mb-2 text-sm font-black uppercase tracking-widest text-neutral-900">{item.title}</h3>
+                    <p className="text-sm leading-relaxed text-neutral-600">{item.body}</p>
                   </div>
-                  <h3 className="mb-2 text-sm font-black uppercase tracking-widest text-neutral-900">{item.title}</h3>
-                  <p className="text-sm leading-relaxed text-neutral-600">{item.body}</p>
                 </div>
               ))}
             </div>
@@ -259,8 +259,7 @@ export default function CaseChiArts() {
                   { label: 'Design', detail: 'Built information hierarchy and interaction system', icon: '✏️' },
                   { label: 'Build', detail: 'Shipped React + Vite + Tailwind app to production', icon: '⚙️' },
                 ].map((r) => (
-                  <div key={r.label} className="relative overflow-hidden rounded-xl p-4" style={{ background: `linear-gradient(135deg, ${GOLD}18, ${GOLD}08)`, border: `1px solid ${GOLD}33` }}>
-                    <div className="absolute right-2 top-2 text-2xl opacity-20 select-none">{r.icon}</div>
+                  <div key={r.label} className="rounded-xl p-4" style={{ background: `linear-gradient(135deg, ${GOLD}18, ${GOLD}08)`, border: `1px solid ${GOLD}33` }}>
                     <p className="mb-1 text-sm font-black text-neutral-900">{r.label}</p>
                     <p className="text-xs leading-relaxed text-neutral-600">{r.detail}</p>
                   </div>
