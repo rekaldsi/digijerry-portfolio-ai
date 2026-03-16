@@ -144,10 +144,25 @@ export default function CaseTradePost() {
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
             A Neighborhood OS.<br />No Internet Required.
           </motion.h1>
-          <motion.p className="text-neutral-400 text-lg max-w-2xl leading-relaxed mb-14"
+          <motion.p className="text-neutral-400 text-lg max-w-2xl leading-relaxed mb-8"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
             Trade Post started as a neighborhood barter app and became a decentralized operating system for local economic coordination — designed to keep working when the internet doesn't. Built on Meshtastic LoRa mesh, E2EE, and OVERWATCH infrastructure intelligence. Currently a working prototype headed for pilot testing in Chicagoland, using OVERWATCH to identify the right neighborhoods to deploy first.
           </motion.p>
+
+          {/* Live Demo CTA */}
+          <motion.div className="mb-14"
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
+            <a
+              href="https://trade-post-mesh-production.up.railway.app/app?demo=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold text-sm transition-all duration-200 hover:opacity-90 hover:scale-105 active:scale-100"
+              style={{ backgroundColor: '#00C896', color: '#0a0a0a' }}
+            >
+              <span className="w-2 h-2 rounded-full bg-current animate-pulse" />
+              Explore Live Demo
+            </a>
+          </motion.div>
 
           {/* Hero stat cards — gradient accent, emoji icons */}
           <motion.div className="grid grid-cols-2 sm:grid-cols-4 gap-4"
