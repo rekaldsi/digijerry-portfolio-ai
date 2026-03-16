@@ -7,19 +7,36 @@ function formatDate() {
 
 function LetterBody({ text }) {
   const blocks = text.split("\n\n");
+
   return (
-    <div className="font-serif text-sm leading-relaxed text-gray-200" style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}>
+    <div className="text-sm leading-relaxed text-neutral-200" style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}>
       {blocks.map((block, i) => {
         const isFootnote = block.startsWith("⚠️");
         const lines = block.split("\n");
-        if (isFootnote) return (
-          <div key={i} className="mt-6 pt-4 border-t border-[#2a3f55]">
-            <p className="text-xs text-amber-400 leading-relaxed">{lines.map((l, j) => <span key={j}>{l}{j < lines.length - 1 && <br />}</span>)}</p>
-          </div>
-        );
+
+        if (isFootnote) {
+          return (
+            <div key={i} className="mt-6 border-t border-white/15 pt-4">
+              <p className="text-xs leading-relaxed text-[#E8C87A]">
+                {lines.map((l, j) => (
+                  <span key={j}>
+                    {l}
+                    {j < lines.length - 1 && <br />}
+                  </span>
+                ))}
+              </p>
+            </div>
+          );
+        }
+
         return (
-          <p key={i} className={[i > 0 ? "mt-4" : "", i < 3 ? "text-xs text-gray-400 font-sans" : ""].filter(Boolean).join(" ")}>
-            {lines.map((l, j) => <span key={j}>{l}{j < lines.length - 1 && <br />}</span>)}
+          <p key={i} className={[i > 0 ? "mt-4" : "", i < 3 ? "font-sans text-xs text-neutral-400" : ""].filter(Boolean).join(" ")}>
+            {lines.map((l, j) => (
+              <span key={j}>
+                {l}
+                {j < lines.length - 1 && <br />}
+              </span>
+            ))}
           </p>
         );
       })}
@@ -39,9 +56,11 @@ export default function EmbedLetterGenerator() {
   const handleGenerate = useCallback(() => {
     const fn = (voice === "staff" ? staffTemplates : templates)[templateType];
     if (!fn) return;
+
     const companyName = company.trim() || "[COMPANY NAME]";
     const contactName = contact.trim() || null;
     const callout = targetCallouts[companyName.toLowerCase()] || null;
+
     setLetter(fn(companyName, contactName, formatDate(), callout));
     setCopied(false);
     setTimeout(() => letterRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 100);
@@ -49,81 +68,128 @@ export default function EmbedLetterGenerator() {
 
   const handleCopy = useCallback(() => {
     if (!letter) return;
-    navigator.clipboard.writeText(letter).then(() => { setCopied(true); setTimeout(() => setCopied(false), 2500); });
+
+    navigator.clipboard.writeText(letter).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    });
   }, [letter]);
 
   return (
-    <div className="bg-white rounded-xl overflow-hidden">
-      {/* Header */}
-      <div className="bg-[#0f1b2d] px-6 py-4 flex items-center justify-between">
+    <section className="flex h-full flex-col overflow-hidden bg-[#0d0d0d] text-neutral-100">
+      <header className="flex min-h-[76px] items-center justify-between border-b border-white/10 bg-[#0d0d0d] px-6 py-4">
         <div>
-          <p className="text-[#d4a017] text-xs font-bold tracking-widest uppercase">Letter Generator</p>
-          <p className="text-white text-sm font-semibold mt-0.5">Personalized outreach in 90 seconds</p>
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#C9A84C]">Letter Generator</p>
+          <p className="mt-0.5 text-sm font-semibold text-white">Personalized outreach in 90 seconds</p>
         </div>
-        <span className="text-xs text-gray-400">Live tool</span>
-      </div>
+        <span className="rounded-full border border-[#C9A84C]/30 bg-[#C9A84C]/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-[#E8C87A]">
+          Live tool
+        </span>
+      </header>
 
-      {/* Form */}
-      <div className="px-6 py-5 bg-[#faf8f3] border-b border-gray-200">
-        {/* Voice toggle */}
-        <div className="flex gap-2 mb-4">
+      <div className="border-b border-white/10 bg-[#111111] px-4 py-5 sm:px-6">
+        <div className="mb-4 flex flex-wrap gap-2">
           {["parent", "staff"].map((v) => (
-            <button key={v} onClick={() => { setVoice(v); setLetter(""); }}
-              className={`text-xs font-bold px-4 py-2 rounded transition-colors border-2 ${voice === v ? "bg-[#0f1b2d] border-[#0f1b2d] text-white" : "border-gray-300 text-gray-600 bg-white hover:border-[#0f1b2d]"}`}>
-              {v === "parent" ? "👨‍👩‍👧 Parent / Supporter" : "🎓 Faculty / Staff"}
+            <button
+              key={v}
+              type="button"
+              onClick={() => {
+                setVoice(v);
+                setLetter("");
+              }}
+              className={`rounded-lg border px-4 py-2 text-xs font-bold uppercase tracking-wide transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E8C87A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#111111] ${
+                voice === v
+                  ? "border-[#C9A84C] bg-[#C9A84C] text-[#0d0d0d]"
+                  : "border-white/20 bg-[#171717] text-neutral-300 hover:border-[#C9A84C]/60 hover:text-white"
+              }`}
+            >
+              {v === "parent" ? "Parent / Supporter" : "Faculty / Staff"}
             </button>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
+        <div className="mb-4 grid grid-cols-1 gap-3 lg:grid-cols-3">
           <div>
-            <label className="text-xs font-bold uppercase tracking-wide text-[#0f1b2d] block mb-1">Partner Type</label>
-            <select value={templateType} onChange={(e) => setTemplateType(e.target.value)}
-              className="w-full border border-gray-300 bg-white px-3 py-2 text-sm rounded focus:outline-none focus:border-[#d4a017]">
-              {templateTypes.map((t) => <option key={t} value={t}>{t}</option>)}
+            <label htmlFor="template-type" className="mb-1 block text-xs font-bold uppercase tracking-wide text-[#E8C87A]">
+              Partner Type
+            </label>
+            <select
+              id="template-type"
+              value={templateType}
+              onChange={(e) => setTemplateType(e.target.value)}
+              className="w-full rounded-lg border border-white/20 bg-[#171717] px-3 py-2 text-sm text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E8C87A]"
+            >
+              {templateTypes.map((t) => (
+                <option key={t} value={t} className="bg-[#171717] text-white">
+                  {t}
+                </option>
+              ))}
             </select>
           </div>
+
           <div>
-            <label className="text-xs font-bold uppercase tracking-wide text-[#0f1b2d] block mb-1">Company / Org</label>
-            <input type="text" value={company} onChange={(e) => setCompany(e.target.value)}
+            <label htmlFor="company" className="mb-1 block text-xs font-bold uppercase tracking-wide text-[#E8C87A]">
+              Company / Org
+            </label>
+            <input
+              id="company"
+              type="text"
+              value={company}
+              onChange={(e) => setCompany(e.target.value)}
               placeholder="e.g. Harris Theater"
-              className="w-full border border-gray-300 bg-white px-3 py-2 text-sm rounded focus:outline-none focus:border-[#d4a017]" />
+              className="w-full rounded-lg border border-white/20 bg-[#171717] px-3 py-2 text-sm text-white placeholder:text-neutral-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E8C87A]"
+            />
           </div>
+
           <div>
-            <label className="text-xs font-bold uppercase tracking-wide text-[#0f1b2d] block mb-1">Contact <span className="text-gray-400 font-normal normal-case">(optional)</span></label>
-            <input type="text" value={contact} onChange={(e) => setContact(e.target.value)}
+            <label htmlFor="contact" className="mb-1 block text-xs font-bold uppercase tracking-wide text-[#E8C87A]">
+              Contact <span className="font-normal normal-case text-neutral-500">(optional)</span>
+            </label>
+            <input
+              id="contact"
+              type="text"
+              value={contact}
+              onChange={(e) => setContact(e.target.value)}
               placeholder="e.g. Jane Smith"
-              className="w-full border border-gray-300 bg-white px-3 py-2 text-sm rounded focus:outline-none focus:border-[#d4a017]" />
+              className="w-full rounded-lg border border-white/20 bg-[#171717] px-3 py-2 text-sm text-white placeholder:text-neutral-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E8C87A]"
+            />
           </div>
         </div>
 
-        <button onClick={handleGenerate}
-          className="bg-[#d4a017] hover:bg-[#f59e0b] text-[#0f1b2d] font-bold px-6 py-2.5 text-xs tracking-widest uppercase rounded transition-colors">
+        <button
+          type="button"
+          onClick={handleGenerate}
+          className="rounded-lg bg-[#C9A84C] px-6 py-2.5 text-xs font-bold uppercase tracking-widest text-[#0d0d0d] transition-colors hover:bg-[#E8C87A] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E8C87A]"
+        >
           Generate Letter →
         </button>
       </div>
 
-      {/* Output */}
-      <div className="px-6 py-5 bg-[#0f1b2d] min-h-[120px]">
+      <div ref={letterRef} className="flex-1 bg-[#0f0f0f] px-4 py-5 sm:px-6">
         {letter ? (
           <>
-            <div className="flex items-center justify-between mb-4">
-              <p className="text-xs font-bold text-[#d4a017] tracking-widest uppercase">Your Letter</p>
-              <button onClick={handleCopy}
-                className={`text-xs font-bold px-4 py-1.5 rounded transition-colors ${copied ? "bg-green-600 text-white" : "bg-[#d4a017] text-[#0f1b2d] hover:bg-[#f59e0b]"}`}>
-                {copied ? "✓ Copied" : "📋 Copy"}
+            <div className="mb-4 flex items-center justify-between">
+              <p className="text-xs font-bold uppercase tracking-widest text-[#C9A84C]">Your Letter</p>
+              <button
+                type="button"
+                onClick={handleCopy}
+                className={`rounded-lg px-4 py-1.5 text-xs font-bold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E8C87A] ${
+                  copied ? "bg-emerald-600 text-white" : "bg-[#C9A84C] text-[#0d0d0d] hover:bg-[#E8C87A]"
+                }`}
+              >
+                {copied ? "Copied" : "Copy"}
               </button>
             </div>
-            <div className="max-h-[320px] overflow-y-auto pr-1">
+            <div className="max-h-[360px] overflow-y-auto rounded-lg border border-white/10 bg-[#151515] p-4 sm:p-5">
               <LetterBody text={letter} />
             </div>
           </>
         ) : (
-          <div className="flex items-center justify-center h-[120px]">
-            <p className="text-gray-500 text-sm text-center">Select a partner type, enter a name,<br />and generate a letter.</p>
+          <div className="flex h-full min-h-[180px] items-center justify-center rounded-lg border border-dashed border-white/20 bg-[#151515] p-5">
+            <p className="text-center text-sm text-neutral-400">Select a partner type, add context, and generate your outreach letter.</p>
           </div>
         )}
       </div>
-    </div>
+    </section>
   );
 }
