@@ -61,7 +61,7 @@ const projects: Project[] = [
     detail: 'Every candidate on the March 17, 2026 Illinois primary ballot — campaign finance, documented red flags, transparency grades, judicial ratings, and a personal ballot builder. 81 candidates, 44 races, 23 judges. Built as a product: scoring engine, autonomous AI enrichment pipeline running 3x daily, static JSON architecture for zero-cost deploys. The data is public. Making it usable is the work.',
     tags: ['Next.js 15', 'TypeScript', 'Civic Tech', 'AI Enrichment', 'Vercel'],
     demoUrl: 'https://thejacket.cc',
-    heroImage: '/jacket-hero.png',
+    heroImage: '/jacket-main.png',
     link: '/case/jacket',
   },
   {
