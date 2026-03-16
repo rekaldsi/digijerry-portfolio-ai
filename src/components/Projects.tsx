@@ -16,6 +16,15 @@ type Project = {
 
 const projects: Project[] = [
   {
+    name: 'TDA iOS',
+    status: 'CONCEPT',
+    description: 'Intelligent operating system for retail marketing at national scale.',
+    detail: 'Designed during a 4-month engagement at Saatchi & Saatchi NY, embedded with the Toyota Dealer Association retail division. TDA iOS is a three-layer intelligence platform: a Knowledge Layer that centralizes institutional memory, a Creative Intelligence Layer that surfaces insights at brief, and a Governance Layer that keeps 1,200+ dealers and four agency tiers aligned. Presented to client leadership and the technology team.',
+    tags: ['AI Strategy', 'Knowledge Architecture', 'Creative Operations', 'Workflow Design', 'Agency System Design'],
+    heroImage: '/tdaios-card.png',
+    link: '/tda',
+  },
+  {
     name: 'KØDEX',
     status: 'LIVE',
     description: 'Full-stack AI platform for serious comic collectors.',
@@ -73,15 +82,6 @@ const projects: Project[] = [
     demoUrl: 'https://www.thebotique.ai',
     heroImage: '/thebotique-hero.jpg',
     link: '/case/botique',
-  },
-  {
-    name: 'TDA iOS',
-    status: 'CONCEPT',
-    description: 'Intelligent operating system for retail marketing at national scale.',
-    detail: 'Designed during a 4-month engagement at Saatchi & Saatchi NY, embedded with the Toyota Dealer Association retail division. TDA iOS is a three-layer intelligence platform: a Knowledge Layer that centralizes institutional memory, a Creative Intelligence Layer that surfaces insights at brief, and a Governance Layer that keeps 1,200+ dealers and four agency tiers aligned. Presented to client leadership and the technology team.',
-    tags: ['AI Strategy', 'Knowledge Architecture', 'Creative Operations', 'Workflow Design', 'Agency System Design'],
-    heroImage: '/tdaios-card.png',
-    link: '/tda',
   },
 ]
 
