@@ -39,7 +39,7 @@ const projects: Project[] = [
     detail: 'A fully decentralized platform for local communities to trade, barter, request help, and broadcast alerts without internet or cell service. Built on Meshtastic LoRa hardware. No tracking, no central server, no dependency on infrastructure that can fail. If you can do commerce without the internet, messaging is already solved. Field-tested in real conditions.',
     tags: ['Meshtastic', 'Python', 'Raspberry Pi', 'LoRa'],
     demoUrl: 'https://trade-post-mesh-production.up.railway.app/app?demo=1',
-    heroImage: '/tradepost-feed.jpg',
+    heroImage: '/tradepost-main.png',
     link: '/case/tradepost',
   },
   {
