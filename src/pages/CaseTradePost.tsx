@@ -62,23 +62,25 @@ const features = [
     num: '01',
     title: 'Offer / Need / Alert Feed',
     body: 'The core coordination surface. Post what you have, what you need, or what the neighborhood needs to know right now. Posts are typed — OFFER, NEED, ALERT, PIN — tagged with a node ID and set to expire. Browse without filtering noise from outside your area. When the grid is up, it syncs to cloud. When it isn\'t, the mesh carries it.',
-    image: '/tradepost-feed-alert.jpg',
-    imageAlt: 'Trade Post feed showing tornado watch and power outage alerts',
-    caption: 'Prototype feed modeled on real Cook County emergency scenarios. The mesh network itself has performed well during previous Chicago-area emergencies.',
+    image: '/tradepost-main.png',
+    imageAlt: 'Trade Post Mesh feed showing a life-critical NEED post for insulin storage during a power outage',
+    caption: 'A real scenario: power out, insulin needs refrigeration, Back of the Yards. The app surfaces this to neighbors within mesh range — no internet required.',
   },
   {
     num: '02',
     title: 'Mesh Transport via Meshtastic LoRa',
     body: 'Lightweight post intents broadcast over LoRa radio: the same long-range, low-power protocol used in disaster relief networks. No internet required for local propagation. Each post hops between mesh nodes, tagged with the originating node ID. The mesh doesn\'t replace the cloud. It activates when the cloud isn\'t there.',
-    image: null,
-    caption: null,
+    image: '/tradepost-new-post.png',
+    imageAlt: 'New post composer showing mesh radio broadcast options, post types, and location privacy controls',
+    caption: 'Post via Gateway or direct radio. Location privacy-fuzzes to ±500m by default. Posts travel peer-to-peer over LoRa when grid connectivity is unavailable.',
   },
   {
     num: '03',
     title: 'E2EE From the Foundation',
     body: 'End-to-end encryption was designed in, not added on. Device key registration, Signal Protocol scaffolding, encrypted payload storage. The server is intentionally blind to offer content. Peer-to-peer mesh transport extends that property: payloads encrypted between devices, no relay decryption at any hop.',
-    image: null,
-    caption: null,
+    image: '/tradepost-what-is-it.png',
+    imageAlt: 'Trade Post Mesh architecture overview — radio layer, app layer, no cell service required',
+    caption: 'Three layers: the radio mesh, the app, and cloud sync. The server sees nothing it doesn\'t need to. Encryption is end-to-end at every transport layer.',
   },
   {
     num: '04',
@@ -86,14 +88,15 @@ const features = [
     body: 'Mesh transport isn\'t always-on. It\'s conditional — activated when OVERWATCH reports sufficient BLE density, mesh node coverage, and redundancy for the local area. If the neighborhood can support it, offers route peer-to-peer. If not, the system uses cloud relay and flags the gap. Infrastructure viability drives transport selection automatically.',
     image: '/overwatch-map-full.jpg',
     imageAlt: 'OVERWATCH Chicago intelligence grid, the layer that determines when mesh activates',
-    caption: 'OVERWATCH: the intelligence layer underneath. 5.2M scans, 368 mesh nodes, real-time readiness scoring tells Trade Post Mesh when to go peer-to-peer.',
+    caption: 'OVERWATCH: the intelligence layer underneath. Millions of scans, hundreds of mesh nodes, real-time readiness scoring tells Trade Post Mesh when to go peer-to-peer.',
   },
   {
     num: '05',
-    title: 'Offline Listing Cache',
-    body: 'Listings cache locally so the experience doesn\'t degrade when connectivity does. Browse, post, and respond with no active connection. When the network returns — cloud or mesh — state syncs forward. No lost posts, no blank screens, no error states during the exact moments the platform is needed most.',
-    image: null,
-    caption: null,
+    title: 'Neighborhood Map',
+    body: 'Every post with a location appears on the map. Filter by type — offers, needs, alerts, pins — and see what\'s happening in each neighborhood at a glance. Tap any pin to expand the post. When mesh nodes are visible, the map shows their coverage radius so neighbors know where the off-grid signal reaches.',
+    image: '/tradepost-map.png',
+    imageAlt: 'Chicago neighborhood map with colored pins for offers, needs, alerts and mesh node locations',
+    caption: 'Live map of coordinated activity across Chicago neighborhoods. Colored by post type. Mesh node coverage shown as radius overlays when active.',
   },
 ]
 
@@ -191,11 +194,15 @@ export default function CaseTradePost() {
       {/* HERO SCREENSHOT */}
       <section style={{ backgroundColor: '#0a0a0a' }} className="pb-16 px-6">
         <div className="max-w-5xl mx-auto">
-          <motion.div {...fadeUp}>
-            <img src="/tradepost-feed-alert.jpg" alt="Trade Post feed" className="w-full rounded-2xl border border-neutral-800" />
-            <p className="text-sm text-neutral-400 mt-3 text-center italic">
-              Prototype feed built around real Chicago emergency scenarios. The underlying Meshtastic mesh network has proven reliable during actual grid stress events.
-            </p>
+          <motion.div {...fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <img src="/tradepost-main.png" alt="Trade Post Mesh NEED feed — insulin storage emergency" className="w-full rounded-2xl border border-neutral-800" />
+              <p className="text-sm text-neutral-500 mt-3 text-center italic">Live NEED post — insulin storage, power out, Back of the Yards</p>
+            </div>
+            <div>
+              <img src="/tradepost-map.png" alt="Trade Post Mesh neighborhood map with post pins across Chicago" className="w-full rounded-2xl border border-neutral-800" />
+              <p className="text-sm text-neutral-500 mt-3 text-center italic">Neighborhood map — offers, needs, and alerts pinned across Chicago</p>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -377,6 +384,20 @@ export default function CaseTradePost() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* HARDWARE */}
+      <section className="bg-white py-24 px-6">
+        <div className="max-w-4xl mx-auto">
+          <motion.div {...fadeUp} className="mb-10">
+            <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00C896' }}>The Hardware</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">No special gear required. Just a radio.</h2>
+            <p className="text-neutral-600 text-lg leading-relaxed">Off-the-shelf Meshtastic devices, pre-flashed and ready. Three options at three price points — all compatible with the ChiMesh network and Trade Post Mesh out of the box.</p>
+          </motion.div>
+          <motion.div {...fadeUp}>
+            <img src="/tradepost-hardware.png" alt="Recommended Meshtastic hardware — Seeed T1000-E, WisMesh Pocket, Seeed Solar Node" className="w-full rounded-2xl border border-neutral-200 shadow-sm" />
+          </motion.div>
         </div>
       </section>
 
