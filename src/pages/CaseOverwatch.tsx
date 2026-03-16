@@ -134,9 +134,16 @@ export default function CaseOverwatch() {
       <section style={{ backgroundColor: '#060a0f' }} className="pb-16 px-6">
         <div className="max-w-5xl mx-auto">
           <motion.div {...fadeUp}>
-            <img src="/overwatch-map-full.jpg" alt="OVERWATCH intelligence grid" className="w-full rounded-2xl border border-neutral-800" />
+            <video
+              src="/overwatch-map-zoom.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full rounded-2xl border border-neutral-800"
+            />
             <p className="text-sm text-neutral-400 mt-3 text-center italic">
-              Chicago, OVERWATCH grid live. 154 aircraft tracked via ADS-B. 50,000 BLE devices. 368 mesh nodes. 5.2M cumulative scans.
+              OVERWATCH grid live. Tracking aircraft via ADS-B, BLE devices, active mesh nodes, and cumulative wardriving scans — all layers updated in real time.
             </p>
           </motion.div>
         </div>
