@@ -312,23 +312,124 @@ export default function CaseOverwatch() {
         </div>
       </section>
 
-      {/* TAKEAWAY */}
+      {/* WHY IT MATTERS */}
+      <section className="bg-white py-24 px-6">
+        <div className="max-w-3xl mx-auto">
+          <motion.div {...fadeUp}>
+            <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00BFFF' }}>Why It Matters</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-8">
+              We built the internet. We never built a backup.
+            </h2>
+            <div className="space-y-6 text-neutral-600 leading-relaxed text-lg">
+              <p>
+                Every system we depend on, from emergency alerts to supply chains to the apps on your phone, assumes the internet is on. When it goes down, whether from a storm, a power failure, a cyberattack, or something nobody predicted, our ability to coordinate collapses with it. We have no visibility into what is actually happening around us. No situational awareness. No way to know what our neighbors know.
+              </p>
+              <p>
+                OVERWATCH is the answer to a question most people haven't thought to ask yet: what does the physical world around you look like, right now, without depending on the cloud to tell you?
+              </p>
+              <p>
+                It maps the invisible infrastructure that already exists in every neighborhood. The WiFi routers. The Bluetooth devices. The LoRa mesh radios. The aircraft overhead. The environmental and geopolitical conditions shaping the region. Combined, these signals tell a story about whether a place is connected, resilient, and ready, or dangerously dependent on systems it doesn't control.
+              </p>
+              <p>
+                This isn't a niche technical idea. It's the next layer of infrastructure awareness that cities, emergency planners, community organizers, and anyone who builds for the real world will eventually need. OVERWATCH builds that layer now.
+              </p>
+            </div>
+
+            <div className="my-12 relative pl-6 md:pl-8">
+              <div className="absolute left-0 top-0 bottom-0 w-1 rounded-full" style={{ background: 'linear-gradient(to bottom, #00BFFF, #C8F135)' }} />
+              <p className="text-xl md:text-2xl font-semibold text-neutral-900 leading-snug italic">
+                The internet is not infrastructure. It is a service. OVERWATCH treats what is underneath it as infrastructure instead.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* INTELLIGENCE LAYERS */}
       <section style={{ backgroundColor: '#060a0f' }} className="py-24 px-6">
+        <div className="max-w-5xl mx-auto">
+          <motion.div {...fadeUp} className="mb-16">
+            <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00BFFF' }}>Intelligence Layers</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">19 signals. One picture.</h2>
+            <p className="text-neutral-400 text-lg max-w-2xl">Every layer is a live feed from a real data source. Toggle any combination. The map updates instantly.</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              { group: 'Field Collection', color: '#C8F135', items: [
+                { icon: '📡', name: 'WiFi Scatter', what: 'Every WiFi access point detected during wardriving sessions, plotted by exact location. Shows where wireless infrastructure actually lives.' },
+                { icon: '🔵', name: 'BLE Devices', what: 'Bluetooth Low Energy devices detected in the field. Wearables, sensors, speakers, locks, anything broadcasting a BLE signal.' },
+                { icon: '🔗', name: 'Mesh Nodes', what: 'Active LoRa mesh radio nodes from the Meshtastic network. Named devices plotted individually, showing the real topology of the off-grid communication layer.' },
+                { icon: '📍', name: 'JEEP-PI Live', what: 'Real-time position and scan feed from the mobile collection unit. Updates every 5 seconds while in the field.' },
+                { icon: '🌐', name: 'WiGLE Networks', what: 'Crowd-sourced global WiFi database overlaid on field data. Adds density context from millions of publicly reported access points worldwide.' },
+              ]},
+              { group: 'Air and Space', color: '#00BFFF', items: [
+                { icon: '✈️', name: 'Live Aircraft', what: 'Every aircraft currently in the air, tracked via ADS-B transponder signals. Altitude, heading, speed, and flight ID in real time.' },
+                { icon: '🛰️', name: 'Satellites', what: '500 active satellites tracked using orbital data from CelesTrak. Shows what is overhead at any given moment.' },
+              ]},
+              { group: 'Global Intelligence', color: '#ff6b6b', items: [
+                { icon: '⚔️', name: 'Conflict Events', what: 'Armed conflict incidents pulled from GDELT every 15 minutes. Sourced from global news media and mapped to precise locations.' },
+                { icon: '🚨', name: 'Disaster Alerts', what: 'Natural disasters, industrial accidents, and humanitarian emergencies tracked via GDACS. Updated continuously from official international sources.' },
+                { icon: '🦠', name: 'C2 Nodes', what: 'Active cybersecurity threat infrastructure: command-and-control servers used by malware and botnets, sourced from feodotracker. Shows where active cyberattacks are being coordinated from.' },
+                { icon: '🌍', name: 'Earthquakes', what: 'Seismic events globally, sourced from USGS in real time. Magnitude, depth, and affected population radius.' },
+              ]},
+              { group: 'Environment', color: '#C8F135', items: [
+                { icon: '🔥', name: 'Fire Hotspots', what: 'Active wildfire and burn detections from NASA FIRMS satellite imagery. Updated multiple times daily.' },
+                { icon: '🌫️', name: 'NASA MODIS', what: 'True-color and false-color satellite imagery from NASA. Shows ground conditions, smoke, flooding, and land change from orbit.' },
+                { icon: '💨', name: 'NASA Aerosol', what: 'Atmospheric aerosol density from NASA satellites. Tracks smoke, dust, and air quality conditions at regional scale.' },
+                { icon: '🌧️', name: 'Weather Radar', what: 'Live precipitation radar from RainViewer. Real-time storm tracking with adjustable opacity over any map layer.' },
+              ]},
+              { group: 'Chicago Local', color: '#00BFFF', items: [
+                { icon: '🚗', name: 'Street Traffic', what: 'Live traffic conditions on Chicago roads from OpenStreetMap. Congestion, closures, and flow rate.' },
+                { icon: '📷', name: 'Speed Cameras', what: 'All City of Chicago speed enforcement camera locations from the open data portal. Static layer showing the full enforcement grid.' },
+                { icon: '⚠️', name: 'Incidents', what: 'Community-reported alerts: protests, police activity, road closures, fires, and medical events. User-generated, expire after 4 hours.' },
+                { icon: '☀️', name: 'Sun Calc', what: 'Right-click anywhere on the map to get precise sunrise, sunset, golden hour, and solar position for that location and date.' },
+                { icon: '📸', name: 'Mapillary', what: 'Street-level photography layer. Click any mapped road to see what it actually looks like on the ground.' },
+              ]},
+            ].map((group) => (
+              <motion.div key={group.group}
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+                transition={{ duration: 0.4 }}
+                className="rounded-2xl border border-neutral-800 overflow-hidden">
+                <div className="px-6 py-4 border-b border-neutral-800">
+                  <span className="text-xs font-bold tracking-[0.25em] uppercase" style={{ color: group.color }}>{group.group}</span>
+                </div>
+                <div className="divide-y divide-neutral-800">
+                  {group.items.map((item) => (
+                    <div key={item.name} className="px-6 py-4 flex gap-4">
+                      <span className="text-xl shrink-0 mt-0.5">{item.icon}</span>
+                      <div>
+                        <p className="text-white font-semibold text-sm mb-1">{item.name}</p>
+                        <p className="text-neutral-500 text-xs leading-relaxed">{item.what}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TAKEAWAY */}
+      <section style={{ backgroundColor: '#060a0f' }} className="py-24 px-6 border-t border-neutral-800">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div {...fadeUp}>
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00BFFF' }}>The Takeaway</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Resilience modeling. Running in production.
+              A new kind of map. Built for what's coming.
             </h2>
             <p className="text-neutral-400 leading-relaxed text-lg mb-8">
-              Built on React, TypeScript, Supabase, MapLibre GL, and Gemini. Live integrations: adsb.lol for aircraft, GDELT for conflict events, GDACS for disaster alerts, USGS for earthquakes, CelesTrak for satellite TLEs, NASA FIRMS and NASA GIBS for environmental data, feodotracker for C2 nodes, WiGLE for crowd-sourced WiFi, and RainViewer for weather radar. Processing millions of field scans from JEEP-PI running in real neighborhoods. A formal mesh viability scoring engine. Natural language SQL queries against live scan data. This is not a hobby map. It is infrastructure planning.
+              OVERWATCH is what happens when you stop treating the internet as a given and start asking what you'd know without it. It is a working system, deployed and live, that combines field-collected signal data with real-time global intelligence feeds into a single coherent picture. No guesswork. No assumptions. Just what the world actually looks like, right now.
+            </p>
+            <p className="text-neutral-400 leading-relaxed text-lg mb-10">
+              This kind of spatial intelligence platform has obvious applications far beyond the original use case: emergency management, urban planning, community resilience, journalism, security research, and anywhere situational awareness matters more than a Google Maps pin.
             </p>
 
-            {/* Final pull quote — gradient bar, left-aligned */}
             <div className="my-10 relative pl-6 md:pl-8 text-left">
               <div className="absolute left-0 top-0 bottom-0 w-1 rounded-full" style={{ background: 'linear-gradient(to bottom, #00BFFF, #C8F135)' }} />
               <p className="text-lg md:text-xl font-semibold text-white leading-snug italic">
-                Not a wardriving tool. An infrastructure resilience engine.
+                Not a wardriving tool. A new category of infrastructure awareness.
               </p>
             </div>
 
