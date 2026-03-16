@@ -16,25 +16,25 @@ const tools = [
     num: '01',
     title: 'Partner & Funder Directory',
     body: 'A curated, searchable directory of 97 potential partners and funders across 12 categories — foundations, corporate partners, government grants, arts funders, music industry, ad agencies, and more. Each entry is tagged by conservatory alignment (Music, Theatre, Dance, Visual Arts, Creative Writing), flagged for existing relationships, and filtered by priority. Built to be handed directly to ChiArts development staff and used without training.',
-    image: '/chiarts-card.jpg',
-    imageAlt: 'ChiArts Supporter Hub partner directory with 97 entries across 12 categories',
-    caption: '97 vetted partners and funders, filtered by category, conservatory, and priority. Built for immediate use by development staff — no learning curve.',
+    image: '/chiarts-directory2.png',
+    imageAlt: 'ChiArts partner directory with category filters and Leo Burnett, DDB, Energy BBDO cards',
+    caption: '97 vetted partners filterable by category — ad agencies, foundations, government grants, and more. Each card has a personalized outreach letter built in.',
   },
   {
     num: '02',
-    title: 'Grant Calendar',
-    body: 'Upcoming grant deadlines surfaced in one view. No more tracking spreadsheets, missed windows, or hunting through foundation websites. Each grant entry includes the funder, deadline, eligibility notes, and conservatory alignment. The calendar is designed to be the first thing a development director opens on Monday morning.',
-    image: null,
-    imageAlt: null,
-    caption: null,
+    title: 'Outreach Letter Generator',
+    body: 'Personalized outreach letters generated on demand — formatted for foundations, corporate partners, government contacts, and individual donors. Select a partner type, enter a contact name, and get a ready-to-send letter in seconds. Reduces a 45-minute task to 90 seconds. Every partner card has a direct "Generate Letter" link that pre-fills the form.',
+    image: '/chiarts-letter-gen.png',
+    imageAlt: 'ChiArts letter generator form with partner type selector, role picker, and generate button',
+    caption: 'Select funder type, enter contact name, generate. The form pre-fills from any partner card in the directory.',
   },
   {
     num: '03',
-    title: 'Outreach Letter Generator',
-    body: 'Personalized outreach letters generated on demand — formatted for foundations, corporate partners, government contacts, and individual donors. Each template is pre-loaded with ChiArts context and tailored by funder type. Staff enter the contact name, select the category, and get a ready-to-send letter. Reduces a 45-minute task to 90 seconds.',
-    image: null,
-    imageAlt: null,
-    caption: null,
+    title: 'Grant Calendar',
+    body: 'Upcoming grant deadlines surfaced in one view. No more tracking spreadsheets, missed windows, or hunting through foundation websites. Each grant entry includes the funder, deadline, eligibility notes, and conservatory alignment. The first thing a development director opens on Monday morning.',
+    image: '/chiarts-grants.png',
+    imageAlt: 'ChiArts grant calendar showing upcoming grant deadlines and funder details',
+    caption: 'Grant deadlines, eligibility, and funder context in one place — no spreadsheets, no hunting.',
   },
   {
     num: '04',
@@ -142,6 +142,20 @@ export default function CaseChiArts() {
                 <div className="text-neutral-400 text-xs mt-1 leading-relaxed">{s.label}</div>
               </motion.div>
             ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* HERO SCREENSHOT */}
+      <section style={{ backgroundColor: '#0d0d0d' }} className="pb-16 px-6">
+        <div className="max-w-5xl mx-auto">
+          <motion.div {...fadeUp}>
+            <img
+              src="/chiarts-hero.png"
+              alt="ChiArts Supporter Hub — hero section with mission statement and primary CTAs"
+              className="w-full rounded-2xl border border-neutral-800 shadow-2xl"
+            />
+            <p className="text-neutral-500 text-sm mt-3 text-center italic">chiarts.support — live, deployed, available to ChiArts staff today</p>
           </motion.div>
         </div>
       </section>
