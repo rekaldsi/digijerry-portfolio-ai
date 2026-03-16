@@ -12,63 +12,76 @@ const fadeUp = {
 }
 
 const phases = [
-  { phase: 'Phase 1', name: 'ScanMap', desc: 'Wardrive upload and visualization. Map clustering. A technical instrument panel for WiFi and BLE signal density. Useful — but narrow.' },
+  { phase: 'Phase 1', name: 'ScanMap', desc: 'Wardrive upload and visualization. Map clustering. A technical instrument panel for WiFi and BLE signal density. Useful, but narrow.' },
   { phase: 'Phase 2', name: 'Mesh Readiness', desc: 'Viability scoring, coverage gap analysis, bridge node detection, relay placement modeling. The tool starts making recommendations, not just pictures.' },
-  { phase: 'Phase 3', name: 'OVERWATCH', desc: 'Full infrastructure intelligence engine. Strategic planning dashboard. AI-assisted resilience assessment. Signals treated as environmental infrastructure — the same way you\'d model roads or power lines.' },
-  { phase: 'Phase 4', name: 'Live Integration (Planned)', desc: 'Real-time mesh ingestion via MQTT. Event-aware infrastructure alerts. Trade Post transport-layer integration. The neighborhood OS comes online.' },
+  { phase: 'Phase 3', name: 'OVERWATCH', desc: 'Full infrastructure intelligence engine. Strategic planning dashboard. AI-assisted resilience assessment. Signals treated as environmental infrastructure, the same way you\'d model roads or power lines.' },
+  { phase: 'Phase 4', name: 'Live Integration (Shipped)', desc: 'Real-time JEEP-PI field sync at 5-second intervals. Incident alert layer: PROTEST, ICE, POLICE, ROAD, FIRE, MEDICAL, with 4-hour expiry. ADS-B aircraft tracking. AI Query Console: natural language to PostGIS SQL via Gemini. The platform became a live operational picture.' },
+  { phase: 'Phase 5', name: 'Multi-Domain Expansion (Shipped)', desc: 'Global OSINT layers added: GDELT conflict events updated every 15 minutes, GDACS disaster alerts, USGS earthquakes, CelesTrak satellite TLE feeds, NASA FIRMS fire hotspots, NASA environmental imagery, feodotracker C2 nodes, IDOT camera grid. OVERWATCH became a full-spectrum intelligence platform.' },
 ]
 
 const capabilities = [
   {
     num: '01',
     title: 'Neighborhood Readiness Index',
-    body: 'A 0–100 composite score computed from four weighted metrics: BLE device density, mesh node coverage, WiFi relay potential, and signal quality. The first formalized metric for whether a neighborhood can support decentralized coordination without cloud dependency. Not an estimate. A score, with data behind it.',
-    image: '/overwatch-system-status.png',
-    imageAlt: 'OVERWATCH system status panel showing live Supabase connection, ADS-B aircraft feed, satellite TLE data, and geopolitical threat intelligence rankings',
-    caption: 'System status panel: live connections to Supabase, ADS-B aircraft feeds, and satellite TLE data — the always-on backbone that powers the readiness score.',
+    body: 'A 0-100 composite score computed from four weighted metrics: BLE device density, mesh node coverage, WiFi relay potential, and signal quality. Named Meshtastic nodes are plotted individually. The WiGLE layer overlays crowd-sourced WiFi density on field-collected data. Coverage gap detection surfaces exactly where the network is thin, and relay placement recommendations tell you where hardware should go. Not an estimate. A score, with data behind it.',
+    image: '/overwatch-wifi-ble.png',
+    imageAlt: 'OVERWATCH Chicago mesh node map showing named Meshtastic nodes, WiFi and BLE signal cluster density across the city',
+    caption: 'Chicago mesh intelligence grid: named LoRa nodes identified, signal clusters mapped by density, coverage gaps visible at a glance.',
   },
   {
     num: '02',
     title: 'Live Data Layer System',
-    body: 'A unified command dashboard with independently toggleable intelligence layers: live aircraft via ADS-B, global conflict events via GDELT, natural disaster alerts via GDACS, earthquake data from USGS, cybersecurity C2 nodes from abuse.ch, NASA environmental feeds, and local Chicago infrastructure layers. Each layer is sourced, ingested, and rendered in real time. One interface. Every signal.',
+    body: 'Independently toggleable intelligence layers span every domain: live aircraft via ADS-B, global conflict events via GDELT updated every 15 minutes, natural disaster alerts via GDACS, earthquake data from USGS, cybersecurity C2 nodes from feodotracker, 500 CelesTrak satellite TLE feeds, NASA FIRMS fire hotspots, NASA GIBS environmental imagery, RainViewer weather radar, and local Chicago infrastructure layers including IDOT traffic cameras. Each layer is sourced, ingested, and rendered in real time. One interface. Every signal.',
     image: '/overwatch-global-events.png',
     imageAlt: 'OVERWATCH global OSINT dashboard showing live aircraft, conflict events, GDACS alerts, earthquakes, and C2 nodes across a world map',
-    caption: 'Global intelligence view: conflict events, disaster alerts, live aircraft, earthquake data, and C2 nodes — all active layers, single map.',
+    caption: 'Global intelligence view: conflict events, disaster alerts, live aircraft, earthquake data, and C2 nodes. All active layers, single map.',
   },
   {
     num: '03',
-    title: 'Spatial Intelligence Grid',
-    body: 'City-scale mesh infrastructure mapped at the node level. Named Meshtastic nodes are identified and plotted individually. Signal detection clusters show density and coverage across neighborhoods. Gap detection surfaces exactly where the network is thin — and relay placement recommendations tell you where to put hardware to fix it. Infrastructure planning, not map decoration.',
-    image: '/overwatch-wifi-ble.png',
-    imageAlt: 'OVERWATCH Chicago mesh node map showing named Meshtastic nodes, WiFi and BLE signal cluster density across the city',
-    caption: 'Chicago mesh intelligence grid: named LoRa nodes identified, signal clusters mapped by density — coverage gaps visible at a glance.',
+    title: 'System Status and Threat Intel',
+    body: 'The platform maintains live health monitoring across every data source: Supabase connectivity, ADS-B aircraft feed status, satellite TLE ingestion, and JEEP-PI field sync uplinks. The threat intelligence panel shows country-level assessments at HIGH or ELEVATED classifications, updated continuously. Five tactical map rendering modes, NORMAL, NVG, CRT, EO, and FLIR, adapt the visual layer to mission context. Geographic presets (CHI, MIDWEST, NATIONAL, GLOBAL) snap the viewport to the relevant scale.',
+    image: '/overwatch-system-status.png',
+    imageAlt: 'OVERWATCH system status panel showing live Supabase connection, ADS-B aircraft feed, satellite TLE data, and geopolitical threat intelligence rankings by country',
+    caption: 'System status panel: live data source health, JEEP-PI uplink sync, and geopolitical threat classifications by country.',
   },
   {
     num: '04',
     title: 'Mobile SIGINT Pipeline',
-    body: 'Field data flows from a custom Android scanner — wardrive sessions ingesting WiFi access points and BLE devices across real neighborhoods — synced to OVERWATCH via JEEP-PI. The signal filter panel lets analysts slice by frequency band (2.4 GHz / 5 GHz), time window, and minimum signal strength. The result is a continuously growing dataset of physical RF infrastructure, queryable in real time.',
+    body: 'JEEP-PI is a Raspberry Pi-based mobile scanner that syncs to OVERWATCH every 5 seconds. Field sessions ingest WiFi access points and BLE devices across real neighborhoods in real time. The signal filter panel slices by frequency band (2.4 GHz / 5 GHz), time window, and minimum signal strength in dBm. WiGLE integration overlays crowd-sourced WiFi density on top of live field collection. The result is a continuously growing, queryable dataset of physical RF infrastructure.',
     image: '/overwatch-signal-filters.png',
     imageAlt: 'OVERWATCH JEEP-PI sync panel showing wardriving scan totals, WiFi APs, BLE devices, and signal filter controls',
-    caption: 'JEEP-PI sync: mobile wardriving sessions continuously feeding WiFi APs, BLE devices, and scan metadata into the intelligence layer.',
+    caption: 'JEEP-PI sync: 5-second field polling feeding WiFi APs, BLE devices, and scan metadata into the intelligence layer continuously.',
+  },
+  {
+    num: '05',
+    title: 'AI Query Console',
+    body: 'Natural language queries translated directly to PostGIS SQL via Gemini, then executed against live scan data in Supabase. Type "show all BLE devices near downtown Chicago" and OVERWATCH generates the SQL, runs it, and returns results on the map. Queries target the observations, mesh_messages, and mesh_nodes tables. No pre-built filters, no dropdown menus. A direct intelligence interface to the underlying spatial database.',
+    image: '',
+    imageAlt: '',
+    caption: '',
   },
 ]
 
 const decisions = [
   {
-    title: 'ScanMap Describes the Tool. Overwatch Describes What It Is.',
-    body: 'The rename wasn\'t branding. ScanMap visualized signals. Overwatch models infrastructure resilience. When formal viability scoring, gap analysis, bridge node detection, and AI insights were in place, the original name was no longer accurate. The new name is.',
+    title: 'ScanMap Describes the Tool. OVERWATCH Describes What It Is.',
+    body: 'The rename was not branding. ScanMap visualized signals. OVERWATCH models infrastructure resilience. When formal viability scoring, gap analysis, bridge node detection, and AI insights were in place, the original name was no longer accurate. The new name is.',
   },
   {
     title: 'Signals Are Infrastructure, Not Surveillance',
-    body: 'The system ingests WiFi, BLE, and mesh signals without identity tracking, payload interception, or personal data collection. Signals are treated the same way you\'d treat road data or power grid topology — as environmental infrastructure. That framing was designed in from day one.',
+    body: 'The system ingests WiFi, BLE, and mesh signals without identity tracking, payload interception, or personal data collection. Signals are treated the same way you\'d treat road data or power grid topology: as environmental infrastructure. That framing was designed in from day one.',
   },
   {
     title: 'AI Grounded in Local Scan Data',
-    body: 'The Gemini-powered insights layer doesn\'t generate generic recommendations. It reasons from the actual scan data for the actual area being analyzed. Relay suggestions, redundancy warnings, and coverage assessments are grounded in what the field scanner found on the ground.',
+    body: 'The AI query layer does not generate generic recommendations. It translates natural language directly to PostGIS SQL and executes it against the actual scan data for the actual area being analyzed. Relay suggestions, coverage queries, and infrastructure assessments run against what the field scanner found on the ground.',
   },
   {
     title: 'Infrastructure Awareness Before Coordination',
     body: 'OVERWATCH exists to answer one question before Trade Post asks you to rely on the mesh: can this neighborhood actually support it? Modeling resilience before building on it is the engineering discipline the rest of the Neighborhood OS depends on.',
+  },
+  {
+    title: 'From Neighborhood Tool to Multi-Domain Platform',
+    body: 'OVERWATCH started as a mesh readiness tool for one city. The expansion into global OSINT layers was not scope creep. It was the realization that local infrastructure resilience exists inside a larger threat context. Knowing a neighborhood can run mesh is more actionable when you also know what is happening in the air above it, the region around it, and the global conditions shaping it. Local and global are the same picture.',
   },
 ]
 
@@ -186,7 +199,7 @@ export default function CaseOverwatch() {
         <div className="max-w-5xl mx-auto">
           <motion.div {...fadeUp} className="mb-16">
             <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: '#00BFFF' }}>Evolution</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">Four phases. One through-line.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white">Five phases. One through-line.</h2>
           </motion.div>
           <div className="space-y-10">
             {phases.map((p, i) => (
@@ -194,9 +207,9 @@ export default function CaseOverwatch() {
                 initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="flex gap-6 items-start transition-all duration-200 ease-out">
-                <div className="shrink-0 w-1 self-stretch rounded-full" style={{ backgroundColor: i < 3 ? '#00BFFF' : '#334155' }} />
+                <div className="shrink-0 w-1 self-stretch rounded-full" style={{ backgroundColor: '#00BFFF' }} />
                 <div>
-                  <span className="text-xs font-bold tracking-widest uppercase" style={{ color: i < 3 ? '#00BFFF' : '#475569' }}>{p.phase}</span>
+                  <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#00BFFF' }}>{p.phase}</span>
                   <h3 className="text-white font-bold text-xl mt-1 mb-2">{p.name}</h3>
                   <p className="text-neutral-400 text-sm leading-relaxed">{p.desc}</p>
                 </div>
@@ -248,7 +261,7 @@ export default function CaseOverwatch() {
             <div className="relative pl-6 md:pl-8">
               <div className="absolute left-0 top-0 bottom-0 w-1 rounded-full" style={{ background: 'linear-gradient(to bottom, #00BFFF, #C8F135)' }} />
               <p className="text-xl md:text-2xl font-semibold text-neutral-900 leading-snug italic">
-                Nine live data layers. A formal mesh viability scoring engine. AI-grounded infrastructure insights. This is applied spatial intelligence built to answer a real question.
+                Multi-domain. Air, ground, signal, conflict, environment. A formal mesh viability scoring engine and natural language intelligence queries against live scan data. Applied spatial intelligence built to answer a real question.
               </p>
             </div>
           </motion.div>
@@ -285,15 +298,15 @@ export default function CaseOverwatch() {
               The intelligence spine of a larger system.
             </h2>
             <p className="text-neutral-600 leading-relaxed text-lg mb-6">
-              OVERWATCH doesn't stand alone. It's the infrastructure awareness layer of Neighborhood OS — the full stack that includes SIVOPS (the offline field scanner) and Trade Post (the coordination and barter platform). The pipeline: SIVOPS collects signals in the field, OVERWATCH models what those signals mean for infrastructure resilience, Trade Post uses that intelligence to route coordination through mesh when the grid fails.
+              OVERWATCH does not stand alone. It is the intelligence layer of Neighborhood OS: the full stack that includes JEEP-PI (the physical mobile scanner hardware) and Trade Post (the coordination platform). The pipeline: JEEP-PI collects signals in the field, OVERWATCH models what those signals mean for infrastructure resilience, Trade Post uses that intelligence to route coordination through mesh when the grid fails.
             </p>
             <p className="text-neutral-600 leading-relaxed text-lg">
               OVERWATCH answers the question every other layer depends on: is this neighborhood ready to operate independently?
             </p>
             <div className="mt-10 p-6 rounded-2xl border border-neutral-100 bg-neutral-50 text-center">
               <p className="text-neutral-500 text-sm font-bold tracking-widest uppercase mb-2">The Pipeline</p>
-              <p className="text-neutral-900 font-bold text-lg">SIVOPS → OVERWATCH → Trade Post</p>
-              <p className="text-neutral-500 text-sm mt-1">Field Sensor → Infrastructure Intelligence → Economic Coordination</p>
+              <p className="text-neutral-900 font-bold text-lg">JEEP-PI → OVERWATCH → Trade Post</p>
+              <p className="text-neutral-500 text-sm mt-1">Physical Collection → Intelligence Layer → Coordination Layer</p>
             </div>
           </motion.div>
         </div>
@@ -308,7 +321,7 @@ export default function CaseOverwatch() {
               Resilience modeling. Running in production.
             </h2>
             <p className="text-neutral-400 leading-relaxed text-lg mb-8">
-              Built on React, TypeScript, Supabase, MapLibre GL, and Gemini — processing millions of field scans from a custom Android scanner running offline in real neighborhoods. Live data layers spanning aircraft, conflict events, environmental feeds, and local infrastructure. A formal mesh viability scoring engine. AI-grounded infrastructure insights. This isn't a hobby map. It's infrastructure planning.
+              Built on React, TypeScript, Supabase, MapLibre GL, and Gemini. Live integrations: adsb.lol for aircraft, GDELT for conflict events, GDACS for disaster alerts, USGS for earthquakes, CelesTrak for satellite TLEs, NASA FIRMS and NASA GIBS for environmental data, feodotracker for C2 nodes, WiGLE for crowd-sourced WiFi, and RainViewer for weather radar. Processing millions of field scans from JEEP-PI running in real neighborhoods. A formal mesh viability scoring engine. Natural language SQL queries against live scan data. This is not a hobby map. It is infrastructure planning.
             </p>
 
             {/* Final pull quote — gradient bar, left-aligned */}
