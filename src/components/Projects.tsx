@@ -11,6 +11,7 @@ type Project = {
   demoUrl?: string
   heroImage?: string
   link?: string
+  accent?: string
 }
 
 const projects: Project[] = [
@@ -44,6 +45,7 @@ const projects: Project[] = [
   },
   {
     name: 'ChiArts Supporter Hub',
+    status: 'LIVE' as const,
     accent: '#C9A84C',
     description: 'Development operations tool for an arts school in crisis.',
     detail: 'When Chicago High School for the Arts lost its independent foundation board and returned to CPS, it lost the infrastructure that funded it. I built a development operations tool to replace it — a vetted directory of 97 partners and funders, a grant calendar, an outreach letter generator, and a corporate matching gifts lookup. Purpose-built for a school trying to rebuild its funding pipeline from scratch.',
