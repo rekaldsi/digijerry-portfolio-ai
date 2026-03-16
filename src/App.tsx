@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import CaseChiArts from './pages/CaseChiArts'
+import CaseJacket from './pages/CaseJacket'
 import { useEffect } from 'react'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
@@ -72,6 +73,7 @@ function App() {
         <Route path="/case/tradepost" element={<CaseTradePost />} />
         <Route path="/case/botique" element={<CaseBotique />} />
         <Route path="/case/chiarts" element={<CaseChiArts />} />
+        <Route path="/case/jacket" element={<CaseJacket />} />
       </Routes>
     </BrowserRouter>
   )
